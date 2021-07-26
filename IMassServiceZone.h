@@ -1,12 +1,12 @@
 #pragma once
 class IMassServiceZone
 {
-    Interval GetFreeInterval(Interval &newInterval);
+    virtual Interval GetFreeInterval(Interval& newInterval) = 0;
 
-    void AddAircraftInterval(int aircraftId, Interval &freeInterval);
+    virtual void AddAircraftInterval(int aircraftId, Interval& freeInterval) = 0;
 
-    void RemoveAircraftInterval(int aircraftId);
+    virtual void RemoveAircraftInterval(int aircraftId) = 0;
 
-    void Reset();    
+    virtual void Reset() = 0;
 };
 

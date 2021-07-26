@@ -1,12 +1,14 @@
 #pragma once
 class ITable
 {
-    void AddRow(TableRow &tableData);
+public:
 
-    void RemoveRow(int id);
+    virtual void AddRow(TableRow& tableData) = 0;
 
-    void UpdateRow(int id, TableRow &newRow);
+    virtual void RemoveRow(int id) = 0;
 
-    void Reset();
+    virtual void UpdateRow(int id, TableRow& newRow) = 0;
+
+    virtual void Reset() = 0'
 };
 
