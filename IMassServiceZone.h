@@ -7,6 +7,6 @@ class IMassServiceZone
 
     void RemoveAircraftInterval(int aircraftId);
 
-    void Reset();
+    void Reset();    
 };
 
