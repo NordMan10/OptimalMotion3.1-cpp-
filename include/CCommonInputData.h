@@ -30,16 +30,15 @@ public:
 
 	map<int, int> m_PermissibleReserveAircraftCount;
 
-private:
-	
-	static CCommonInputData* m_pInstance;
+
+public:
+	~CCommonInputData();
 
 protected:
 	CCommonInputData(int runwayCount, int specialPlaceCount);
-
+	
 
 public:
-	static CCommonInputData* GetInstance();
-	static CCommonInputData* GetInstance(int runwayCount, int specialPlaceCount);
+	static CCommonInputData& GetInstance(int runwayCount = 2, int specialPlaceCount = 2);
 };
 

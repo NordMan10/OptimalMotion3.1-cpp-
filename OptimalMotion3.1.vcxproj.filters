@@ -13,7 +13,7 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Static">
+    <Filter Include="Source Files\Static">
       <UniqueIdentifier>{70ddd7d0-1c38-4708-9646-83123b599505}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -30,16 +30,16 @@
     <ClInclude Include="OptimalMotion3.1.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ITable.h">
+    <ClInclude Include="include\IMassServiceZone.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="IMassServiceZone.h">
+    <ClInclude Include="include\CCommonInputData.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="CommonInputData.h">
+    <ClInclude Include="include\CInputTakingOffMoments.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="InputTakingOffMoments.h">
+    <ClInclude Include="include\CInterval.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -47,16 +47,16 @@
     <ClCompile Include="OptimalMotion3.1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ITable.cpp">
+    <ClCompile Include="src\IMassServiceZone.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="IMassServiceZone.cpp">
+    <ClCompile Include="src\CInputTakingOffMoments.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="CommonInputData.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\CCommonInputData.cpp">
+      <Filter>Source Files\Static</Filter>
     </ClCompile>
-    <ClCompile Include="InputTakingOffMoments.cpp">
+    <ClCompile Include="src\CInterval.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

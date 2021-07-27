@@ -50,7 +50,7 @@ int* CInputTakingOffMoments::GetNearestPermittedMoment(int possibleMoment)
         auto commonInputData = CCommonInputData::GetInstance();
 
         // Если разрешенный момент больше или равен возможному + резервное время прибытия => возвращаем его
-        if (permittedMoment - commonInputData->m_SpareArrivalTimeInterval.m_StartMoment >= possibleMoment)
+        if (permittedMoment - commonInputData.m_SpareArrivalTimeInterval.m_StartMoment >= possibleMoment)
         {
             auto it = find(begin, end, permittedMoment);
             m_LastPermittedMomentIndex = it - orderedPermittedMoments.cbegin();
