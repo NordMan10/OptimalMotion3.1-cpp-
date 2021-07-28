@@ -11,7 +11,7 @@ public:
 
 
 public:
-	CInterval operator+(const CInterval& summand) const;
+	CInterval operator+(const CInterval& summand);
 
 
 public:
@@ -20,19 +20,13 @@ public:
 	/// </summary>
 	/// <param name="interval"></param>
 	/// <returns></returns>
-	bool IsIntervalsIntersects(CInterval& interval);
-	
-	/// <summary>
-	/// ¬озвращает разность между последним и первый моментом
-	/// </summary>
-	/// <returns></returns>
-	int GetIntervalDuration();
+	bool IsIntervalsIntersects(const CInterval& interval);
 
 	/// <summary>
 	/// ¬озвращает true, если переданным момент попадаем в данный интервал (включа€ границы), и false, если нет
 	/// </summary>
 	/// <param name="moment"></param>
 	/// <returns></returns>
-	bool IsMomentInInterval(int moment);
+	bool IsMomentInInterval(int moment) const;
 };
 

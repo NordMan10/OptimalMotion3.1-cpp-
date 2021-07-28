@@ -20,7 +20,7 @@ public:
 public:
 	~ProgramConstants();
 
-protected:
+private:
 	ProgramConstants(int startIdValue);
 	
 

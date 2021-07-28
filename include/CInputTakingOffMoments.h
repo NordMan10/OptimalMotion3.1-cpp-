@@ -46,9 +46,7 @@ public:
 
 	CInputTakingOffMoments(vector<int>& plannedMoments, vector<int>& permittedMoments);
 
-	/** Copy constructor.
-	*
-	*/
+	// Copy constructor.
 	CInputTakingOffMoments(const CInputTakingOffMoments& from);
 
 

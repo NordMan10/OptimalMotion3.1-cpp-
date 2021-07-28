@@ -1,14 +1,14 @@
-#include "../include/DataRandomizer.h"
+#include "../include/CDataRandomizer.h"
 #include <vector>
 
-DataRandomizer::DataRandomizer() {};
+CDataRandomizer::CDataRandomizer() {};
 
-int DataRandomizer::GetRandomInt(int min, int max)
+int CDataRandomizer::GetRandomInt(int min, int max)
 {
 	return rand() % (max + min);
 }
 
-int DataRandomizer::GetRandomizedValue(int value, int dispersion, int step)
+int CDataRandomizer::GetRandomizedValue(int value, int dispersion, int step)
 {
 	if (dispersion == 0 || step == 0)
 		return value;
@@ -29,7 +29,7 @@ int DataRandomizer::GetRandomizedValue(int value, int dispersion, int step)
 	return possibleValues[valueIndex];
 }
 
-int DataRandomizer::GetRandomizedValue(int minValue, int maxValue)
+int CDataRandomizer::GetRandomizedValue(int minValue, int maxValue)
 {
 	return GetRandomInt(minValue, maxValue);
 }

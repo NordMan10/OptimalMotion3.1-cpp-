@@ -34,7 +34,7 @@ public:
 public:
 	~CCommonInputData();
 
-protected:
+private:
 	CCommonInputData(int runwayCount, int specialPlaceCount);
 	
 

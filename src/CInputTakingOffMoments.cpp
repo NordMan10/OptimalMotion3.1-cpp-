@@ -25,7 +25,6 @@ CInputTakingOffMoments::CInputTakingOffMoments(const CInputTakingOffMoments& fro
 
 }
 
-
 int CInputTakingOffMoments::GetNextPermittedMoment()
 {
     return m_PermittedMoments[++m_LastPermittedMomentIndex];

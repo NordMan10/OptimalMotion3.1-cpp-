@@ -19,13 +19,13 @@
  //
 
 
-class DataRandomizer
+class CDataRandomizer
 {
 public:
-	~DataRandomizer();
+	~CDataRandomizer();
 
 protected:
-	DataRandomizer();
+	CDataRandomizer();
 
 
 public:
