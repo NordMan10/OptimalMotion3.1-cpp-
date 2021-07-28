@@ -10,7 +10,7 @@
  *
  */
 
-class TakingOffAircraftCreationIntervals
+class CTakingOffAircraftCreationIntervals
 {
 public:
 	/// <summary>
@@ -45,8 +45,10 @@ public:
 
 
 public:
-	TakingOffAircraftCreationIntervals(
+	CTakingOffAircraftCreationIntervals(
 		int motionFromParkingToPS, int motionFromPSToES, int takeoff,
-		int motionFromParkingToSP, int motionFromSPToPS, int processing)
+		int motionFromParkingToSP, int motionFromSPToPS, int processing);
+
+	CTakingOffAircraftCreationIntervals() = default;
 };
 

@@ -139,25 +139,43 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="include\DataRandomizer.h" />
+    <ClInclude Include="include\CAircraftInputDataGenerator.h" />
+    <ClInclude Include="include\CAircraftInputData.h" />
+    <ClInclude Include="include\CAircraftIDGenerator.h" />
+    <ClInclude Include="include\CIMassServiceZoneExtensions.h" />
+    <ClInclude Include="include\CDataRandomizer.h" />
     <ClInclude Include="include\CCommonInputData.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="include\IMassServiceZone.h" />
     <ClInclude Include="include\CInputTakingOffMoments.h" />
     <ClInclude Include="OptimalMotion3.1.h" />
     <ClInclude Include="include\CInterval.h" />
-    <ClInclude Include="include\ProgramConstants.h" />
+    <ClInclude Include="include\CProgramConstants.h" />
     <ClInclude Include="Resource.h" />
+    <ClInclude Include="include\CTakingOffAircraftCalculatingIntervals.h" />
+    <ClInclude Include="include\CTakingOffAircraftCalculatingMoments.h" />
+    <ClInclude Include="include\CTakingOffAircraftCreationIntervals.h" />
+    <ClInclude Include="include\CTakingOffAircraftCreationMoments.h" />
+    <ClInclude Include="include\CTakingOffAircraft.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\DataRandomizer.cpp" />
-    <ClCompile Include="src\ProgramConstants.cpp" />
+    <ClCompile Include="src\CAircraftInputDataGenerator.cpp" />
+    <ClCompile Include="src\CAircraftInputData.cpp" />
+    <ClCompile Include="src\CAircraftIDGenerator.cpp" />
+    <ClCompile Include="src\CIMassServiceZoneExtensions.cpp" />
+    <ClCompile Include="src\CDataRandomizer.cpp" />
+    <ClCompile Include="src\CProgramConstants.cpp" />
     <ClCompile Include="src\CInterval.cpp" />
     <ClCompile Include="src\CCommonInputData.cpp" />
     <ClCompile Include="src\IMassServiceZone.cpp" />
     <ClCompile Include="src\CInputTakingOffMoments.cpp" />
     <ClCompile Include="OptimalMotion3.1.cpp" />
+    <ClCompile Include="src\CTakingOffAircraftCalculatingIntervals.cpp" />
+    <ClCompile Include="src\CTakingOffAircraftCalculatingMoments.cpp" />
+    <ClCompile Include="src\CTakingOffAircraftCreationIntervals.cpp" />
+    <ClCompile Include="src\CTakingOffAircraftCreationMoments.cpp" />
+    <ClCompile Include="src\CTakingOffAircraft.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="OptimalMotion3.1.rc" />

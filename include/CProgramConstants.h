@@ -9,22 +9,22 @@
  *
  */
 
-class ProgramConstants
+class CProgramConstants
 {
 public:
 	/// <summary>
 	/// Ќачальное значение Id дл€ зон массового обслуживани€
 	/// </summary>
-	static int m_StartIdValue;
+	static int ms_StartIdValue;
 
 public:
-	~ProgramConstants();
+	~CProgramConstants();
 
 private:
-	ProgramConstants(int startIdValue);
+	CProgramConstants(int startIdValue);
 	
 
 public:
-	static ProgramConstants& GetInstance(int startIdValue = 1);
+	static CProgramConstants& GetInstance(int startIdValue = 1);
 };
 

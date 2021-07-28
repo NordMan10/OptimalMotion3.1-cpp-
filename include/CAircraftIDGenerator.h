@@ -2,7 +2,7 @@
 
 /** Крaткое описание класса
  * Класс для генерации уникальных Id для ВС. Синглтон
- * File  : AircraftIdGenerator.h
+ * File  : CAircraftIDGenerator.h
  * Author:
  *
  * Длинное описание класса
@@ -18,16 +18,16 @@
  //
 
 
-class AircraftIdGenerator
+class CAircraftIDGenerator
 {
 private:
 	int m_InitIdValue;
 	int m_Id;
 
 public:
-	~AircraftIdGenerator();
+	~CAircraftIDGenerator();
 
-	static AircraftIdGenerator* GetInstance(int initIdValue);
+	static CAircraftIDGenerator& GetInstance(int initIdValue);
 
 	/// <summary>
 	/// Возвращает уникальный Id для ВС
@@ -41,6 +41,6 @@ public:
 	void Reset();
 
 private:
-	AircraftIdGenerator(int id);
+	CAircraftIDGenerator(int id);
 };
 

@@ -10,7 +10,7 @@
  *
  */
 
-class TakingOffAircraftCalculatingMoments
+class CTakingOffAircraftCalculatingMoments
 {
 public:
 	/// <summary>
@@ -36,6 +36,6 @@ public:
 
 
 public:
-	TakingOffAircraftCalculatingMoments() { };
+	CTakingOffAircraftCalculatingMoments() { };
 };
 

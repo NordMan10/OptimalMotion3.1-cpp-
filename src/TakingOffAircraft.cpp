@@ -1,2 +1,0 @@
-#include "../include/TakingOffAircraft.h"
-

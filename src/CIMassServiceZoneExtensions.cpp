@@ -1,7 +1,7 @@
-#include "../include/IMassServiceZoneExtensions.h"
+#include "../include/CIMassServiceZoneExtensions.h"
 #include <stdexcept>
 
-void IMassServiceZoneExtensions::AddAircraftInterval(int aircraftId, const CInterval& freeInterval, std::map<int, CInterval>& zoneIntervals)
+void CIMassServiceZoneExtensions::AddAircraftInterval(int aircraftId, const CInterval& freeInterval, std::map<int, CInterval>& zoneIntervals)
 {
 	//try
 	//{
@@ -18,7 +18,7 @@ void IMassServiceZoneExtensions::AddAircraftInterval(int aircraftId, const CInte
 	zoneIntervals.emplace(aircraftId, freeInterval);
 }
 
-CInterval IMassServiceZoneExtensions::GetFreeInterval(const CInterval& interval, const std::map<int, CInterval>& zoneIntervals)
+CInterval CIMassServiceZoneExtensions::GetFreeInterval(const CInterval& interval, const std::map<int, CInterval>& zoneIntervals)
 {
 	auto newInterval = CInterval(interval.m_StartMoment, interval.m_EndMoment);
 	for(const auto& occupiedInterval : zoneIntervals)
@@ -33,12 +33,12 @@ CInterval IMassServiceZoneExtensions::GetFreeInterval(const CInterval& interval,
 	return newInterval;
 }
 
-void IMassServiceZoneExtensions::RemoveAircraftInterval(int aircraftId, std::map<int, CInterval>& zoneIntervals)
+void CIMassServiceZoneExtensions::RemoveAircraftInterval(int aircraftId, std::map<int, CInterval>& zoneIntervals)
 {
 	zoneIntervals.erase(aircraftId);
 }
 
-bool IMassServiceZoneExtensions::CheckIntervalsIntersection(const CInterval& interval, const std::map<int, CInterval>& zoneIntervals)
+bool CIMassServiceZoneExtensions::CheckIntervalsIntersection(const CInterval& interval, const std::map<int, CInterval>& zoneIntervals)
 {
 	for(const auto& occupiedInterval : zoneIntervals)
 	{

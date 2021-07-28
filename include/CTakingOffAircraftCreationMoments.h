@@ -10,7 +10,7 @@
  *
  */
 
-class TakingOffAircraftCreationMoments
+class CTakingOffAircraftCreationMoments
 {
 public:
 	/// <summary>
@@ -20,6 +20,7 @@ public:
 
 
 public:
-	TakingOffAircraftCreationMoments(int plannedTakingOff);
+	CTakingOffAircraftCreationMoments(int plannedTakingOff);
+	CTakingOffAircraftCreationMoments() = default;
 };
 

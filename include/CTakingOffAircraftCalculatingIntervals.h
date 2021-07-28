@@ -9,13 +9,13 @@
  *
  */
 
-class TakingOffAircraftCalculatingIntervals
+class CTakingOffAircraftCalculatingIntervals
 {
 public:
 	int m_PSDelay;
 
 
 public:
-	TakingOffAircraftCalculatingIntervals() {};
+	CTakingOffAircraftCalculatingIntervals() {};
 };
 

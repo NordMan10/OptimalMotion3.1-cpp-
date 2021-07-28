@@ -20,15 +20,15 @@
 class CCommonInputData
 {
 public:
-	int m_RunwayCount;
+	static int m_RunwayCount;
 
-	int m_SpecialPlaceCount;
+	static int m_SpecialPlaceCount;
 
-	CInputTakingOffMoments m_InputTakingOffMoments;
+	static CInputTakingOffMoments m_InputTakingOffMoments;
 
-	CInterval m_SpareArrivalTimeInterval;
+	static CInterval m_SpareArrivalTimeInterval;
 
-	map<int, int> m_PermissibleReserveAircraftCount;
+	static map<int, int> m_PermissibleReserveAircraftCount;
 
 
 public:
@@ -39,6 +39,6 @@ private:
 	
 
 public:
-	static CCommonInputData& GetInstance(int runwayCount = 2, int specialPlaceCount = 2);
+	//static CCommonInputData& GetInstance(int runwayCount = 2, int specialPlaceCount = 2);
 };
 

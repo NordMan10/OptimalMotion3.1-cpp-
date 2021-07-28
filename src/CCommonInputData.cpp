@@ -1,8 +1,11 @@
 #include "../include/CCommonInputData.h"
 #include <limits>
 
-CCommonInputData::CCommonInputData(int runwayCount, int specialPlaceCount) : m_RunwayCount(runwayCount), m_SpecialPlaceCount(specialPlaceCount)
+CCommonInputData::CCommonInputData(int runwayCount, int specialPlaceCount)
 {
+	m_RunwayCount = runwayCount;
+	m_SpecialPlaceCount = specialPlaceCount;
+
 	vector<int> plannedMoments{ 600, 630, 680, 700, 750, 1040, 1290, 1310, 1500, 1580 };
 	vector<int> permittedMoments{ 600, 630, 680, 700, 750, 1040, 1290, 1310, 1500, 1580 };
 
@@ -22,10 +25,10 @@ CCommonInputData::CCommonInputData(int runwayCount, int specialPlaceCount) : m_R
 	};
 }
 
-CCommonInputData& CCommonInputData::GetInstance(int runwayCount = 2, int specialPlaceCount = 2)
-{
-	static CCommonInputData instance{ runwayCount, specialPlaceCount };
-
-	return instance;
-}
+//CCommonInputData& CCommonInputData::GetInstance(int runwayCount = 2, int specialPlaceCount = 2)
+//{
+//	static CCommonInputData instance{ runwayCount, specialPlaceCount };
+//
+//	return instance;
+//}
 

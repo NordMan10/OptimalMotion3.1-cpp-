@@ -1,7 +1,7 @@
-#include "../include/TakingOffAircraftCreationIntervals.h"
+#include "../include/CTakingOffAircraftCreationIntervals.h"
 
 
-TakingOffAircraftCreationIntervals::TakingOffAircraftCreationIntervals
+CTakingOffAircraftCreationIntervals::CTakingOffAircraftCreationIntervals
 	(
 		int motionFromParkingToPS, int motionFromPSToES, int takingOff,
 		int motionFromParkingToSP, int motionFromSPToPS, int processing

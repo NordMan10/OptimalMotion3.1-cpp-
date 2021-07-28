@@ -14,6 +14,10 @@
 
 using namespace std;
 
+/**
+ * .
+ */
+
 class CInputTakingOffMoments
 {
 
@@ -44,6 +48,12 @@ public:
 	// Default constructor
 	CInputTakingOffMoments();
 
+	/**
+	 * .
+	 * 
+	 * \param plannedMoments
+	 * \param permittedMoments
+	 */
 	CInputTakingOffMoments(vector<int>& plannedMoments, vector<int>& permittedMoments);
 
 	// Copy constructor.
@@ -59,10 +69,10 @@ public:
 
 	/// <summary>
 	/// Возвращаем ближайший разрешенный момент для переданного возможного момента, если его возможно установить. 
-	/// Если невозможно, возвращает null
+	/// Если невозможно, возвращает nullptr. 
 	/// </summary>
 	/// <param name="possibleMoment"></param>
-	/// <returns></returns>
+	/// <returns>Необходимо удалить объект, полученный через указатель</returns>
 	int* GetNearestPermittedMoment(int possibleMoment);
 
 	/// <summary>

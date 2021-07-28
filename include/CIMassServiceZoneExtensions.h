@@ -4,7 +4,7 @@
  * Класс, содержащий реализацию общих методов для интерфейса зоны массового обслуживания (IMassServiceZone).
    Описание данного интерфейса см. в определении интерфейса IMassServiceZone
  * 
- * File  : IMassServiceZoneExtensions.h
+ * File  : CIMassServiceZoneExtensions.h
  * Author:
  *
  * Длинное описание класса
@@ -23,7 +23,7 @@
 #include "CInterval.h"
 
 
-class IMassServiceZoneExtensions
+class CIMassServiceZoneExtensions
 {
 public:
 	static void AddAircraftInterval(int aircraftId, const CInterval& freeInterval, std::map<int, CInterval>& zoneIntervals);
