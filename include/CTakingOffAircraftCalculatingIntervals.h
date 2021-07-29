@@ -12,7 +12,7 @@
 class CTakingOffAircraftCalculatingIntervals
 {
 public:
-	int m_PSDelay;
+	int m_PSDelay = 0;
 
 
 public:

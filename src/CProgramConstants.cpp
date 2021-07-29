@@ -1,13 +1,13 @@
 #include "../include/CProgramConstants.h"
 
-CProgramConstants::CProgramConstants(int startIdValue)
+CProgramConstants::CProgramConstants()
 {
-	ms_StartIdValue = startIdValue;
 }
 
-CProgramConstants& CProgramConstants::GetInstance(int startIdValue)
+CProgramConstants* CProgramConstants::GetInstance()
 {
-	static CProgramConstants instance{ startIdValue };
+	if (m_Instance == nullptr)
+		m_Instance = new  CProgramConstants{ };
 
-	return instance;
+	return m_Instance;
 }

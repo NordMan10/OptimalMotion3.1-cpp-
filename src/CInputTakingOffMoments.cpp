@@ -6,7 +6,7 @@
 
 using namespace std;
 
-CInputTakingOffMoments::CInputTakingOffMoments()
+CInputTakingOffMoments::CInputTakingOffMoments() 
 {
 	m_PlannedMoments = vector<int>();
 	m_PermittedMoments = vector<int>();
@@ -62,22 +62,22 @@ int* CInputTakingOffMoments::GetNearestPermittedMoment(int possibleMoment)
     return nullptr;
 }
 
-vector<int>& CInputTakingOffMoments::GetUnusedPlannedMoments()
+vector<int>& CInputTakingOffMoments::GetUnusedPlannedMoments(vector<int>& unusedPlannedMoments)
 {
 	// Упорядочиваем разрешенные моменты
-    auto orderedPlannedMoments = m_PlannedMoments;
-    sort(orderedPlannedMoments.begin(), orderedPlannedMoments.end());
+    unusedPlannedMoments = m_PlannedMoments;
+    sort(unusedPlannedMoments.begin(), unusedPlannedMoments.end());
 
 	// Отбираем еще не использованные плановые моменты
-	auto begin = orderedPlannedMoments.cbegin();
-	auto end = orderedPlannedMoments.cbegin() + m_LastPlannedTakingOffMomentIndex + 1;
-    orderedPlannedMoments.erase(begin, end);
+	auto begin = unusedPlannedMoments.cbegin();
+	auto end = unusedPlannedMoments.cbegin() + m_LastPlannedTakingOffMomentIndex + 1;
+    unusedPlannedMoments.erase(begin, end);
 
 	// Увеличиваем индекс последнего использованного планового момента на количество
 	// неиспользованных (потому что подразумевается, что раз их взяли, то они уже использованы)
-    m_LastPlannedTakingOffMomentIndex += orderedPlannedMoments.size();
+    m_LastPlannedTakingOffMomentIndex += unusedPlannedMoments.size();
 
-	return orderedPlannedMoments;
+	return unusedPlannedMoments;
 }
 
 void CInputTakingOffMoments::ResetLastPlannedTakingOffMomentIndex()

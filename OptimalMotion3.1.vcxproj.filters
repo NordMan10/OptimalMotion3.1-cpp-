@@ -75,6 +75,9 @@
     <ClInclude Include="include\CAircraftInputDataGenerator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\Enums\ENU_AIRCRAFT_PRIORITIES.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="OptimalMotion3.1.cpp">
@@ -138,5 +141,8 @@
     <Image Include="OptimalMotion3.1.ico">
       <Filter>Resource Files</Filter>
     </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Text\Notes.md" />
   </ItemGroup>
 </Project>

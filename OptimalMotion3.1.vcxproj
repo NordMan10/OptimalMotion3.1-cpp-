@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="include\Enums\ENU_AIRCRAFT_PRIORITIES.h" />
     <ClInclude Include="include\CAircraftInputDataGenerator.h" />
     <ClInclude Include="include\CAircraftInputData.h" />
     <ClInclude Include="include\CAircraftIDGenerator.h" />
@@ -183,6 +184,9 @@
   <ItemGroup>
     <Image Include="OptimalMotion3.1.ico" />
     <Image Include="small.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Text\Notes.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

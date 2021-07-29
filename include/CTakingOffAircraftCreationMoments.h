@@ -16,7 +16,7 @@ public:
 	/// <summary>
 	/// Плановый момент вылета
 	/// </summary>
-	int m_PlannedTakingOff;
+	int m_PlannedTakingOff = 0;
 
 
 public:

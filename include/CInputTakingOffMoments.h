@@ -22,30 +22,34 @@ class CInputTakingOffMoments
 {
 
 public:
-	/// <summary>
-	/// ѕлановые моменты взлета
-	/// </summary>
+	/**
+	 * ѕлановые моменты взлета.
+	 */
 	vector<int> m_PlannedMoments;
 
-	/// <summary>
-	/// –азрешенные моменты взлета
-	/// </summary>
+	/**
+	 * –азрешенные моменты взлета.
+	 */
 	vector<int> m_PermittedMoments;
 
 private:
-	/// <summary>
-	/// »ндекс последнего использованного планового момента
-	/// </summary>
+	/**
+	 * »ндекс последнего использованного планового момента.
+	 */
 	int m_LastPlannedTakingOffMomentIndex = -1;
 
-	/// <summary>
-	/// »ндекс последнего использованного разрешенного момента
-	/// </summary>
+	/**
+	 * »ндекс последнего использованного разрешенного момента.
+	 */
 	int m_LastPermittedMomentIndex = -1;
 
 
 public:
-	// Default constructor
+	/**
+	 *  онструктор по умолчанию.
+	 * 
+	 * \return 
+	 */
 	CInputTakingOffMoments();
 
 	/**
@@ -61,25 +65,29 @@ public:
 
 
 public:
-	/// <summary>
-	/// ¬озвращает самый первый неиспользованный разрешенный момент взлета
-	/// </summary>
-	/// <returns></returns>
+	/**
+	 * ¬озвращает самый первый неиспользованный разрешенный момент взлета.
+	 * 
+	 * \return —амый первый неиспользованный разрешенный момент взлета.
+	 */
 	int GetNextPermittedMoment();
 
-	/// <summary>
-	/// ¬озвращаем ближайший разрешенный момент дл€ переданного возможного момента, если его возможно установить. 
-	/// ≈сли невозможно, возвращает nullptr. 
-	/// </summary>
-	/// <param name="possibleMoment"></param>
-	/// <returns>Ќеобходимо удалить объект, полученный через указатель</returns>
+	/**
+	 * ¬озвращает ближайший разрешенный момент дл€ переданного возможного момента, если его возможно установить.
+	 * ≈сли невозможно, возвращает nullptr. ѕосле использовани€ указатель нужно удалить.
+	 * 
+	 * \param possibleMoment
+	 * \return 
+	 */
 	int* GetNearestPermittedMoment(int possibleMoment);
 
-	/// <summary>
-	/// ¬озвращает список неиспользованных плановых моментов
-	/// </summary>
-	/// <returns></returns>
-	vector<int>& GetUnusedPlannedMoments();
+	/**
+	 * ¬озвращает список неиспользованных плановых моментов.
+	 * 
+	 * \param unusedPlannedMoments
+	 * \return —сылку на переданный список
+	 */
+	vector<int>& GetUnusedPlannedMoments(vector<int>& unusedPlannedMoments);
 
 	void ResetLastPlannedTakingOffMomentIndex();
 

@@ -1,8 +1,8 @@
 #include "../include/CAircraftInputData.h"
 
 CAircraftInputData::CAircraftInputData(std::string runwayId, int specialPlaceId, std::string type,
-	int priority, bool processingIsNeeded, CTakingOffAircraftCreationIntervals& creationIntervals,
-	CTakingOffAircraftCreationMoments& creationMoments)
+	int priority, bool processingIsNeeded, CTakingOffAircraftCreationIntervals* creationIntervals,
+	CTakingOffAircraftCreationMoments* creationMoments)
 {
 	m_RunwayId = runwayId;
 	m_SpecialPlaceId = specialPlaceId;
@@ -11,4 +11,10 @@ CAircraftInputData::CAircraftInputData(std::string runwayId, int specialPlaceId,
 	m_ProcessingIsNeeded = processingIsNeeded;
 	m_CreationIntervals = creationIntervals;
 	m_CreationMoments = creationMoments;
+}
+
+CAircraftInputData::~CAircraftInputData()
+{
+	delete(m_CreationMoments);
+	delete(m_CreationIntervals);
 }

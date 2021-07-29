@@ -1,0 +1,8 @@
+#pragma once
+
+enum ENU_AIRCRAFT_PRIORITIES
+{
+	EAP_DEFAULT,
+	EAP_MEDIUM,
+	EAP_HIGH
+};

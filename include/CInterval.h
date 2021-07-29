@@ -9,6 +9,8 @@ public:
 public:
 	CInterval(int firstMoment = 0, int lastMoment = 0);
 
+	CInterval(const CInterval& from);
+
 
 public:
 	CInterval operator+(const CInterval& summand);

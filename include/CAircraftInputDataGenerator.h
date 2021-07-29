@@ -12,6 +12,8 @@
 
  // SYSTEM INCLUDES
  //
+#include <random>
+#include "CAircraftInputData.h"
 
  // PROJECT INCLUDES
  //
@@ -22,11 +24,26 @@
 
 class CAircraftInputDataGenerator
 {
-public:
+private:
+	CCommonInputData* m_CommonInputData;
+	CProgramConstants* m_ProgramConstants;
+
+
+private:
+	CAircraftInputDataGenerator();
 
 
 
 public:
-	CAircraftInputDataGenerator() {}
+	CAircraftInputDataGenerator& GetInstance();
+
+	CAircraftInputData* GetAircraftInputData(int plannedTakingOffMoment);
+
+private:
+	int GetAircraftPriority();
+
+	bool GetProcessingNecessity();
+
+	CTakingOffAircraftCreationIntervals* GetTakingOffAircraftCreationIntervals();
 };
 

@@ -36,16 +36,18 @@ public:
 
 	bool m_ProcessingIsNeeded;
 
-	CTakingOffAircraftCreationIntervals m_CreationIntervals;
+	CTakingOffAircraftCreationIntervals* m_CreationIntervals;
 
-	CTakingOffAircraftCreationMoments m_CreationMoments;
+	CTakingOffAircraftCreationMoments* m_CreationMoments;
 
 
 public:
 	CAircraftInputData(std::string runwayId, int specialPlaceId, std::string type, int priority,
-		bool processingIsNeeded, CTakingOffAircraftCreationIntervals& creationIntervals, 
-		CTakingOffAircraftCreationMoments& creationMoments);
+		bool processingIsNeeded, CTakingOffAircraftCreationIntervals* creationIntervals, 
+		CTakingOffAircraftCreationMoments* creationMoments);
 
 	CAircraftInputData() = default;
+
+	~CAircraftInputData();
 };
 
