@@ -15,6 +15,7 @@
 // LOCAL INCLUDES
 #include "./CInputTakingOffMoments.h"
 #include "CInterval.h"
+#include <memory>
 
 
 class CCommonInputData
@@ -24,34 +25,30 @@ public:
 
 	int m_SpecialPlaceCount;
 
-	CInputTakingOffMoments* m_InputTakingOffMoments;
+	std::shared_ptr<CInputTakingOffMoments> m_InputTakingOffMoments;
 
 	CInterval m_SpareArrivalTimeInterval;
 
 	map<int, int> m_PermissibleReserveAircraftCount;
 
 private:
-	static CCommonInputData* ms_Instance;
+	static std::shared_ptr<CCommonInputData> ms_Instance;
 
 
 public:
-	~CCommonInputData();
+	~CCommonInputData() {};
 
 private:
 	CCommonInputData();
-
-	CCommonInputData(int runwayCount, int specialPlaceCount);
 
 	CCommonInputData(int runwayCount, int specialPlaceCount, vector<int>& plannedMoments, vector<int>& permittedMoments,
 		const CInterval& m_SpareArrivalTimeInterval, const map<int, int>& m_PermissibleReserveAircraftCount);
 	
 
 public:
-	static CCommonInputData* GetInstance();
+	static std::shared_ptr<CCommonInputData> GetInstance();
 
-	static CCommonInputData* GetInstance(int runwayCount, int specialPlaceCount);
-
-	static CCommonInputData& GetInstance(int runwayCount, int specialPlaceCount, vector<int>& plannedMoments, vector<int>& permittedMoments,
+	static std::shared_ptr<CCommonInputData> GetInstance(int runwayCount, int specialPlaceCount, vector<int>& plannedMoments, vector<int>& permittedMoments,
 		const CInterval& m_SpareArrivalTimeInterval, const map<int, int>& m_PermissibleReserveAircraftCount);
 };
 

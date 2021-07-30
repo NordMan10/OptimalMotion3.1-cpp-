@@ -1,4 +1,5 @@
 #pragma once
+#include <memory>
 
 /** Крaткое описание класса
  * Какие-либо константные значения, общие для всего проекта
@@ -8,6 +9,17 @@
  * Длинное описание класса
  *
  */
+
+// SYSTEM INCLUDES
+//
+#include <memory>
+
+// PROJECT INCLUDES
+//
+
+// LOCAL INCLUDES
+//
+
 
 class CProgramConstants
 {
@@ -48,7 +60,7 @@ public:
 	int m_ProcessingTime = 240;
 	
 private:
-	static CProgramConstants* m_Instance;
+	static std::shared_ptr<CProgramConstants> m_Instance;
 
 
 public:
@@ -59,6 +71,6 @@ private:
 	
 
 public:
-	static CProgramConstants* GetInstance();
+	static std::shared_ptr<CProgramConstants> GetInstance();
 };
 

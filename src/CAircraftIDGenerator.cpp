@@ -6,12 +6,15 @@ CAircraftIDGenerator::CAircraftIDGenerator(int initIdValue)
 	m_Id = initIdValue;
 }
 
-CAircraftIDGenerator& CAircraftIDGenerator::GetInstance(int initIdValue)
+std::shared_ptr<CAircraftIDGenerator> CAircraftIDGenerator::GetInstance(int initIdValue)
 {
-	static CAircraftIDGenerator instance = CAircraftIDGenerator(initIdValue);
+	if(!m_Instance)
+		m_Instance = std::shared_ptr<CAircraftIDGenerator>(new CAircraftIDGenerator(initIdValue));
 
-	return instance;
+	return m_Instance;
 }
+
+std::shared_ptr<CAircraftIDGenerator> CAircraftIDGenerator::m_Instance = nullptr;
 
 int CAircraftIDGenerator::GetUniqueAircraftId()
 {

@@ -10,6 +10,7 @@
  */
  // SYSTEM INCLUDES
  //
+#include <memory>
 
  // PROJECT INCLUDES
  //
@@ -23,11 +24,18 @@ class CAircraftIDGenerator
 private:
 	int m_InitIdValue;
 	int m_Id;
+	static std::shared_ptr<CAircraftIDGenerator> m_Instance;
+
 
 public:
-	~CAircraftIDGenerator();
+	~CAircraftIDGenerator() {};
 
-	static CAircraftIDGenerator& GetInstance(int initIdValue);
+private:
+	CAircraftIDGenerator(int id);
+
+
+public:
+	static std::shared_ptr<CAircraftIDGenerator> GetInstance(int initIdValue);
 
 	/// <summary>
 	/// Возвращает уникальный Id для ВС
@@ -40,7 +48,5 @@ public:
 	/// </summary>
 	void Reset();
 
-private:
-	CAircraftIDGenerator(int id);
 };
 

@@ -1,5 +1,6 @@
-#include "../include/CAircraftInputDataGenerator.h"
 #include <string>
+
+#include "../include/CAircraftInputDataGenerator.h"
 #include "../include/CProgramConstants.h"
 #include "../include/CCommonInputData.h"
 #include "../include/CDataRandomizer.h"
@@ -12,14 +13,17 @@ CAircraftInputDataGenerator::CAircraftInputDataGenerator()
 	m_ProgramConstants = CProgramConstants::GetInstance();
 }
 
-CAircraftInputDataGenerator& CAircraftInputDataGenerator::GetInstance()
-{
-	static CAircraftInputDataGenerator instance{};
+std::shared_ptr<CAircraftInputDataGenerator> CAircraftInputDataGenerator::m_Instance = nullptr;
 
-	return instance;
+std::shared_ptr<CAircraftInputDataGenerator> CAircraftInputDataGenerator::GetInstance()
+{
+	if (!m_Instance)
+		m_Instance = std::make_shared<CAircraftInputDataGenerator>(new CAircraftInputDataGenerator());
+
+	return m_Instance;
 }
 
-CAircraftInputData* CAircraftInputDataGenerator::GetAircraftInputData(int plannedTakingOffMoment)
+std::shared_ptr<CAircraftInputData> CAircraftInputDataGenerator::GetAircraftInputData(int plannedTakingOffMoment)
 {
 	auto runwayId = std::to_string(rand() % ((*m_ProgramConstants).m_StartIdValue + (*m_CommonInputData).m_RunwayCount + 1));
 	int specialPlaceId = CDataRandomizer::GetRandomizedValue((*m_ProgramConstants).m_StartIdValue, (*m_CommonInputData).m_SpecialPlaceCount + 1);
@@ -31,10 +35,10 @@ CAircraftInputData* CAircraftInputDataGenerator::GetAircraftInputData(int planne
 
 	bool processingIsNeeded = GetProcessingNecessity();
 
-	auto creationMoments = new CTakingOffAircraftCreationMoments(plannedTakingOffMoment);
-	auto creationIntervals = GetTakingOffAircraftCreationIntervals();
+	auto creationMoments = std::shared_ptr<CTakingOffAircraftCreationMoments>(new CTakingOffAircraftCreationMoments(plannedTakingOffMoment));
+	auto creationIntervals = std::shared_ptr<CTakingOffAircraftCreationIntervals>(GetTakingOffAircraftCreationIntervals());
 
-	return new CAircraftInputData(runwayId, specialPlaceId, aircraftType, priority, processingIsNeeded, creationIntervals, creationMoments);
+	return std::shared_ptr<CAircraftInputData>(new CAircraftInputData(runwayId, specialPlaceId, aircraftType, priority, processingIsNeeded, creationIntervals, creationMoments));
 }
 
 int CAircraftInputDataGenerator::GetAircraftPriority()
@@ -58,7 +62,7 @@ bool CAircraftInputDataGenerator::GetProcessingNecessity()
 	return processingIsNeededVariants[rand() % (0 + processingIsNeededVariants.size())];
 }
 
-CTakingOffAircraftCreationIntervals* CAircraftInputDataGenerator::GetTakingOffAircraftCreationIntervals()
+std::shared_ptr<CTakingOffAircraftCreationIntervals> CAircraftInputDataGenerator::GetTakingOffAircraftCreationIntervals()
 {
 	auto motionFromParkingToPS = CDataRandomizer::GetRandomizedValue((*m_ProgramConstants).m_MotionFromParkingToPS, 25, 15);
 	auto motionFromPSToES = CDataRandomizer::GetRandomizedValue((*m_ProgramConstants).m_MotionFromPSToES, 25, 5);
@@ -67,6 +71,6 @@ CTakingOffAircraftCreationIntervals* CAircraftInputDataGenerator::GetTakingOffAi
 	auto motionFromSPToPS = CDataRandomizer::GetRandomizedValue((*m_ProgramConstants).m_MotionFromSPToPS, 25, 15);
 	auto processingTime = CDataRandomizer::GetRandomizedValue((*m_ProgramConstants).m_ProcessingTime, 25, 30);
 
-	return new CTakingOffAircraftCreationIntervals(motionFromParkingToPS, motionFromPSToES, takingOffInterval, motionFromParkingToSP,
-		motionFromSPToPS, processingTime);
+	return std::shared_ptr<CTakingOffAircraftCreationIntervals>(new CTakingOffAircraftCreationIntervals(motionFromParkingToPS, 
+		motionFromPSToES, takingOffInterval, motionFromParkingToSP, motionFromSPToPS, processingTime));
 }

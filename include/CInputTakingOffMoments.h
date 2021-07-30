@@ -14,9 +14,6 @@
 
 using namespace std;
 
-/**
- * .
- */
 
 class CInputTakingOffMoments
 {
@@ -42,6 +39,7 @@ private:
 	 * Индекс последнего использованного разрешенного момента.
 	 */
 	int m_LastPermittedMomentIndex = -1;
+
 
 
 public:

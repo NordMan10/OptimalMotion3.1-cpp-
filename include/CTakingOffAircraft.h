@@ -35,13 +35,13 @@ public:
 
 	int m_Priority;
 
-	CTakingOffAircraftCreationMoments m_CreationMoments;
+	std::shared_ptr<CTakingOffAircraftCreationMoments> m_CreationMoments;
 
-	CTakingOffAircraftCalculatingMoments m_CalculatingMoments;
+	std::shared_ptr<CTakingOffAircraftCalculatingMoments> m_CalculatingMoments = nullptr;
 
-	CTakingOffAircraftCreationIntervals m_CreationIntervals;
+	std::shared_ptr<CTakingOffAircraftCreationIntervals> m_CreationIntervals;
 
-	CTakingOffAircraftCalculatingIntervals m_CalculatingIntervals;
+	std::shared_ptr<CTakingOffAircraftCalculatingIntervals> m_CalculatingIntervals = nullptr;
 
 	bool m_ProcessingIsNeeded;
 

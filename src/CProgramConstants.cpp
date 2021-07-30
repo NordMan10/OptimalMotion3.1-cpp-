@@ -4,10 +4,10 @@ CProgramConstants::CProgramConstants()
 {
 }
 
-CProgramConstants* CProgramConstants::GetInstance()
+std::shared_ptr<CProgramConstants> CProgramConstants::GetInstance()
 {
-	if (m_Instance == nullptr)
-		m_Instance = new  CProgramConstants{ };
+	if (!m_Instance)
+		m_Instance = std::shared_ptr<CProgramConstants>(new CProgramConstants{ });
 
 	return m_Instance;
 }

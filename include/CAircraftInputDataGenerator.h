@@ -24,9 +24,13 @@
 
 class CAircraftInputDataGenerator
 {
+public:
+	static std::shared_ptr<CAircraftInputDataGenerator> m_Instance;
+
+
 private:
-	CCommonInputData* m_CommonInputData;
-	CProgramConstants* m_ProgramConstants;
+	std::shared_ptr<CCommonInputData> m_CommonInputData;
+	std::shared_ptr<CProgramConstants> m_ProgramConstants;
 
 
 private:
@@ -35,15 +39,15 @@ private:
 
 
 public:
-	CAircraftInputDataGenerator& GetInstance();
+	static std::shared_ptr<CAircraftInputDataGenerator> GetInstance();
 
-	CAircraftInputData* GetAircraftInputData(int plannedTakingOffMoment);
+	std::shared_ptr<CAircraftInputData> GetAircraftInputData(int plannedTakingOffMoment);
 
 private:
 	int GetAircraftPriority();
 
 	bool GetProcessingNecessity();
 
-	CTakingOffAircraftCreationIntervals* GetTakingOffAircraftCreationIntervals();
+	std::shared_ptr<CTakingOffAircraftCreationIntervals> GetTakingOffAircraftCreationIntervals();
 };
 

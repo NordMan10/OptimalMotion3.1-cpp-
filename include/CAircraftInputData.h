@@ -13,6 +13,7 @@
  // SYSTEM INCLUDES
  //
 #include <string>
+#include <memory>
 
  // PROJECT INCLUDES
  //
@@ -36,18 +37,18 @@ public:
 
 	bool m_ProcessingIsNeeded;
 
-	CTakingOffAircraftCreationIntervals* m_CreationIntervals;
+	std::shared_ptr<CTakingOffAircraftCreationIntervals> m_CreationIntervals;
 
-	CTakingOffAircraftCreationMoments* m_CreationMoments;
+	std::shared_ptr<CTakingOffAircraftCreationMoments> m_CreationMoments;
 
 
 public:
 	CAircraftInputData(std::string runwayId, int specialPlaceId, std::string type, int priority,
-		bool processingIsNeeded, CTakingOffAircraftCreationIntervals* creationIntervals, 
-		CTakingOffAircraftCreationMoments* creationMoments);
+		bool processingIsNeeded, std::shared_ptr<CTakingOffAircraftCreationIntervals> creationIntervals,
+		std::shared_ptr<CTakingOffAircraftCreationMoments> creationMoments);
 
 	CAircraftInputData() = default;
 
-	~CAircraftInputData();
+	~CAircraftInputData() {};
 };
 
