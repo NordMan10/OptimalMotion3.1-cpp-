@@ -75,6 +75,15 @@
     <ClInclude Include="include\Enums\ENU_AIRCRAFT_PRIORITIES.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\CPreliminaryStart.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\CRunway.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\CSpecialPlace.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="OptimalMotion3.1.cpp">
@@ -120,6 +129,15 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\CAircraftInputDataGenerator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\CPreliminaryStart.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\CRunway.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\CSpecialPlace.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

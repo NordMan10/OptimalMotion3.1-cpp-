@@ -1,7 +1,7 @@
 #include "../include/CIMassServiceZoneExtensions.h"
 #include <stdexcept>
 
-void CIMassServiceZoneExtensions::AddAircraftInterval(int aircraftId, const CInterval& freeInterval, std::map<int, CInterval>& zoneIntervals)
+void CIMassServiceZoneExtensions::AddAircraftInterval(IMassServiceZone* zone, int aircraftId, const CInterval& freeInterval, std::map<int, CInterval>& zoneIntervals)
 {
 	//try
 	//{
@@ -18,7 +18,7 @@ void CIMassServiceZoneExtensions::AddAircraftInterval(int aircraftId, const CInt
 	zoneIntervals.emplace(aircraftId, freeInterval);
 }
 
-std::shared_ptr<CInterval> CIMassServiceZoneExtensions::GetFreeInterval(const CInterval& interval, const std::map<int, CInterval>& zoneIntervals)
+std::shared_ptr<CInterval> CIMassServiceZoneExtensions::GetFreeInterval(IMassServiceZone* zone, const CInterval& interval, const std::map<int, CInterval>& zoneIntervals)
 {
 	auto newIntervalPtr = new CInterval(interval.m_StartMoment, interval.m_EndMoment);
 	auto newInterval = *newIntervalPtr;
@@ -37,7 +37,7 @@ std::shared_ptr<CInterval> CIMassServiceZoneExtensions::GetFreeInterval(const CI
 	return std::shared_ptr<CInterval>(resultIntervalPtr);
 }
 
-void CIMassServiceZoneExtensions::RemoveAircraftInterval(int aircraftId, std::map<int, CInterval>& zoneIntervals)
+void CIMassServiceZoneExtensions::RemoveAircraftInterval(IMassServiceZone* zone, int aircraftId, std::map<int, CInterval>& zoneIntervals)
 {
 	zoneIntervals.erase(aircraftId);
 }

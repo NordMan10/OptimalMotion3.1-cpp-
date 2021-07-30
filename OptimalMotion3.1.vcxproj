@@ -139,6 +139,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="include\CSpecialPlace.h" />
+    <ClInclude Include="include\CRunway.h" />
     <ClInclude Include="include\Enums\ENU_AIRCRAFT_PRIORITIES.h" />
     <ClInclude Include="include\CAircraftInputDataGenerator.h" />
     <ClInclude Include="include\CAircraftInputData.h" />
@@ -151,6 +153,7 @@
     <ClInclude Include="OptimalMotion3.1.h" />
     <ClInclude Include="include\CInterval.h" />
     <ClInclude Include="include\CProgramConstants.h" />
+    <ClInclude Include="include\CPreliminaryStart.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="include\CTakingOffAircraftCalculatingIntervals.h" />
     <ClInclude Include="include\CTakingOffAircraftCalculatingMoments.h" />
@@ -160,6 +163,9 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\CSpecialPlace.cpp" />
+    <ClCompile Include="src\CRunway.cpp" />
+    <ClCompile Include="src\CPreliminaryStart.cpp" />
     <ClCompile Include="src\CAircraftInputDataGenerator.cpp" />
     <ClCompile Include="src\CAircraftInputData.cpp" />
     <ClCompile Include="src\CIMassServiceZoneExtensions.cpp" />
