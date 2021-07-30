@@ -142,7 +142,6 @@
     <ClInclude Include="include\Enums\ENU_AIRCRAFT_PRIORITIES.h" />
     <ClInclude Include="include\CAircraftInputDataGenerator.h" />
     <ClInclude Include="include\CAircraftInputData.h" />
-    <ClInclude Include="include\CAircraftIDGenerator.h" />
     <ClInclude Include="include\CIMassServiceZoneExtensions.h" />
     <ClInclude Include="include\CDataRandomizer.h" />
     <ClInclude Include="include\CCommonInputData.h" />
@@ -163,7 +162,6 @@
   <ItemGroup>
     <ClCompile Include="src\CAircraftInputDataGenerator.cpp" />
     <ClCompile Include="src\CAircraftInputData.cpp" />
-    <ClCompile Include="src\CAircraftIDGenerator.cpp" />
     <ClCompile Include="src\CIMassServiceZoneExtensions.cpp" />
     <ClCompile Include="src\CDataRandomizer.cpp" />
     <ClCompile Include="src\CProgramConstants.cpp" />

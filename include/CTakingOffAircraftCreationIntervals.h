@@ -34,21 +34,36 @@ public:
 	int m_MotionFromSPToPS;
 
 	/// <summary>
-	/// Время взлета
-	/// </summary>
-	int m_TakingOff;
-
-	/// <summary>
 	/// Время обработки
 	/// </summary>
 	int m_Processing;
 
+	/// <summary>
+	/// Время взлета
+	/// </summary>
+	int m_TakingOff;
+
 
 public:
 	CTakingOffAircraftCreationIntervals(
-		int motionFromParkingToPS, int motionFromPSToES, int takeoff,
-		int motionFromParkingToSP, int motionFromSPToPS, int processing);
+		int motionFromParkingToPS, int motionFromPSToES, int motionFromParkingToSP,
+		int motionFromSPToPS, int processing, int takeoff);
 
 	CTakingOffAircraftCreationIntervals() = default;
+
+
+public:
+	int GetMotionFromParkingToPS() const;
+
+	int GetMotionFromPSToES() const;
+
+	int GetMotionFromParkingToSP() const;
+
+	int GetMotionFromSPToPS() const;
+
+	int GetProcessing() const;
+
+	int GetTakingOff() const;
+
 };
 

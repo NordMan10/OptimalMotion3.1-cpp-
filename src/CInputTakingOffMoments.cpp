@@ -13,7 +13,7 @@ CInputTakingOffMoments::CInputTakingOffMoments()
 }
 
 
-CInputTakingOffMoments::CInputTakingOffMoments(vector<int>& plannedMoments, vector<int>& permittedMoments)
+CInputTakingOffMoments::CInputTakingOffMoments(vector<int> plannedMoments, vector<int> permittedMoments)
 {
 	m_PlannedMoments = plannedMoments;
 	m_PermittedMoments = permittedMoments;
@@ -46,11 +46,11 @@ int* CInputTakingOffMoments::GetNearestPermittedMoment(int possibleMoment)
     // Проверяем каждый разрешенный момент
     for(int permittedMoment : orderedPermittedMoments)
     {
-        auto commonInputDataPtr = CCommonInputData::GetInstance();
+        auto commonInputDataPtr = CCommonInputData::GetSpareArrivalTimeInterval();
         auto commonInputData = *(commonInputDataPtr);
 
         // Если разрешенный момент больше или равен возможному + резервное время прибытия => возвращаем его
-        if (permittedMoment - commonInputData.m_SpareArrivalTimeInterval.m_StartMoment >= possibleMoment)
+        if (permittedMoment - commonInputData.m_StartMoment >= possibleMoment)
         {
             auto it = find(begin, end, permittedMoment);
             m_LastPermittedMomentIndex = it - orderedPermittedMoments.cbegin();

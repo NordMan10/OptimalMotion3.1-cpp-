@@ -51,9 +51,12 @@ public:
 
 	int m_SpecialPlaceId;
 
+private:
+	static int ms_IdGenerator;
+
 
 public:
-	CTakingOffAircraft(int id, const CAircraftInputData& inputData);
+	CTakingOffAircraft(const CAircraftInputData& inputData);
 
 	CTakingOffAircraft() = default;
 };

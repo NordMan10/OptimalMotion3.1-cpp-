@@ -1,8 +1,9 @@
 #include "../include/CTakingOffAircraft.h"
+#include "../include/CProgramConstants.h"
 
-CTakingOffAircraft::CTakingOffAircraft(int id, const CAircraftInputData& inputData)
+CTakingOffAircraft::CTakingOffAircraft(const CAircraftInputData& inputData)
 {
-	m_Id = id;
+	m_Id = ms_IdGenerator++;
 	m_Type = inputData.m_Type;
 	m_Priority = inputData.m_Priority;
 	m_CreationMoments = inputData.m_CreationMoments;
@@ -11,3 +12,5 @@ CTakingOffAircraft::CTakingOffAircraft(int id, const CAircraftInputData& inputDa
 	m_RunwayId = inputData.m_RunwayId;
 	m_SpecialPlaceId = inputData.m_SpecialPlaceId;
 }
+
+int CTakingOffAircraft::ms_IdGenerator = CProgramConstants::m_StartIdValue;

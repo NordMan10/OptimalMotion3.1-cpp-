@@ -18,37 +18,81 @@
 #include <memory>
 
 
-class CCommonInputData
+class CCommonInputData final
 {
-public:
-	int m_RunwayCount;
-
-	int m_SpecialPlaceCount;
-
-	std::shared_ptr<CInputTakingOffMoments> m_InputTakingOffMoments;
-
-	CInterval m_SpareArrivalTimeInterval;
-
-	map<int, int> m_PermissibleReserveAircraftCount;
-
 private:
-	static std::shared_ptr<CCommonInputData> ms_Instance;
+	static int m_RunwayCount;
 
+	static int m_SpecialPlaceCount;
 
+	static CInputTakingOffMoments m_InputTakingOffMoments;
+
+	static CInterval m_SpareArrivalTimeInterval;
+
+	static std::map<int, int> m_PermissibleReserveAircraftCount;
+
+	/// <summary>
+	/// Количество ВПП
+	/// </summary>
 public:
-	~CCommonInputData() {};
+	static int GetRunwayCount();
+	static void SetRunwayCount(int value);
 
-private:
-	CCommonInputData();
+	/// <summary>
+	/// Количество спец. площадок
+	/// </summary>
+	static int GetSpecialPlaceCount();
+	static void SetSpecialPlaceCount(int value);
 
-	CCommonInputData(int runwayCount, int specialPlaceCount, vector<int>& plannedMoments, vector<int>& permittedMoments,
-		const CInterval& m_SpareArrivalTimeInterval, const map<int, int>& m_PermissibleReserveAircraftCount);
-	
+	/// <summary>
+	/// Наборы плановых и разрешенных моментов
+	/// </summary>
+	static CInputTakingOffMoments* GetInputTakingOffMoments();
 
-public:
-	static std::shared_ptr<CCommonInputData> GetInstance();
+	/// <summary>
+	///  Интервал запасного времени прибытия
+	/// </summary>
+	static CInterval* GetSpareArrivalTimeInterval();
+	static void SetSpareArrivalTimeInterval(CInterval* value);
 
-	static std::shared_ptr<CCommonInputData> GetInstance(int runwayCount, int specialPlaceCount, vector<int>& plannedMoments, vector<int>& permittedMoments,
-		const CInterval& m_SpareArrivalTimeInterval, const map<int, int>& m_PermissibleReserveAircraftCount);
+	/// <summary>
+	/// Допустимое количество резервных ВС в зависимости от времени простоя
+	/// </summary>
+	static std::map<int, int> GetPermissibleReserveAircraftCount();
 };
+
+
+//class CCommonInputData
+//{
+//public:
+//	static int m_RunwayCount;
+//
+//	static int m_SpecialPlaceCount;
+//
+//	static std::shared_ptr<CInputTakingOffMoments> m_InputTakingOffMoments;
+//
+//	CInterval m_SpareArrivalTimeInterval;
+//
+//	map<int, int> m_PermissibleReserveAircraftCount;
+//
+//private:
+//	static std::shared_ptr<CCommonInputData> ms_Instance;
+//
+//
+//public:
+//	~CCommonInputData() {};
+//
+//private:
+//	CCommonInputData();
+//
+//	CCommonInputData(int runwayCount, int specialPlaceCount, vector<int>& plannedMoments, vector<int>& permittedMoments,
+//		const CInterval& m_SpareArrivalTimeInterval, const map<int, int>& m_PermissibleReserveAircraftCount);
+//	
+//
+//public:
+//	static std::shared_ptr<CCommonInputData> GetInstance();
+//
+//	static std::shared_ptr<CCommonInputData> GetInstance(int runwayCount, int specialPlaceCount, vector<int>& plannedMoments, vector<int>& permittedMoments,
+//		const CInterval& m_SpareArrivalTimeInterval, const map<int, int>& m_PermissibleReserveAircraftCount);
+//};
 

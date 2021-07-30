@@ -17,5 +17,9 @@ public:
 
 public:
 	CTakingOffAircraftCalculatingIntervals() {};
+
+
+public:
+	int GetPSDelay() const;
 };
 

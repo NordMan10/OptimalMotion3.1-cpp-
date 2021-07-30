@@ -1,13 +1,15 @@
 #include "../include/CProgramConstants.h"
 
-CProgramConstants::CProgramConstants()
-{
-}
+int CProgramConstants::m_StartIdValue = 1;
 
-std::shared_ptr<CProgramConstants> CProgramConstants::GetInstance()
-{
-	if (!m_Instance)
-		m_Instance = std::shared_ptr<CProgramConstants>(new CProgramConstants{ });
+int CProgramConstants::m_MotionFromParkingToPS = 240;
 
-	return m_Instance;
-}
+int CProgramConstants::m_MotionFromPSToES = 40;
+
+int CProgramConstants::m_MotionFromParkingToSP = 120;
+
+int CProgramConstants::m_MotionFromSPToPS = 120;
+
+int CProgramConstants::m_ProcessingTime = 240;
+
+int CProgramConstants::m_TakingOffInterval = 30;

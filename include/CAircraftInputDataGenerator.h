@@ -29,11 +29,6 @@ public:
 
 
 private:
-	std::shared_ptr<CCommonInputData> m_CommonInputData;
-	std::shared_ptr<CProgramConstants> m_ProgramConstants;
-
-
-private:
 	CAircraftInputDataGenerator();
 
 

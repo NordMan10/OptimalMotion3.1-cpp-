@@ -51,9 +51,6 @@
     <ClInclude Include="include\CIMassServiceZoneExtensions.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\CAircraftIDGenerator.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="include\CTakingOffAircraftCalculatingIntervals.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -102,9 +99,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\CIMassServiceZoneExtensions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\CAircraftIDGenerator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\CTakingOffAircraftCalculatingIntervals.cpp">

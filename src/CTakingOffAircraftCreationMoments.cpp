@@ -4,3 +4,8 @@ CTakingOffAircraftCreationMoments::CTakingOffAircraftCreationMoments(int planned
 {
 	m_PlannedTakingOff = plannedTakingOff;
 }
+
+int CTakingOffAircraftCreationMoments::GetPlannedTakingOff() const
+{
+	return m_PlannedTakingOff;
+}

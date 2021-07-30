@@ -22,5 +22,9 @@ public:
 public:
 	CTakingOffAircraftCreationMoments(int plannedTakingOff);
 	CTakingOffAircraftCreationMoments() = default;
+
+
+public:
+	int GetPlannedTakingOff() const;
 };
 

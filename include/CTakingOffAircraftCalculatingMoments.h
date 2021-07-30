@@ -37,5 +37,15 @@ public:
 
 public:
 	CTakingOffAircraftCalculatingMoments() { };
+
+
+public:
+	int GetPossibleTakingOff() const;
+
+	int GetPermittedTakingOff() const;
+
+	int GetReservePermittedTakingOff() const;
+
+	int GetStart() const;
 };
 

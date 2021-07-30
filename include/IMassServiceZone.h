@@ -10,6 +10,7 @@
  */
  // SYSTEM INCLUDES
  //
+#include <memory>
 
  // PROJECT INCLUDES
  //
@@ -21,7 +22,7 @@
 
 class IMassServiceZone
 {
-    virtual CInterval GetFreeInterval(CInterval& newInterval) = 0;
+    virtual std::shared_ptr<CInterval> GetFreeInterval(CInterval& newInterval) = 0;
 
     virtual void AddAircraftInterval(int aircraftId, CInterval& freeInterval) = 0;
 

@@ -27,50 +27,36 @@ public:
 	/// <summary>
 	/// Начальное значение Id для зон массового обслуживания
 	/// </summary>
-	int m_StartIdValue = 1;
+	static int m_StartIdValue;
 
 	/// <summary>
 	/// Время руления от парковки до ПРДВ
 	/// </summary>
-	int m_MotionFromParkingToPS = 240;
+	static int m_MotionFromParkingToPS;
 
 	/// <summary>
 	/// Время руления от ПРДВ до ИСП
 	/// </summary>
-	int m_MotionFromPSToES = 40;
+	static int m_MotionFromPSToES;
 
 	/// <summary>
 	/// Время руления от парковки до Спец. площадки
 	/// </summary>
-	int m_MotionFromParkingToSP = 120;
+	static int m_MotionFromParkingToSP;
 
 	/// <summary>
 	/// Время руления от Спец. площадки до ПРДВ
 	/// </summary>
-	int m_MotionFromSPToPS = 120;
+	static int m_MotionFromSPToPS;
 
 	/// <summary>
 	/// Время взлета
 	/// </summary>
-	int m_TakingOffInterval = 30;
+	static int m_TakingOffInterval;
 
 	/// <summary>
 	/// Время обработки
 	/// </summary>
-	int m_ProcessingTime = 240;
-	
-private:
-	static std::shared_ptr<CProgramConstants> m_Instance;
+	static int m_ProcessingTime;
 
-
-public:
-	~CProgramConstants();
-
-private:
-	CProgramConstants();
-	
-
-public:
-	static std::shared_ptr<CProgramConstants> GetInstance();
 };
-

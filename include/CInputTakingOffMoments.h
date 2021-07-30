@@ -56,7 +56,7 @@ public:
 	 * \param plannedMoments
 	 * \param permittedMoments
 	 */
-	CInputTakingOffMoments(vector<int>& plannedMoments, vector<int>& permittedMoments);
+	CInputTakingOffMoments(vector<int> plannedMoments, vector<int> permittedMoments);
 
 	// Copy constructor.
 	CInputTakingOffMoments(const CInputTakingOffMoments& from);

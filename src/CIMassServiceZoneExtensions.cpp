@@ -18,19 +18,23 @@ void CIMassServiceZoneExtensions::AddAircraftInterval(int aircraftId, const CInt
 	zoneIntervals.emplace(aircraftId, freeInterval);
 }
 
-CInterval CIMassServiceZoneExtensions::GetFreeInterval(const CInterval& interval, const std::map<int, CInterval>& zoneIntervals)
+std::shared_ptr<CInterval> CIMassServiceZoneExtensions::GetFreeInterval(const CInterval& interval, const std::map<int, CInterval>& zoneIntervals)
 {
-	auto newInterval = CInterval(interval.m_StartMoment, interval.m_EndMoment);
+	auto newIntervalPtr = new CInterval(interval.m_StartMoment, interval.m_EndMoment);
+	auto newInterval = *newIntervalPtr;
+
+	CInterval* resultIntervalPtr = nullptr;
+
 	for(const auto& occupiedInterval : zoneIntervals)
 	{
 		if (newInterval.m_EndMoment >= occupiedInterval.second.m_StartMoment && newInterval.m_StartMoment <= occupiedInterval.second.m_EndMoment)
 		{
 			auto delay = occupiedInterval.second.m_EndMoment - interval.m_StartMoment;
-			newInterval = CInterval(interval.m_StartMoment + delay, interval.m_EndMoment + delay);
+			resultIntervalPtr = new CInterval(interval.m_StartMoment + delay, interval.m_EndMoment + delay);
 		}
 	}
 
-	return newInterval;
+	return std::shared_ptr<CInterval>(resultIntervalPtr);
 }
 
 void CIMassServiceZoneExtensions::RemoveAircraftInterval(int aircraftId, std::map<int, CInterval>& zoneIntervals)

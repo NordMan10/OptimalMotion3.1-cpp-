@@ -28,7 +28,7 @@ class CIMassServiceZoneExtensions
 public:
 	static void AddAircraftInterval(int aircraftId, const CInterval& freeInterval, std::map<int, CInterval>& zoneIntervals);
 
-	static CInterval GetFreeInterval(const CInterval& interval, const std::map<int, CInterval>& zoneIntervals);
+	static std::shared_ptr<CInterval> GetFreeInterval(const CInterval& interval, const std::map<int, CInterval>& zoneIntervals);
 
 	static void RemoveAircraftInterval(int aircraftId, std::map<int, CInterval>& zoneIntervals);
 
