@@ -44,8 +44,8 @@ public:
 
 public:
 	CAircraftInputData(std::string runwayId, int specialPlaceId, std::string type, int priority,
-		bool processingIsNeeded, std::shared_ptr<CTakingOffAircraftCreationIntervals> creationIntervals,
-		std::shared_ptr<CTakingOffAircraftCreationMoments> creationMoments);
+		bool processingIsNeeded, std::shared_ptr<CTakingOffAircraftCreationMoments> creationMoments,
+		std::shared_ptr<CTakingOffAircraftCreationIntervals> creationIntervals);
 
 	CAircraftInputData() = default;
 

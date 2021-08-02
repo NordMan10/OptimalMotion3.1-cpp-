@@ -12,7 +12,7 @@
 
 class CTakingOffAircraftCreationMoments
 {
-public:
+private:
 	/// <summary>
 	/// Плановый момент вылета
 	/// </summary>

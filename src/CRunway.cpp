@@ -2,12 +2,12 @@
 
 #include "../include/CIMassServiceZoneExtensions.h"
 
-CRunway::CRunway(int id)
+CRunway::CRunway(std::string id)
 {
 	m_Id = id;
 }
 
-int CRunway::GetId() const
+std::string CRunway::GetId() const
 {
 	return m_Id;
 }

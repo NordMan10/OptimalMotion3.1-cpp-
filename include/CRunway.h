@@ -9,6 +9,7 @@
  *
  */
 #include <map>
+#include <string>
 
  // SYSTEM INCLUDES
  //
@@ -25,17 +26,17 @@
 class CRunway : public IMassServiceZone
 {
 private:
-	int m_Id = 0;
+	std::string m_Id;
 
 	std::map<int, CInterval> m_OccupiedIntervals = std::map<int, CInterval>();
 	 
 
 public:
-	CRunway(int id);
+	CRunway(std::string id);
 
 
 public:
-	int GetId() const;
+	std::string GetId() const;
 
 	void AddAircraftInterval(int aircraftId, CInterval& freeInterval);
 

@@ -84,7 +84,13 @@
     <ClInclude Include="include\CSpecialPlace.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="CModel.h">
+    <ClInclude Include="include\CModel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\СTableRow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\CVectorHelper.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -143,7 +149,13 @@
     <ClCompile Include="src\CSpecialPlace.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="CModel.cpp">
+    <ClCompile Include="src\CModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\СTableRow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\CVectorHelper.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -21,15 +21,15 @@
 class CCommonInputData final
 {
 private:
-	static int m_RunwayCount;
+	static int ms_RunwayCount;
 
-	static int m_SpecialPlaceCount;
+	static int ms_SpecialPlaceCount;
 
-	static CInputTakingOffMoments m_InputTakingOffMoments;
+	static CInputTakingOffMoments ms_InputTakingOffMoments;
 
-	static CInterval m_SpareArrivalTimeInterval;
+	static CInterval ms_SpareArrivalTimeInterval;
 
-	static std::map<int, int> m_PermissibleReserveAircraftCount;
+	static std::map<int, int> ms_PermissibleReserveAircraftCount;
 
 	/// <summary>
 	/// Количество ВПП
@@ -65,15 +65,15 @@ public:
 //class CCommonInputData
 //{
 //public:
-//	static int m_RunwayCount;
+//	static int ms_RunwayCount;
 //
-//	static int m_SpecialPlaceCount;
+//	static int ms_SpecialPlaceCount;
 //
-//	static std::shared_ptr<CInputTakingOffMoments> m_InputTakingOffMoments;
+//	static std::shared_ptr<CInputTakingOffMoments> ms_InputTakingOffMoments;
 //
-//	CInterval m_SpareArrivalTimeInterval;
+//	CInterval ms_SpareArrivalTimeInterval;
 //
-//	map<int, int> m_PermissibleReserveAircraftCount;
+//	map<int, int> ms_PermissibleReserveAircraftCount;
 //
 //private:
 //	static std::shared_ptr<CCommonInputData> ms_Instance;
@@ -86,13 +86,13 @@ public:
 //	CCommonInputData();
 //
 //	CCommonInputData(int runwayCount, int specialPlaceCount, vector<int>& plannedMoments, vector<int>& permittedMoments,
-//		const CInterval& m_SpareArrivalTimeInterval, const map<int, int>& m_PermissibleReserveAircraftCount);
+//		const CInterval& ms_SpareArrivalTimeInterval, const map<int, int>& ms_PermissibleReserveAircraftCount);
 //	
 //
 //public:
 //	static std::shared_ptr<CCommonInputData> GetInstance();
 //
 //	static std::shared_ptr<CCommonInputData> GetInstance(int runwayCount, int specialPlaceCount, vector<int>& plannedMoments, vector<int>& permittedMoments,
-//		const CInterval& m_SpareArrivalTimeInterval, const map<int, int>& m_PermissibleReserveAircraftCount);
+//		const CInterval& ms_SpareArrivalTimeInterval, const map<int, int>& ms_PermissibleReserveAircraftCount);
 //};
 

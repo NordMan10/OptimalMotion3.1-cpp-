@@ -28,8 +28,12 @@
 
 class CTakingOffAircraft
 {
-public:
+private:
 	int m_Id;
+
+	std::string m_RunwayId;
+
+	int m_SpecialPlaceId;
 
 	std::string m_Type;
 
@@ -47,11 +51,6 @@ public:
 
 	bool m_IsReserve;
 
-	std::string m_RunwayId;
-
-	int m_SpecialPlaceId;
-
-private:
 	static int ms_IdGenerator;
 
 
@@ -59,5 +58,31 @@ public:
 	CTakingOffAircraft(const CAircraftInputData& inputData);
 
 	CTakingOffAircraft() = default;
+
+
+public:
+	static bool PermittedMomentComparer(CTakingOffAircraft a1, CTakingOffAircraft a2);
+
+	int GetId() { return m_Id; }
+
+	std::string GetType() { return m_Type; }
+
+	int GetPriority() { return m_Priority; }
+
+	std::shared_ptr<CTakingOffAircraftCreationMoments> GetCreationMoments() const { return m_CreationMoments; }
+	
+	std::shared_ptr<CTakingOffAircraftCalculatingMoments> GetCalculatingMoments() const { return m_CalculatingMoments; }
+	
+	std::shared_ptr<CTakingOffAircraftCreationIntervals> GetCreationIntervals() const { return m_CreationIntervals; }
+	
+	std::shared_ptr<CTakingOffAircraftCalculatingIntervals> GetCalculatingIntervals() const { return m_CalculatingIntervals; }
+
+	bool GetProcessingNecessity() const { return m_ProcessingIsNeeded; }
+
+	bool GetReserveFlag() const { return m_IsReserve; }
+
+	std::string GetRunwayId() const { return m_RunwayId; }
+
+	int GetSpecialPlaceId() const { return m_SpecialPlaceId; }
 };
 

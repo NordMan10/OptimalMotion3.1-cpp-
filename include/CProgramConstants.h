@@ -27,36 +27,36 @@ public:
 	/// <summary>
 	/// Начальное значение Id для зон массового обслуживания
 	/// </summary>
-	static int m_StartIdValue;
+	static int ms_StartIdValue;
 
 	/// <summary>
 	/// Время руления от парковки до ПРДВ
 	/// </summary>
-	static int m_MotionFromParkingToPS;
+	static int ms_MotionFromParkingToPS;
 
 	/// <summary>
 	/// Время руления от ПРДВ до ИСП
 	/// </summary>
-	static int m_MotionFromPSToES;
+	static int ms_MotionFromPSToES;
 
 	/// <summary>
 	/// Время руления от парковки до Спец. площадки
 	/// </summary>
-	static int m_MotionFromParkingToSP;
+	static int ms_MotionFromParkingToSP;
 
 	/// <summary>
 	/// Время руления от Спец. площадки до ПРДВ
 	/// </summary>
-	static int m_MotionFromSPToPS;
+	static int ms_MotionFromSPToPS;
 
 	/// <summary>
 	/// Время взлета
 	/// </summary>
-	static int m_TakingOffInterval;
+	static int ms_TakingOffInterval;
 
 	/// <summary>
 	/// Время обработки
 	/// </summary>
-	static int m_ProcessingTime;
+	static int ms_ProcessingTime;
 
 };

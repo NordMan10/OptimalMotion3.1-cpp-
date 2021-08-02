@@ -12,7 +12,7 @@
 
 class CTakingOffAircraftCreationIntervals
 {
-public:
+private:
 	/// <summary>
 	/// Время руления от парковки до ПРДВ
 	/// </summary>

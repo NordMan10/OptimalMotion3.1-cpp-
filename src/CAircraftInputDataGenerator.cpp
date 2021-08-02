@@ -35,9 +35,10 @@ std::shared_ptr<CAircraftInputData> CAircraftInputDataGenerator::GetAircraftInpu
 	bool processingIsNeeded = GetProcessingNecessity();
 
 	auto creationMoments = std::shared_ptr<CTakingOffAircraftCreationMoments>(new CTakingOffAircraftCreationMoments(plannedTakingOffMoment));
-	auto creationIntervals = std::shared_ptr<CTakingOffAircraftCreationIntervals>(GetTakingOffAircraftCreationIntervals());
+	auto creationIntervals = GetTakingOffAircraftCreationIntervals();
 
-	return std::shared_ptr<CAircraftInputData>(new CAircraftInputData(runwayId, specialPlaceId, aircraftType, priority, processingIsNeeded, creationIntervals, creationMoments));
+	return std::shared_ptr<CAircraftInputData>(new CAircraftInputData(runwayId, specialPlaceId, aircraftType, priority, processingIsNeeded, 
+		creationMoments, creationIntervals));
 }
 
 int CAircraftInputDataGenerator::GetAircraftPriority()
