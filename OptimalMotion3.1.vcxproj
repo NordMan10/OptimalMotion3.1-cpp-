@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="CModel.h" />
     <ClInclude Include="include\CSpecialPlace.h" />
     <ClInclude Include="include\CRunway.h" />
     <ClInclude Include="include\Enums\ENU_AIRCRAFT_PRIORITIES.h" />
@@ -163,6 +164,7 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CModel.cpp" />
     <ClCompile Include="src\CSpecialPlace.cpp" />
     <ClCompile Include="src\CRunway.cpp" />
     <ClCompile Include="src\CPreliminaryStart.cpp" />

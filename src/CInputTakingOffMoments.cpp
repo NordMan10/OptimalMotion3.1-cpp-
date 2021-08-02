@@ -4,16 +4,15 @@
 #include "../include/CInputTakingOffMoments.h"
 #include "../include/CCommonInputData.h"
 
-using namespace std;
 
 CInputTakingOffMoments::CInputTakingOffMoments() 
 {
-	m_PlannedMoments = vector<int>();
-	m_PermittedMoments = vector<int>();
+	m_PlannedMoments = std::vector<int>();
+	m_PermittedMoments = std::vector<int>();
 }
 
 
-CInputTakingOffMoments::CInputTakingOffMoments(vector<int> plannedMoments, vector<int> permittedMoments)
+CInputTakingOffMoments::CInputTakingOffMoments(std::vector<int> plannedMoments, std::vector<int> permittedMoments)
 {
 	m_PlannedMoments = plannedMoments;
 	m_PermittedMoments = permittedMoments;
@@ -63,11 +62,11 @@ int* CInputTakingOffMoments::GetNearestPermittedMoment(int possibleMoment)
     return nullptr;
 }
 
-vector<int>& CInputTakingOffMoments::GetUnusedPlannedMoments(vector<int>& unusedPlannedMoments)
+std::vector<int>& CInputTakingOffMoments::GetUnusedPlannedMoments(std::vector<int>& unusedPlannedMoments)
 {
 	// Упорядочиваем разрешенные моменты
     unusedPlannedMoments = m_PlannedMoments;
-    sort(unusedPlannedMoments.begin(), unusedPlannedMoments.end());
+    std::sort(unusedPlannedMoments.begin(), unusedPlannedMoments.end());
 
 	// Отбираем еще не использованные плановые моменты
 	auto begin = unusedPlannedMoments.cbegin();

@@ -27,7 +27,7 @@ std::shared_ptr<CAircraftInputData> CAircraftInputDataGenerator::GetAircraftInpu
 	auto runwayId = std::to_string(rand() % (CProgramConstants::m_StartIdValue + CCommonInputData::GetRunwayCount() + 1));
 	int specialPlaceId = CDataRandomizer::GetRandomizedValue(CProgramConstants::m_StartIdValue, CCommonInputData::GetSpecialPlaceCount() + 1);
 
-	vector<std::string> aircraftTypes{ "Light", "Medium", "Heavy" };
+	std::vector<std::string> aircraftTypes{ "Light", "Medium", "Heavy" };
 	std::string aircraftType = std::to_string(rand() % (0 + aircraftTypes.size()));
 
 	auto priority = GetAircraftPriority();
@@ -57,7 +57,7 @@ int CAircraftInputDataGenerator::GetAircraftPriority()
 
 bool CAircraftInputDataGenerator::GetProcessingNecessity()
 {
-	auto processingIsNeededVariants = vector<bool>{ true, false };
+	auto processingIsNeededVariants = std::vector<bool>{ true, false };
 	return processingIsNeededVariants[rand() % (0 + processingIsNeededVariants.size())];
 }
 

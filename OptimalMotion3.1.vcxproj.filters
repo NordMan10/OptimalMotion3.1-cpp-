@@ -84,6 +84,9 @@
     <ClInclude Include="include\CSpecialPlace.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="CModel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="OptimalMotion3.1.cpp">
@@ -138,6 +141,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\CSpecialPlace.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CModel.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

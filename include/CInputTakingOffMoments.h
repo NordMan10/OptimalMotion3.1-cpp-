@@ -12,8 +12,6 @@
  // SYSTEM INCLUDES
 #include <vector>
 
-using namespace std;
-
 
 class CInputTakingOffMoments
 {
@@ -22,12 +20,12 @@ public:
 	/**
 	 * Плановые моменты взлета.
 	 */
-	vector<int> m_PlannedMoments;
+	std::vector<int> m_PlannedMoments;
 
 	/**
 	 * Разрешенные моменты взлета.
 	 */
-	vector<int> m_PermittedMoments;
+	std::vector<int> m_PermittedMoments;
 
 private:
 	/**
@@ -56,7 +54,7 @@ public:
 	 * \param plannedMoments
 	 * \param permittedMoments
 	 */
-	CInputTakingOffMoments(vector<int> plannedMoments, vector<int> permittedMoments);
+	CInputTakingOffMoments(std::vector<int> plannedMoments, std::vector<int> permittedMoments);
 
 	// Copy constructor.
 	CInputTakingOffMoments(const CInputTakingOffMoments& from);
@@ -85,7 +83,7 @@ public:
 	 * \param unusedPlannedMoments
 	 * \return Ссылку на переданный список
 	 */
-	vector<int>& GetUnusedPlannedMoments(vector<int>& unusedPlannedMoments);
+	std::vector<int>& GetUnusedPlannedMoments(std::vector<int>& unusedPlannedMoments);
 
 	void ResetLastPlannedTakingOffMomentIndex();
 
