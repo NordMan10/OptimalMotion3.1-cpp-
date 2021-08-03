@@ -7,25 +7,24 @@
 #include "../include/Enums/ENU_AIRCRAFT_PRIORITIES.h"
 
 
-CAircraftInputDataGenerator::CAircraftInputDataGenerator()
-{
+CAircraftInputDataGenerator::CAircraftInputDataGenerator() {}
 
-}
+CAircraftInputDataGenerator::CAircraftInputDataGenerator(CAircraftInputDataGenerator& from) {}
 
 std::shared_ptr<CAircraftInputDataGenerator> CAircraftInputDataGenerator::m_Instance = nullptr;
 
 std::shared_ptr<CAircraftInputDataGenerator> CAircraftInputDataGenerator::GetInstance()
 {
 	if (!m_Instance)
-		m_Instance = std::make_shared<CAircraftInputDataGenerator>(new CAircraftInputDataGenerator());
+		m_Instance = std::shared_ptr<CAircraftInputDataGenerator>(new CAircraftInputDataGenerator());
 
 	return m_Instance;
 }
 
 std::shared_ptr<CAircraftInputData> CAircraftInputDataGenerator::GetAircraftInputData(int plannedTakingOffMoment)
 {
-	auto runwayId = std::to_string(rand() % (CProgramConstants::m_StartIdValue + CCommonInputData::GetRunwayCount() + 1));
-	int specialPlaceId = CDataRandomizer::GetRandomizedValue(CProgramConstants::m_StartIdValue, CCommonInputData::GetSpecialPlaceCount() + 1);
+	auto runwayId = std::to_string(rand() % (CProgramConstants::ms_StartIdValue + CCommonInputData::GetRunwayCount() + 1));
+	int specialPlaceId = CDataRandomizer::GetRandomizedValue(CProgramConstants::ms_StartIdValue, CCommonInputData::GetSpecialPlaceCount() + 1);
 
 	std::vector<std::string> aircraftTypes{ "Light", "Medium", "Heavy" };
 	std::string aircraftType = std::to_string(rand() % (0 + aircraftTypes.size()));
@@ -64,12 +63,12 @@ bool CAircraftInputDataGenerator::GetProcessingNecessity()
 
 std::shared_ptr<CTakingOffAircraftCreationIntervals> CAircraftInputDataGenerator::GetTakingOffAircraftCreationIntervals()
 {
-	auto motionFromParkingToPS = CDataRandomizer::GetRandomizedValue(CProgramConstants::m_MotionFromParkingToPS, 25, 15);
-	auto motionFromPSToES = CDataRandomizer::GetRandomizedValue(CProgramConstants::m_MotionFromPSToES, 25, 5);
-	auto takingOffInterval = CDataRandomizer::GetRandomizedValue(CProgramConstants::m_TakingOffInterval, 0, 5);
-	auto motionFromParkingToSP = CDataRandomizer::GetRandomizedValue(CProgramConstants::m_MotionFromParkingToSP, 25, 15);
-	auto motionFromSPToPS = CDataRandomizer::GetRandomizedValue(CProgramConstants::m_MotionFromSPToPS, 25, 15);
-	auto processingTime = CDataRandomizer::GetRandomizedValue(CProgramConstants::m_ProcessingTime, 25, 30);
+	auto motionFromParkingToPS = CDataRandomizer::GetRandomizedValue(CProgramConstants::ms_MotionFromParkingToPS, 25, 15);
+	auto motionFromPSToES = CDataRandomizer::GetRandomizedValue(CProgramConstants::ms_MotionFromPSToES, 25, 5);
+	auto takingOffInterval = CDataRandomizer::GetRandomizedValue(CProgramConstants::ms_TakingOffInterval, 0, 5);
+	auto motionFromParkingToSP = CDataRandomizer::GetRandomizedValue(CProgramConstants::ms_MotionFromParkingToSP, 25, 15);
+	auto motionFromSPToPS = CDataRandomizer::GetRandomizedValue(CProgramConstants::ms_MotionFromSPToPS, 25, 15);
+	auto processingTime = CDataRandomizer::GetRandomizedValue(CProgramConstants::ms_ProcessingTime, 25, 30);
 
 	return std::shared_ptr<CTakingOffAircraftCreationIntervals>(new CTakingOffAircraftCreationIntervals(motionFromParkingToPS, 
 		motionFromPSToES, takingOffInterval, motionFromParkingToSP, motionFromSPToPS, processingTime));

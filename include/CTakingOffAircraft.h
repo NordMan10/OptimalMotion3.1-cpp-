@@ -61,13 +61,25 @@ public:
 
 
 public:
-	static bool PermittedMomentComparer(CTakingOffAircraft a1, CTakingOffAircraft a2);
+	static bool PossibleMomentComparer(std::shared_ptr<CTakingOffAircraft> a1, std::shared_ptr<CTakingOffAircraft> a2);
+
+	static bool PermittedMomentComparer(std::shared_ptr<CTakingOffAircraft> a1, std::shared_ptr<CTakingOffAircraft> a2);
 
 	int GetId() { return m_Id; }
 
 	std::string GetType() { return m_Type; }
 
 	int GetPriority() { return m_Priority; }
+
+	bool GetProcessingNecessity() const { return m_ProcessingIsNeeded; }
+
+	bool GetReserveFlag() const { return m_IsReserve; }
+	
+	void SetReserveFlag(bool reserveFlag) { m_IsReserve = reserveFlag; }
+
+	std::string GetRunwayId() const { return m_RunwayId; }
+
+	int GetSpecialPlaceId() const { return m_SpecialPlaceId; }
 
 	std::shared_ptr<CTakingOffAircraftCreationMoments> GetCreationMoments() const { return m_CreationMoments; }
 	
@@ -76,13 +88,5 @@ public:
 	std::shared_ptr<CTakingOffAircraftCreationIntervals> GetCreationIntervals() const { return m_CreationIntervals; }
 	
 	std::shared_ptr<CTakingOffAircraftCalculatingIntervals> GetCalculatingIntervals() const { return m_CalculatingIntervals; }
-
-	bool GetProcessingNecessity() const { return m_ProcessingIsNeeded; }
-
-	bool GetReserveFlag() const { return m_IsReserve; }
-
-	std::string GetRunwayId() const { return m_RunwayId; }
-
-	int GetSpecialPlaceId() const { return m_SpecialPlaceId; }
 };
 

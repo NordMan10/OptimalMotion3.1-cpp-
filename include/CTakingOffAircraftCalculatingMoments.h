@@ -12,7 +12,7 @@
 
 class CTakingOffAircraftCalculatingMoments
 {
-public:
+private:
 	/// <summary>
 	/// Возможный момент взлета
 	/// </summary>
@@ -40,12 +40,20 @@ public:
 
 
 public:
-	int GetPossibleTakingOff() const;
+	int GetPossibleTakingOff() const { return m_PossibleTakingOff; }
 
-	int GetPermittedTakingOff() const;
+	void SetPossibleTakingOff(int possibleMoment) { m_PossibleTakingOff = possibleMoment; }
 
-	int GetReservePermittedTakingOff() const;
+	int GetPermittedTakingOff() const { return m_PermittedTakingOff; }
 
-	int GetStart() const;
+	void SetPermittedTakingOff(int permittedMoment) { m_PermittedTakingOff = permittedMoment; }
+
+	int GetReservePermittedTakingOff() const { return m_ReservePermittedTakingOff; }
+
+	void SetReservePermittedTakingOff(int reservePermittedTakingOff) { m_ReservePermittedTakingOff = reservePermittedTakingOff; }
+
+	int GetStart() const { return m_Start; }
+
+	void SetStart(int start) { m_Start = start; }
 };
 

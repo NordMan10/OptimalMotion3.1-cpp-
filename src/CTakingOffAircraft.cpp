@@ -4,24 +4,24 @@
 CTakingOffAircraft::CTakingOffAircraft(const CAircraftInputData& inputData)
 {
 	m_Id = ms_IdGenerator++;
-	m_Type = inputData.m_Type;
-	m_Priority = inputData.m_Priority;
-	m_CreationMoments = inputData.m_CreationMoments;
-	m_CreationIntervals = inputData.m_CreationIntervals;
-	m_ProcessingIsNeeded = inputData.m_ProcessingIsNeeded;
-	m_RunwayId = inputData.m_RunwayId;
-	m_SpecialPlaceId = inputData.m_SpecialPlaceId;
+	m_Type = inputData.GetType();
+	m_Priority = inputData.GetPriority();
+	m_RunwayId = inputData.GetRunwayId();
+	m_SpecialPlaceId = inputData.GetSpecialPlaceId();
+	m_CreationMoments = inputData.GetCreationMoments();
+	m_CreationIntervals = inputData.GetCreationIntervals();
+	m_ProcessingIsNeeded = inputData.GetProcessingNecessity();
 }
 
 int CTakingOffAircraft::ms_IdGenerator = CProgramConstants::ms_StartIdValue;
 
 
-bool CTakingOffAircraft::PermittedMomentComparer(CTakingOffAircraft a1, CTakingOffAircraft a2)
+bool CTakingOffAircraft::PermittedMomentComparer(std::shared_ptr<CTakingOffAircraft> a1, std::shared_ptr<CTakingOffAircraft> a2)
 {
-	return a1.m_CalculatingMoments->GetPermittedTakingOff() < a2.m_CalculatingMoments->GetPermittedTakingOff();
+	return a1->GetCalculatingMoments()->GetPermittedTakingOff() < a2->GetCalculatingMoments()->GetPermittedTakingOff();
 }
 
-//bool CTakingOffAircraft::operator< (CTakingOffAircraft& a)
-//{
-//
-//}
+bool CTakingOffAircraft::PossibleMomentComparer(std::shared_ptr<CTakingOffAircraft> a1, std::shared_ptr<CTakingOffAircraft> a2)
+{
+	return a1->GetCalculatingMoments()->GetPossibleTakingOff() < a2->GetCalculatingMoments()->GetPossibleTakingOff();
+}

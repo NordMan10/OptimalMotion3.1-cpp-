@@ -31,6 +31,8 @@ public:
 private:
 	CAircraftInputDataGenerator();
 
+public:
+	CAircraftInputDataGenerator(CAircraftInputDataGenerator& from);
 
 
 public:

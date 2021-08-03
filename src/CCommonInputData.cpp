@@ -2,18 +2,18 @@
 #include <limits>
 
 
-int CCommonInputData::m_RunwayCount = 2;
+int CCommonInputData::ms_RunwayCount = 2;
 
-int CCommonInputData::m_SpecialPlaceCount = 2;
+int CCommonInputData::ms_SpecialPlaceCount = 2;
 
 
 
-CInputTakingOffMoments CCommonInputData::m_InputTakingOffMoments = CInputTakingOffMoments{ std::vector<int> { 600, 630, 680, 700, 750, 1040, 1290, 1310, 1500, 1580 },
+CInputTakingOffMoments CCommonInputData::ms_InputTakingOffMoments = CInputTakingOffMoments{ std::vector<int> { 600, 630, 680, 700, 750, 1040, 1290, 1310, 1500, 1580 },
 		std::vector<int> {660, 750, 790, 850, 880, 940, 1060, 1120, 1200, 1280, 1670, 1700, 1760, 1800, 1900, 2000, 2090, 2150, 2240, 2390, 2500} };
 
-CInterval CCommonInputData::m_SpareArrivalTimeInterval = CInterval(20, 50);
+CInterval CCommonInputData::ms_SpareArrivalTimeInterval = CInterval(20, 50);
 
-std::map<int, int> CCommonInputData::m_PermissibleReserveAircraftCount =
+std::map<int, int> CCommonInputData::ms_PermissibleReserveAircraftCount =
 {
 	{0, std::numeric_limits<int>::max()},
 	{1, 300},
@@ -26,49 +26,49 @@ std::map<int, int> CCommonInputData::m_PermissibleReserveAircraftCount =
 
 int CCommonInputData::GetRunwayCount()
 {
-	return m_RunwayCount;
+	return ms_RunwayCount;
 }
 
 void CCommonInputData::SetRunwayCount(int value)
 {
-	m_RunwayCount = value;
+	ms_RunwayCount = value;
 }
 
 int CCommonInputData::GetSpecialPlaceCount()
 {
-	return m_SpecialPlaceCount;
+	return ms_SpecialPlaceCount;
 }
 
 void CCommonInputData::SetSpecialPlaceCount(int value)
 {
-	m_SpecialPlaceCount = value;
+	ms_SpecialPlaceCount = value;
 }
 
 CInputTakingOffMoments* CCommonInputData::GetInputTakingOffMoments()
 {
-	return &m_InputTakingOffMoments;
+	return &ms_InputTakingOffMoments;
 }
 
 CInterval* CCommonInputData::GetSpareArrivalTimeInterval()
 {
-	return &m_SpareArrivalTimeInterval;
+	return &ms_SpareArrivalTimeInterval;
 }
 
 void CCommonInputData::SetSpareArrivalTimeInterval(CInterval* value)
 {
-	m_SpareArrivalTimeInterval = *value;
+	ms_SpareArrivalTimeInterval = *value;
 }
 
 std::map<int, int> CCommonInputData::GetPermissibleReserveAircraftCount()
 {
-	return m_PermissibleReserveAircraftCount;
+	return ms_PermissibleReserveAircraftCount;
 }
 
 
 //CCCommonInputData::CCCommonInputData()
 //{
-//	m_RunwayCount = 2;
-//	m_SpecialPlaceCount = 2;
+//	ms_RunwayCount = 2;
+//	ms_SpecialPlaceCount = 2;
 //
 //	vector<int> plannedMoments{ 600, 630, 680, 700, 750, 1040, 1290, 1310, 1500, 1580 };
 //	vector<int> permittedMoments
@@ -77,11 +77,11 @@ std::map<int, int> CCommonInputData::GetPermissibleReserveAircraftCount()
 //		1700, 1760, 1800, 1900, 2000, 2090, 2150, 2240, 2390, 2500
 //	};
 //
-//	m_InputTakingOffMoments = std::shared_ptr<CInputTakingOffMoments>(new CInputTakingOffMoments(plannedMoments, permittedMoments));
+//	ms_InputTakingOffMoments = std::shared_ptr<CInputTakingOffMoments>(new CInputTakingOffMoments(plannedMoments, permittedMoments));
 //
-//	m_SpareArrivalTimeInterval = CInterval(20, 50);
+//	ms_SpareArrivalTimeInterval = CInterval(20, 50);
 //
-//	m_PermissibleReserveAircraftCount = map<int, int>
+//	ms_PermissibleReserveAircraftCount = map<int, int>
 //	{
 //		{ 0, numeric_limits<int>::max() },
 //		{ 1, 300 },
@@ -96,14 +96,14 @@ std::map<int, int> CCommonInputData::GetPermissibleReserveAircraftCount()
 //CCCommonInputData::CCCommonInputData(int runwayCount, int specialPlaceCount, vector<int>& plannedMoments, vector<int>& permittedMoments,
 //	const CInterval& spareArrivalTimeInterval, const map<int, int>& permissibleReserveAircraftCount)
 //{
-//	m_RunwayCount = runwayCount;
-//	m_SpecialPlaceCount = specialPlaceCount;
+//	ms_RunwayCount = runwayCount;
+//	ms_SpecialPlaceCount = specialPlaceCount;
 //
-//	m_InputTakingOffMoments = std::shared_ptr<CInputTakingOffMoments>(new CInputTakingOffMoments(plannedMoments, permittedMoments));
+//	ms_InputTakingOffMoments = std::shared_ptr<CInputTakingOffMoments>(new CInputTakingOffMoments(plannedMoments, permittedMoments));
 //
-//	m_SpareArrivalTimeInterval = CInterval(spareArrivalTimeInterval);
+//	ms_SpareArrivalTimeInterval = CInterval(spareArrivalTimeInterval);
 //
-//	m_PermissibleReserveAircraftCount = map<int, int>(permissibleReserveAircraftCount);
+//	ms_PermissibleReserveAircraftCount = map<int, int>(permissibleReserveAircraftCount);
 //}
 //
 //std::shared_ptr<CCCommonInputData> CCCommonInputData::GetInstance()

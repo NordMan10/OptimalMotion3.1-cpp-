@@ -11,7 +11,7 @@
 
 class CTakingOffAircraftCalculatingIntervals
 {
-public:
+private:
 	int m_PSDelay = 0;
 
 
@@ -20,6 +20,8 @@ public:
 
 
 public:
-	int GetPSDelay() const;
+	int GetPSDelay() const { return m_PSDelay; }
+
+	void SetPSDelay(int PSDelay) { m_PSDelay = PSDelay; }
 };
 

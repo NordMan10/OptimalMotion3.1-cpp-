@@ -1,19 +1,13 @@
 #include "../include/CIMassServiceZoneExtensions.h"
 #include <stdexcept>
 
-void CIMassServiceZoneExtensions::AddAircraftInterval(IMassServiceZone* zone, int aircraftId, const CInterval& freeInterval, std::map<int, CInterval>& zoneIntervals)
+void CIMassServiceZoneExtensions::AddAircraftInterval(IMassServiceZone* zone, int aircraftId, const CInterval freeInterval, std::map<int, CInterval>& zoneIntervals)
 {
-	//try
-	//{
-		if (CheckIntervalsIntersection(freeInterval, zoneIntervals))
-			throw std::runtime_error("Интервалы пересекаются! Передайте проверенный интервал");
-	//}
-	//catch (std::exception& exception)
-	//{
-		// ? Здесь нужно реализовать уведомление об ошибке. Если она возникла, значит метод 
-		// ? выдачи свободного интервала (GetFreeInterval()) работает не правильно
-	//	//cerr << exception.what() << endl;
-	//}
+	if (CheckIntervalsIntersection(freeInterval, zoneIntervals))
+		throw std::runtime_error("Интервалы пересекаются! Передайте проверенный интервал");
+
+	// ? Если данная ошибка возникла, значит метод 
+	// ? выдачи свободного интервала GetFreeInterval() работает не правильно
 
 	zoneIntervals.emplace(aircraftId, freeInterval);
 }

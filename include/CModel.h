@@ -55,14 +55,26 @@ private:
 
 	std::shared_ptr<std::vector<std::shared_ptr<ÑTableRow>>> GetOutputData(std::vector<int>& unusedPlannedTakingOffMoments);
 
-	std::shared_ptr<std::vector<CTakingOffAircraft>> GetOrderedConfiguredTakingOffAircrafts(std::vector<int>& plannedTakingOffMoments);
+	std::shared_ptr<std::vector<std::shared_ptr<CTakingOffAircraft>>> GetOrderedConfiguredTakingOffAircrafts(std::vector<int>& plannedTakingOffMoments);
 
-	std::vector<CTakingOffAircraft> GetReconfiguredAircraftsWithReserve(std::vector<CTakingOffAircraft>& orderedTakingOffAircrafts);
+	std::shared_ptr<std::vector<std::shared_ptr<CTakingOffAircraft>>> GetReconfiguredAircraftsWithReserve(
+		std::shared_ptr<std::vector<std::shared_ptr<CTakingOffAircraft>>> orderedTakingOffAircrafts);
 
-	void SetPSWaitingTime(std::vector<CTakingOffAircraft>& takingOffAircrafts);
+	void SetPSWaitingTime(std::vector<std::shared_ptr<CTakingOffAircraft>>& takingOffAircrafts);
 
 	std::shared_ptr<ÑTableRow> GetTableRow(CTakingOffAircraft& aircraft);
 
-	int GetRunwayStartDelay(CTakingOffAircraft& takingOffAircraft, CInterval& takingOffInterval);
+	int GetRunwayStartDelay(std::shared_ptr<CTakingOffAircraft> takingOffAircraft, CInterval& takingOffInterval);
+
+	int GetSpecialPlaceStartDelay(std::shared_ptr<CTakingOffAircraft> takingOffAircraft, CInterval& takingOffInterval, int SPArriveMoment);
+
+	std::shared_ptr<std::map<int, int>> GetReserveAircraftsStartMoments(int permittedMoment, int aircraftIndex,
+		std::shared_ptr<std::vector<std::shared_ptr<CTakingOffAircraft>>> orderedTakingOffAircrafts);
+
+	int GetReserveAircraftCount(int permittedMoment, int aircraftIndex, std::vector<int>& possibleTakingOffMoments);
+
+	void SetSPreparedStartMoments(std::map<int, int>& aircraftsStartMomentData, std::vector<std::shared_ptr<CTakingOffAircraft>>& takingOffAircrafts);
+
+	int GetMostPriorityAircraftIndex(std::map<int, int>& aircraftsStartMomentData, std::vector<std::shared_ptr<CTakingOffAircraft>>& takingOffAircrafts);
 };
 

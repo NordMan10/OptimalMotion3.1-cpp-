@@ -26,7 +26,7 @@
 
 class CAircraftInputData
 {
-public:
+private:
 	std::string m_RunwayId;
 
 	int m_SpecialPlaceId;
@@ -37,10 +37,9 @@ public:
 
 	bool m_ProcessingIsNeeded;
 
-	std::shared_ptr<CTakingOffAircraftCreationIntervals> m_CreationIntervals;
-
 	std::shared_ptr<CTakingOffAircraftCreationMoments> m_CreationMoments;
 
+	std::shared_ptr<CTakingOffAircraftCreationIntervals> m_CreationIntervals;
 
 public:
 	CAircraftInputData(std::string runwayId, int specialPlaceId, std::string type, int priority,
@@ -50,5 +49,21 @@ public:
 	CAircraftInputData() = default;
 
 	~CAircraftInputData() {};
+
+
+public:
+	std::string GetRunwayId() const { return m_RunwayId; }
+
+	int GetSpecialPlaceId() const { return m_SpecialPlaceId; }
+
+	std::string GetType() const { return m_Type; }
+
+	int GetPriority() const { return m_Priority; }
+
+	bool GetProcessingNecessity() const { return m_ProcessingIsNeeded; }
+
+	std::shared_ptr<CTakingOffAircraftCreationMoments> GetCreationMoments() const { return m_CreationMoments; }
+
+	std::shared_ptr<CTakingOffAircraftCreationIntervals> GetCreationIntervals() const { return m_CreationIntervals; }
 };
 
