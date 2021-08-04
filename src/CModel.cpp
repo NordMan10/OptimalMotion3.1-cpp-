@@ -49,12 +49,12 @@ std::vector<std::shared_ptr<CSpecialPlace>> CModel::GetSpecialPleces() const
 std::shared_ptr<std::vector<std::shared_ptr<СTableRow>>> CModel::GetOutputData(std::vector<int>& unusedPlannedTakingOffMoments)
 {
 	// Создаем набор данных о ВС в формате строки таблицы
-	auto tableRows = std::shared_ptr<std::vector<std::shared_ptr<СTableRow>>>{};
+	auto tableRows = std::shared_ptr<std::vector<std::shared_ptr<СTableRow>>>(new std::vector<std::shared_ptr<СTableRow>>());
 
 	// Получаем список ВС с заданными возможными и стартовыми моментами, упорядоченный по возможным моментам
 	auto orderedConfiguredTakingOffAircrafts = GetOrderedConfiguredTakingOffAircrafts(unusedPlannedTakingOffMoments);
 
-	// Получаем список ВС с заданными резервными ВС
+	// Получаем список ВС с заданными разрешенными моментами и резервными ВС
 	auto aircraftsWithReserve = GetReconfiguredAircraftsWithReserve(orderedConfiguredTakingOffAircrafts);
 
 	// Для всех ВС задаем время простоя на ПРДВ
@@ -112,13 +112,13 @@ std::shared_ptr<std::vector<std::shared_ptr<CTakingOffAircraft>>> CModel::GetOrd
 			startDelay += GetSpecialPlaceStartDelay(takingOffAircraft, takingOffInterval, SPArriveMoment);
 
 			startMoment = SPArriveMoment - takingOffAircraft->GetCreationIntervals()->GetMotionFromParkingToSP() + 
-				startDelay - CCommonInputData::GetSpareArrivalTimeInterval()->m_EndMoment;
+				startDelay - CCommonInputData::GetSpareArrivalTimeInterval().m_EndMoment;
 		}
 		else
 		{
 			// Рассчитываем и задаем момент старта при отсутствии необходимости обработки
 			startMoment = takingOffInterval.m_StartMoment - takingOffAircraft->GetCreationIntervals()->GetMotionFromPSToES() -
-				takingOffAircraft->GetCreationIntervals()->GetMotionFromParkingToPS() + startDelay - CCommonInputData::GetSpareArrivalTimeInterval()->m_EndMoment;
+				takingOffAircraft->GetCreationIntervals()->GetMotionFromParkingToPS() + startDelay - CCommonInputData::GetSpareArrivalTimeInterval().m_EndMoment;
 		}
 
 		// Задаем рассчитанный момент старта текущему ВС
@@ -149,9 +149,14 @@ int CModel::GetRunwayStartDelay(std::shared_ptr<CTakingOffAircraft> takingOffAir
 	auto thisRunwayIterator = std::find_if(m_Runways.begin(), m_Runways.end(),
 		[&takingOffAircraft](std::shared_ptr<CRunway> r) -> bool
 		{
+			auto temp = (*r).GetId() == takingOffAircraft->GetRunwayId();
 			return (*r).GetId() == takingOffAircraft->GetRunwayId();
 		});
 
+	if (thisRunwayIterator >= m_Runways.end())
+	{
+		auto temp = 4;
+	}
 	auto thisRunway = *thisRunwayIterator;
 
 	// Получаем свободный интервал от ВПП
@@ -203,7 +208,7 @@ std::shared_ptr<std::vector<std::shared_ptr<CTakingOffAircraft>>> CModel::GetRec
 		auto possibleMoment = orderedTakingOffAircrafts->at(i)->GetCalculatingMoments()->GetPossibleTakingOff();
 
 		// Пытаемся получить ближайший к возможному моменту разрешенный момент
-		auto nearestPermittedMoment = CCommonInputData::GetInputTakingOffMoments()->GetNearestPermittedMoment(possibleMoment);
+		auto nearestPermittedMoment = CCommonInputData::GetInputTakingOffMoments().GetNearestPermittedMoment(possibleMoment);
 		// Проверяем 
 		if (nearestPermittedMoment == nullptr)
 		{
@@ -216,7 +221,7 @@ std::shared_ptr<std::vector<std::shared_ptr<CTakingOffAircraft>>> CModel::GetRec
 		}
 
 		// Если же получили не null, то отмечаем, что это проверенный разрешенный момент
-		auto verifiedPermittedMoment = (int)nearestPermittedMoment;
+		auto verifiedPermittedMoment = *nearestPermittedMoment;
 
 		// Рассчитываем задержку для текущего ВС, возможный момент которого мы рассматриваем
 		auto startDelay = verifiedPermittedMoment - possibleMoment;
@@ -248,7 +253,8 @@ std::shared_ptr<std::vector<std::shared_ptr<CTakingOffAircraft>>> CModel::GetRec
 				// Если данное ВС не является наиболее приоритетным => помечаем его как резервное
 				orderedTakingOffAircrafts->at(dataItem.first)->SetReserveFlag(true);
 				// Задаем резервный разрешенный момент (момент взлета, если это ВС останется резервным и не заменит главное ВС)
-				orderedTakingOffAircrafts->at(dataItem.first)->GetCalculatingMoments()->SetReservePermittedTakingOff(CCommonInputData::GetInputTakingOffMoments()->GetNextPermittedMoment());
+				orderedTakingOffAircrafts->at(dataItem.first)->GetCalculatingMoments()->SetReservePermittedTakingOff(CCommonInputData::GetInputTakingOffMoments()
+					.GetNextPermittedMoment());
 			}
 
 			// Добавляем индекс текущего ВС в список использованных
@@ -308,7 +314,7 @@ int CModel::GetReserveAircraftCount(int permittedMoment, int aircraftIndex, std:
 	// Определяем максимально возможное количество резервных ВС.
 	// Пока имеются возможные моменты и разрешенный момент входит в разрешенный страховочный интервал
 	while (aircraftIndex + index < (int)possibleTakingOffMoments.size() - 1 &&
-		permittedMoment - CCommonInputData::GetSpareArrivalTimeInterval()->m_StartMoment >= possibleTakingOffMoments[aircraftIndex + index])
+		permittedMoment - CCommonInputData::GetSpareArrivalTimeInterval().m_StartMoment >= possibleTakingOffMoments[aircraftIndex + index])
 	{
 		// Увеличиваем количество резервных ВС
 		reserveAircraftCount++;

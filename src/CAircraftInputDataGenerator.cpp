@@ -23,8 +23,8 @@ std::shared_ptr<CAircraftInputDataGenerator> CAircraftInputDataGenerator::GetIns
 
 std::shared_ptr<CAircraftInputData> CAircraftInputDataGenerator::GetAircraftInputData(int plannedTakingOffMoment)
 {
-	auto runwayId = std::to_string(rand() % (CProgramConstants::ms_StartIdValue + CCommonInputData::GetRunwayCount() + 1));
-	int specialPlaceId = CDataRandomizer::GetRandomizedValue(CProgramConstants::ms_StartIdValue, CCommonInputData::GetSpecialPlaceCount() + 1);
+	auto runwayId = std::to_string(CDataRandomizer::GetRandomInt(CProgramConstants::ms_StartIdValue, CCommonInputData::GetRunwayCount() + 1));
+	int specialPlaceId = CDataRandomizer::GetRandomInt(CProgramConstants::ms_StartIdValue, CCommonInputData::GetSpecialPlaceCount() + 1);
 
 	std::vector<std::string> aircraftTypes{ "Light", "Medium", "Heavy" };
 	std::string aircraftType = std::to_string(rand() % (0 + aircraftTypes.size()));

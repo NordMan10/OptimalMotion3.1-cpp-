@@ -5,7 +5,7 @@ CDataRandomizer::CDataRandomizer() {};
 
 int CDataRandomizer::GetRandomInt(int min, int max)
 {
-	return rand() % (max + min);
+	return (int)((max - min) * ((double)rand() / (double)RAND_MAX) + min);
 }
 
 int CDataRandomizer::GetRandomizedValue(int value, int dispersion, int step)
@@ -27,9 +27,4 @@ int CDataRandomizer::GetRandomizedValue(int value, int dispersion, int step)
 	auto valueIndex = GetRandomInt(0, possibleValues.size());
 
 	return possibleValues[valueIndex];
-}
-
-int CDataRandomizer::GetRandomizedValue(int minValue, int maxValue)
-{
-	return GetRandomInt(minValue, maxValue);
 }

@@ -3,6 +3,8 @@
 
 #include "framework.h"
 #include "OptimalMotion3.1.h"
+#include "include/CModel.h"
+#include "include/CCommonInputData.h"
 
 #define MAX_LOADSTRING 100
 
@@ -26,6 +28,14 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
     UNREFERENCED_PARAMETER(lpCmdLine);
 
     // TODO: Place code here.
+
+    auto model = CModel(2, 2);
+
+    auto temp = CCommonInputData::GetInputTakingOffMoments().GetUnusedPlannedMoments();
+
+    model.GetOutputData(*temp);
+
+    
 
     // Initialize global strings
     LoadStringW(hInstance, IDS_APP_TITLE, szTitle, MAX_LOADSTRING);

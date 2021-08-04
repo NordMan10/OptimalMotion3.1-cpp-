@@ -44,22 +44,22 @@ void CCommonInputData::SetSpecialPlaceCount(int value)
 	ms_SpecialPlaceCount = value;
 }
 
-CInputTakingOffMoments* CCommonInputData::GetInputTakingOffMoments()
+CInputTakingOffMoments& CCommonInputData::GetInputTakingOffMoments()
 {
-	return &ms_InputTakingOffMoments;
+	return ms_InputTakingOffMoments;
 }
 
-CInterval* CCommonInputData::GetSpareArrivalTimeInterval()
+CInterval& CCommonInputData::GetSpareArrivalTimeInterval()
 {
-	return &ms_SpareArrivalTimeInterval;
+	return ms_SpareArrivalTimeInterval;
 }
 
-void CCommonInputData::SetSpareArrivalTimeInterval(CInterval* value)
+void CCommonInputData::SetSpareArrivalTimeInterval(CInterval& interval)
 {
-	ms_SpareArrivalTimeInterval = *value;
+	ms_SpareArrivalTimeInterval = CInterval(interval);
 }
 
-std::map<int, int> CCommonInputData::GetPermissibleReserveAircraftCount()
+std::map<int, int>& CCommonInputData::GetPermissibleReserveAircraftCount()
 {
 	return ms_PermissibleReserveAircraftCount;
 }

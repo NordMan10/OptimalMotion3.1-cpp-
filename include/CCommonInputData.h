@@ -47,18 +47,18 @@ public:
 	/// <summary>
 	/// Наборы плановых и разрешенных моментов
 	/// </summary>
-	static CInputTakingOffMoments* GetInputTakingOffMoments();
+	static CInputTakingOffMoments& GetInputTakingOffMoments();
 
 	/// <summary>
 	///  Интервал запасного времени прибытия
 	/// </summary>
-	static CInterval* GetSpareArrivalTimeInterval();
-	static void SetSpareArrivalTimeInterval(CInterval* value);
+	static CInterval& GetSpareArrivalTimeInterval();
+	static void SetSpareArrivalTimeInterval(CInterval& value);
 
 	/// <summary>
 	/// Допустимое количество резервных ВС в зависимости от времени простоя
 	/// </summary>
-	static std::map<int, int> GetPermissibleReserveAircraftCount();
+	static std::map<int, int>& GetPermissibleReserveAircraftCount();
 };
 
 

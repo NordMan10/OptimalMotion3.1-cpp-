@@ -35,12 +35,8 @@ public:
 	/// <param name="minValue"></param>
 	/// <param name="maxValue"></param>
 	/// <returns></returns>
-	static int GetRandomizedValue(int minValue, int maxValue);
-
+	static int GetRandomInt(int min, int max);
 
 	static int GetRandomizedValue(int value, int dispersion, int step);
-
-private:
-	static int GetRandomInt(int min, int max);
 };
 

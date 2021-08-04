@@ -48,12 +48,12 @@ public:
 	
 	std::vector<std::shared_ptr<CSpecialPlace>> GetSpecialPleces() const;
 
+	std::shared_ptr<std::vector<std::shared_ptr<ÑTableRow>>> GetOutputData(std::vector<int>& unusedPlannedTakingOffMoments);
+
 private:
 	void InitRunways(int runwayCount);
 
 	void InitSpecialPlaces(int specPlatformCount);
-
-	std::shared_ptr<std::vector<std::shared_ptr<ÑTableRow>>> GetOutputData(std::vector<int>& unusedPlannedTakingOffMoments);
 
 	std::shared_ptr<std::vector<std::shared_ptr<CTakingOffAircraft>>> GetOrderedConfiguredTakingOffAircrafts(std::vector<int>& plannedTakingOffMoments);
 

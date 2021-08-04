@@ -1,6 +1,7 @@
 #pragma once
 
 #include <algorithm>
+#include <cassert>
 #include "../include/CInputTakingOffMoments.h"
 #include "../include/CCommonInputData.h"
 
@@ -26,66 +27,69 @@ CInputTakingOffMoments::CInputTakingOffMoments(const CInputTakingOffMoments& fro
 
 int CInputTakingOffMoments::GetNextPermittedMoment()
 {
-    return m_PermittedMoments[++m_LastPermittedMomentIndex];
+    //assert(m_NextPermittedMomentIndex < m_PermittedMoments.size());
+    return m_PermittedMoments[++m_NextPermittedMomentIndex];
 }
 
 int* CInputTakingOffMoments::GetNearestPermittedMoment(int possibleMoment)
 {
+    // —оздаем копию списка разрешенных моментов
     auto orderedPermittedMoments = m_PermittedMoments;
 
     // ”пор€дочиваем разрешенные моменты
     sort(orderedPermittedMoments.begin(), orderedPermittedMoments.end());
 
-    // ¬ыбираем только те, что еще не были использованы
-    auto begin = orderedPermittedMoments.cbegin();
-    auto end = orderedPermittedMoments.cbegin() + m_LastPermittedMomentIndex + 1;
+    //  ”дал€ем уже использованные моменты
+	auto begin = orderedPermittedMoments.begin();
+	auto end = orderedPermittedMoments.begin() + (m_NextPermittedMomentIndex + 1);
     orderedPermittedMoments.erase(begin, end);
 
-
     // ѕровер€ем каждый разрешенный момент
-    for(int permittedMoment : orderedPermittedMoments)
+    for(auto permittedMoment : orderedPermittedMoments)
     {
-        auto commonInputDataPtr = CCommonInputData::GetSpareArrivalTimeInterval();
-        auto commonInputData = *(commonInputDataPtr);
+        auto commonInputData = CCommonInputData::GetSpareArrivalTimeInterval();
 
         // ≈сли разрешенный момент больше или равен возможному + резервное врем€ прибыти€ => возвращаем его
-        if (permittedMoment - commonInputData.m_StartMoment >= possibleMoment)
+        if (permittedMoment >= possibleMoment + commonInputData.m_StartMoment)
         {
-            auto it = find(begin, end, permittedMoment);
-            m_LastPermittedMomentIndex = it - orderedPermittedMoments.cbegin();
+            auto begin = orderedPermittedMoments.begin();
+            auto end = orderedPermittedMoments.end();
 
-            int* result = new int(permittedMoment);
-            return result;
+            auto permittedMomentIterator = find(begin, end, permittedMoment);
+            m_NextPermittedMomentIndex = (permittedMomentIterator - begin) - 1;
+
+            return new int(permittedMoment);
         }
     }
 
     return nullptr;
 }
 
-std::vector<int>& CInputTakingOffMoments::GetUnusedPlannedMoments(std::vector<int>& unusedPlannedMoments)
+std::shared_ptr<std::vector<int>> CInputTakingOffMoments::GetUnusedPlannedMoments()
 {
-	// ”пор€дочиваем разрешенные моменты
-    unusedPlannedMoments = m_PlannedMoments;
-    std::sort(unusedPlannedMoments.begin(), unusedPlannedMoments.end());
+	//—оздаем копию списка плановых моментов
+    auto unusedPlannedMoments = std::shared_ptr<std::vector<int>>(new std::vector<int>(m_PlannedMoments));
+    // ”пор€дочиваем разрешенные моменты
+    std::sort(unusedPlannedMoments->begin(), unusedPlannedMoments->end());
 
 	// ќтбираем еще не использованные плановые моменты
-	auto begin = unusedPlannedMoments.cbegin();
-	auto end = unusedPlannedMoments.cbegin() + m_LastPlannedTakingOffMomentIndex + 1;
-    unusedPlannedMoments.erase(begin, end);
+	auto begin = unusedPlannedMoments->begin();
+	auto end = unusedPlannedMoments->begin() + (m_NextPlannedTakingOffMomentIndex + 1);
+    unusedPlannedMoments->erase(begin, end);
 
 	// ”величиваем индекс последнего использованного планового момента на количество
 	// неиспользованных (потому что подразумеваетс€, что раз их вз€ли, то они уже использованы)
-    m_LastPlannedTakingOffMomentIndex += unusedPlannedMoments.size();
+    m_NextPlannedTakingOffMomentIndex += unusedPlannedMoments->size();
 
 	return unusedPlannedMoments;
 }
 
 void CInputTakingOffMoments::ResetLastPlannedTakingOffMomentIndex()
 {
-    m_LastPlannedTakingOffMomentIndex = -1;
+    m_NextPlannedTakingOffMomentIndex = -1;
 }
 
 void CInputTakingOffMoments::ResetLastPermittedTakingOffMomentIndex()
 {
-	m_LastPermittedMomentIndex= -1;
+	m_NextPermittedMomentIndex = -1;
 }

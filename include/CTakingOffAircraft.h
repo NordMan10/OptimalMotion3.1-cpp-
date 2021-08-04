@@ -41,11 +41,13 @@ private:
 
 	std::shared_ptr<CTakingOffAircraftCreationMoments> m_CreationMoments;
 
-	std::shared_ptr<CTakingOffAircraftCalculatingMoments> m_CalculatingMoments = nullptr;
+	std::shared_ptr<CTakingOffAircraftCalculatingMoments> m_CalculatingMoments = 
+		std::shared_ptr<CTakingOffAircraftCalculatingMoments>(new CTakingOffAircraftCalculatingMoments());
 
 	std::shared_ptr<CTakingOffAircraftCreationIntervals> m_CreationIntervals;
 
-	std::shared_ptr<CTakingOffAircraftCalculatingIntervals> m_CalculatingIntervals = nullptr;
+	std::shared_ptr<CTakingOffAircraftCalculatingIntervals> m_CalculatingIntervals = 
+		std::shared_ptr<CTakingOffAircraftCalculatingIntervals>(new CTakingOffAircraftCalculatingIntervals());
 
 	bool m_ProcessingIsNeeded;
 
