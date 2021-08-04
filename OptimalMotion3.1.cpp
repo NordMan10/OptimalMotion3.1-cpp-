@@ -31,9 +31,9 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 
     auto model = CModel(2, 2);
 
-    auto temp = CCommonInputData::GetInputTakingOffMoments().GetUnusedPlannedMoments();
+    auto unusedPlannedMoments = CCommonInputData::GetInputTakingOffMoments().GetUnusedPlannedMoments();
 
-    model.GetOutputData(*temp);
+    model.GetOutputData(*unusedPlannedMoments);
 
     
 
