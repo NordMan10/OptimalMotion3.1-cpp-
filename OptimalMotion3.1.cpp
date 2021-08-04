@@ -19,6 +19,26 @@ BOOL                InitInstance(HINSTANCE, int);
 LRESULT CALLBACK    WndProc(HWND, UINT, WPARAM, LPARAM);
 INT_PTR CALLBACK    About(HWND, UINT, WPARAM, LPARAM);
 
+
+// Мои переменные:
+auto permittedMoments = std::vector<LPCWSTR>();
+auto startMoments = std::vector<LPCWSTR>();
+auto PSDelay = std::vector<std::string>();
+
+std::wstring s2ws(const std::string& s)
+{
+	int len;
+	int slength = (int)s.length() + 1;
+	len = MultiByteToWideChar(CP_ACP, 0, s.c_str(), slength, 0, 0);
+	wchar_t* buf = new wchar_t[len];
+	MultiByteToWideChar(CP_ACP, 0, s.c_str(), slength, buf, len);
+	std::wstring r(buf);
+	delete[] buf;
+	return r;
+}
+
+
+
 int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
                      _In_opt_ HINSTANCE hPrevInstance,
                      _In_ LPWSTR    lpCmdLine,
@@ -33,8 +53,15 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 
     auto unusedPlannedMoments = CCommonInputData::GetInputTakingOffMoments().GetUnusedPlannedMoments();
 
-    model.GetOutputData(*unusedPlannedMoments);
+    auto outputData = model.GetOutputData(*unusedPlannedMoments);
 
+    for (auto dataItem : *outputData)
+    {
+        auto temp = s2ws(dataItem->m_PermittedTakingOffMoment);
+        auto temp2 = temp.c_str();
+        permittedMoments.push_back(temp2);
+        startMoments.push_back(s2ws(dataItem->m_StartMoment).c_str());
+    }
     
 
     // Initialize global strings
@@ -121,6 +148,8 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
    return TRUE;
 }
 
+
+
 //
 //  FUNCTION: WndProc(HWND, UINT, WPARAM, LPARAM)
 //
@@ -156,7 +185,15 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
         {
             PAINTSTRUCT ps;
             HDC hdc = BeginPaint(hWnd, &ps);
-            // TODO: Add any drawing code that uses hdc here...
+            
+            for (auto i = 0; i < (int)permittedMoments.size(); i++)
+            {
+				TextOut(hdc,
+					50, 10 * (i + 1),
+                    permittedMoments[i], wcslen(permittedMoments[i]));
+            }
+
+
             EndPaint(hWnd, &ps);
         }
         break;
