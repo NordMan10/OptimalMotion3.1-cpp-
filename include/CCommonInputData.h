@@ -60,39 +60,3 @@ public:
 	/// </summary>
 	static std::map<int, int>& GetPermissibleReserveAircraftCount();
 };
-
-
-//class CCommonInputData
-//{
-//public:
-//	static int ms_RunwayCount;
-//
-//	static int ms_SpecialPlaceCount;
-//
-//	static std::shared_ptr<CInputTakingOffMoments> ms_InputTakingOffMoments;
-//
-//	CInterval ms_SpareArrivalTimeInterval;
-//
-//	map<int, int> ms_PermissibleReserveAircraftCount;
-//
-//private:
-//	static std::shared_ptr<CCommonInputData> ms_Instance;
-//
-//
-//public:
-//	~CCommonInputData() {};
-//
-//private:
-//	CCommonInputData();
-//
-//	CCommonInputData(int runwayCount, int specialPlaceCount, vector<int>& plannedMoments, vector<int>& permittedMoments,
-//		const CInterval& ms_SpareArrivalTimeInterval, const map<int, int>& ms_PermissibleReserveAircraftCount);
-//	
-//
-//public:
-//	static std::shared_ptr<CCommonInputData> GetInstance();
-//
-//	static std::shared_ptr<CCommonInputData> GetInstance(int runwayCount, int specialPlaceCount, vector<int>& plannedMoments, vector<int>& permittedMoments,
-//		const CInterval& ms_SpareArrivalTimeInterval, const map<int, int>& ms_PermissibleReserveAircraftCount);
-//};
-

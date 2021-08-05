@@ -71,5 +71,5 @@ std::shared_ptr<CTakingOffAircraftCreationIntervals> CAircraftInputDataGenerator
 	auto processingTime = CDataRandomizer::GetRandomizedValue(CProgramConstants::ms_ProcessingTime, 25, 30);
 
 	return std::shared_ptr<CTakingOffAircraftCreationIntervals>(new CTakingOffAircraftCreationIntervals(motionFromParkingToPS, 
-		motionFromPSToES, takingOffInterval, motionFromParkingToSP, motionFromSPToPS, processingTime));
+		motionFromPSToES, motionFromParkingToSP, motionFromSPToPS, processingTime, takingOffInterval));
 }

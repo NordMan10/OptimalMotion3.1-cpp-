@@ -47,7 +47,7 @@ private:
 public:
 	CTakingOffAircraftCreationIntervals(
 		int motionFromParkingToPS, int motionFromPSToES, int motionFromParkingToSP,
-		int motionFromSPToPS, int processing, int takeoff);
+		int motionFromSPToPS, int processing, int takingOff);
 
 	CTakingOffAircraftCreationIntervals() = default;
 

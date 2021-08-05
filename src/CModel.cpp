@@ -220,7 +220,7 @@ std::shared_ptr<std::vector<std::shared_ptr<CTakingOffAircraft>>> CModel::GetRec
 			continue;
 		}
 
-		// Если же получили не null, то отмечаем, что это проверенный разрешенный момент
+		// Если же получили не nullptr, то отмечаем, что это проверенный разрешенный момент
 		auto verifiedPermittedMoment = *nearestPermittedMoment;
 
 		// Рассчитываем задержку для текущего ВС, возможный момент которого мы рассматриваем
@@ -246,7 +246,7 @@ std::shared_ptr<std::vector<std::shared_ptr<CTakingOffAircraft>>> CModel::GetRec
 		for(auto dataItem : allAircraftsStartMomentData)
 		{
 			// Задаем разрешенный момент
-			orderedTakingOffAircrafts->at(dataItem.first)->GetCalculatingMoments()->SetPermittedTakingOff(verifiedPermittedMoment);
+ 			orderedTakingOffAircrafts->at(dataItem.first)->GetCalculatingMoments()->SetPermittedTakingOff(verifiedPermittedMoment);
 			// Сравниваем индекс ВС и индекс наиболее приритетного ВС
 			if (dataItem.first != mostPriorityAircraftIndex)
 			{
@@ -366,7 +366,7 @@ int CModel::GetMostPriorityAircraftIndex(std::map<int, int>& aircraftsStartMomen
 	for(auto dataItem : aircraftsStartMomentData)
 	{
 		if (takingOffAircrafts[dataItem.first]->GetPriority() > takingOffAircrafts[mostPriorityAircraftIndex]->GetPriority())
-			mostPriorityAircraftIndex = dataItem.second;
+			mostPriorityAircraftIndex = dataItem.first;
 	}
 
 	return mostPriorityAircraftIndex;
@@ -386,13 +386,17 @@ void CModel::SetPSWaitingTime(std::vector<std::shared_ptr<CTakingOffAircraft>>& 
 		else
 			arrivalToPSMoment = aircraft->GetCalculatingMoments()->GetStart() + aircraft->GetCreationIntervals()->GetMotionFromParkingToPS();
 
+		auto PSDelay1 = aircraft->GetCalculatingMoments()->GetReservePermittedTakingOff() - arrivalToPSMoment -
+			aircraft->GetCreationIntervals()->GetMotionFromPSToES() - aircraft->GetCreationIntervals()->GetTakingOff();
+
+		auto PSDelay2 = aircraft->GetCalculatingMoments()->GetPermittedTakingOff() - arrivalToPSMoment -
+			aircraft->GetCreationIntervals()->GetMotionFromPSToES() - aircraft->GetCreationIntervals()->GetTakingOff();
+
 		// Рассчитываем время простоя
 		if (aircraft->GetReserveFlag())
-			aircraft->GetCalculatingIntervals()->SetPSDelay(aircraft->GetCalculatingMoments()->GetReservePermittedTakingOff() - arrivalToPSMoment - 
-			aircraft->GetCreationIntervals()->GetMotionFromPSToES() - aircraft->GetCreationIntervals()->GetTakingOff());
+			aircraft->GetCalculatingIntervals()->SetPSDelay(PSDelay1);
 		else
-			aircraft->GetCalculatingIntervals()->SetPSDelay(aircraft->GetCalculatingMoments()->GetPermittedTakingOff() - arrivalToPSMoment - 
-				aircraft->GetCreationIntervals()->GetMotionFromPSToES() - aircraft->GetCreationIntervals()->GetTakingOff());
+			aircraft->GetCalculatingIntervals()->SetPSDelay(PSDelay2);
 	}
 }
 

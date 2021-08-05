@@ -21,22 +21,22 @@ private:
 	/**
 	 * ѕлановые моменты взлета.
 	 */
-	std::vector<int> m_PlannedMoments = std::vector<int>();
+	std::vector<int> m_OrderedPlannedMoments = std::vector<int>();
 
 	/**
 	 * –азрешенные моменты взлета.
 	 */
-	std::vector<int> m_PermittedMoments = std::vector<int>();
+	std::vector<int> m_OrderedPermittedMoments = std::vector<int>();
 
 	/**
 	 * »ндекс последнего использованного планового момента.
 	 */
-	int m_NextPlannedTakingOffMomentIndex = -1;
+	int m_LastPlannedTakingOffMomentIndex = -1;
 
 	/**
 	 * »ндекс последнего использованного разрешенного момента.
 	 */
-	int m_NextPermittedMomentIndex = -1;
+	int m_LastPermittedMomentIndex = -1;
 
 
 
@@ -61,9 +61,9 @@ public:
 
 
 public:
-	std::vector<int> GetPlannedMoments() const { return m_PlannedMoments; }
+	std::vector<int> GetPlannedMoments() const { return m_OrderedPlannedMoments; }
 
-	std::vector<int> GetPermittedMoments() const { return m_PermittedMoments; }
+	std::vector<int> GetPermittedMoments() const { return m_OrderedPermittedMoments; }
 
 	/**
 	 * ¬озвращает самый первый неиспользованный разрешенный момент взлета.

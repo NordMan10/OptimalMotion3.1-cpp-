@@ -25,17 +25,18 @@ auto permittedMoments = std::vector<LPCWSTR>();
 auto startMoments = std::vector<LPCWSTR>();
 auto PSDelay = std::vector<std::string>();
 
-std::wstring s2ws(const std::string& s)
-{
-	int len;
-	int slength = (int)s.length() + 1;
-	len = MultiByteToWideChar(CP_ACP, 0, s.c_str(), slength, 0, 0);
-	wchar_t* buf = new wchar_t[len];
-	MultiByteToWideChar(CP_ACP, 0, s.c_str(), slength, buf, len);
-	std::wstring r(buf);
-	delete[] buf;
-	return r;
-}
+// Это была попытка вывести данные на экран. Это вспомогательная функция
+//std::wstring s2ws(const std::string& s)
+//{
+//	int len;
+//	int slength = (int)s.length() + 1;
+//	len = MultiByteToWideChar(CP_ACP, 0, s.c_str(), slength, 0, 0);
+//	wchar_t* buf = new wchar_t[len];
+//	MultiByteToWideChar(CP_ACP, 0, s.c_str(), slength, buf, len);
+//	std::wstring r(buf);
+//	delete[] buf;
+//	return r;
+//}
 
 
 
@@ -55,13 +56,14 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 
     auto outputData = model.GetOutputData(*unusedPlannedMoments);
 
-    for (auto dataItem : *outputData)
-    {
-        auto temp = s2ws(dataItem->m_PermittedTakingOffMoment);
-        auto temp2 = temp.c_str();
-        permittedMoments.push_back(temp2);
-        startMoments.push_back(s2ws(dataItem->m_StartMoment).c_str());
-    }
+    // Это была попытка вывести данные на экран
+	/*for (auto dataItem : *outputData)
+	{
+		auto temp = s2ws(dataItem->m_PermittedTakingOffMoment);
+		auto temp2 = temp.c_str();
+		permittedMoments.push_back(temp2);
+		startMoments.push_back(s2ws(dataItem->m_StartMoment).c_str());
+	}*/
     
 
     // Initialize global strings
@@ -186,12 +188,13 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             PAINTSTRUCT ps;
             HDC hdc = BeginPaint(hWnd, &ps);
             
-            for (auto i = 0; i < (int)permittedMoments.size(); i++)
+            // Это была попытка вывести данные на экран
+            /*for (auto i = 0; i < (int)permittedMoments.size(); i++)
             {
 				TextOut(hdc,
 					50, 10 * (i + 1),
                     permittedMoments[i], wcslen(permittedMoments[i]));
-            }
+            }*/
 
 
             EndPaint(hWnd, &ps);

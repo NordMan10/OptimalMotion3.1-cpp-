@@ -26,6 +26,15 @@
 class ÑTableRow
 {
 public:
+	bool m_IsReserved;
+
+	std::string m_PSWaitingTime;
+
+	std::string m_RunwayId;
+
+	std::string m_SpecialPlaceId;
+
+
 	std::string m_AircraftId;
 
 	std::string m_PlannedTakingOffMoment;
@@ -44,19 +53,13 @@ public:
 
 	std::string m_AircraftPriority;
 
-	bool m_IsReserved;
-
-	std::string m_PSWaitingTime;
-
-	std::string m_RunwayId;
-
-	std::string m_SpecialPlaceId;
+	
 
 
 public:
 	ÑTableRow(std::string aircraftId, std::string plannedTakingOffMoment, std::string possibleTakingOffMoment,
 		std::string permittedTakingOffMoment, std::string startMoment, std::string totalMotionTime, std::string processingTime, bool
-		needProcessing, std::string prioriry, bool isReserved, std::string m_PSWaitingTime, std::string runwayId, std::string specialPlaceId);
+		needProcessing, std::string prioriry, bool isReserved, std::string PSWaitingTime, std::string runwayId, std::string specialPlaceId);
 	
 };
 

@@ -41,5 +41,15 @@ public:
 			return false;
 		}
 	}
+
+	template <class T>
+	static int IndexOf(std::vector<T>& list, T element)
+	{
+		auto begin = list.begin();
+		auto end = list.end();
+
+		auto elementIterator = find(begin, end, element);
+		return elementIterator - begin;
+	}
 };
 
