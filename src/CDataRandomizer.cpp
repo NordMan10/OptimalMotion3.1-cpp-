@@ -1,7 +1,6 @@
 #include "../include/CDataRandomizer.h"
 #include <vector>
 
-CDataRandomizer::CDataRandomizer() {};
 
 int CDataRandomizer::GetRandomInt(int min, int max)
 {

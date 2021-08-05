@@ -1,5 +1,4 @@
 #pragma once
-#include <memory>
 
 /** Крaткое описание класса
  * Какие-либо константные значения, общие для всего проекта
@@ -12,7 +11,6 @@
 
 // SYSTEM INCLUDES
 //
-#include <memory>
 
 // PROJECT INCLUDES
 //

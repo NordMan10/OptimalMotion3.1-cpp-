@@ -22,21 +22,26 @@
 class CDataRandomizer
 {
 public:
-	~CDataRandomizer();
+	
 
-protected:
-	CDataRandomizer();
-
-
-public:
-	/// <summary>
-	/// Возвращает значение в пределах переданного интервала значений
-	/// </summary>
-	/// <param name="minValue"></param>
-	/// <param name="maxValue"></param>
-	/// <returns></returns>
+	
+	 /**
+	  * Возвращает случайное число в пределах переданного интервала значений.
+	  * 
+	  * \param min
+	  * \param max
+	  * \return 
+	  */
 	static int GetRandomInt(int min, int max);
 
+	/**
+	 * Возвращает случайное число с заданным шагом и разбросом от среднего значения.
+	 * 
+	 * \param value Среднее значение
+	 * \param dispersion Разброс
+	 * \param step Шаг
+	 * \return Целое число
+	 */
 	static int GetRandomizedValue(int value, int dispersion, int step);
 };
 

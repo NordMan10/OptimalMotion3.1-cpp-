@@ -1,7 +1,7 @@
 #include "../include/CIMassServiceZoneExtensions.h"
 #include <stdexcept>
 
-void CIMassServiceZoneExtensions::AddAircraftInterval(IMassServiceZone* zone, int aircraftId, const CInterval freeInterval, std::map<int, CInterval>& zoneIntervals)
+void CIMassServiceZoneExtensions::AddAircraftInterval(IMassServiceZone* zone, int aircraftId, const CInterval& freeInterval, std::map<int, CInterval>& zoneIntervals)
 {
 	if (CheckIntervalsIntersection(freeInterval, zoneIntervals))
 		throw std::runtime_error("Интервалы пересекаются! Передайте проверенный интервал");
@@ -14,16 +14,16 @@ void CIMassServiceZoneExtensions::AddAircraftInterval(IMassServiceZone* zone, in
 
 std::shared_ptr<CInterval> CIMassServiceZoneExtensions::GetFreeInterval(IMassServiceZone* zone, const CInterval& interval, const std::map<int, CInterval>& zoneIntervals)
 {
-	auto newInterval = new CInterval(interval.m_StartMoment, interval.m_EndMoment);
+	auto newInterval = new CInterval(interval.GetStartMoment(), interval.GetEndMoment());
 
 	//CInterval* resultIntervalPtr = nullptr;
 
 	for(const auto& occupiedInterval : zoneIntervals)
 	{
-		if (newInterval->m_EndMoment >= occupiedInterval.second.m_StartMoment && newInterval->m_StartMoment <= occupiedInterval.second.m_EndMoment)
+		if (newInterval->GetEndMoment() >= occupiedInterval.second.GetStartMoment() && newInterval->GetStartMoment() <= occupiedInterval.second.GetEndMoment())
 		{
-			auto delay = occupiedInterval.second.m_EndMoment - interval.m_StartMoment;
-			newInterval = new CInterval(interval.m_StartMoment + delay, interval.m_EndMoment + delay);
+			auto delay = occupiedInterval.second.GetEndMoment() - interval.GetStartMoment();
+			newInterval = new CInterval(interval.GetStartMoment() + delay, interval.GetEndMoment() + delay);
 		}
 	}
 

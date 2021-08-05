@@ -20,11 +20,11 @@ private:
 
 
 public:
-	CTakingOffAircraftCreationMoments(int plannedTakingOff);
+	CTakingOffAircraftCreationMoments(int plannedTakingOff) { m_PlannedTakingOff = plannedTakingOff; }
 	CTakingOffAircraftCreationMoments() = default;
 
 
 public:
-	int GetPlannedTakingOff() const;
+	int GetPlannedTakingOff() const { return m_PlannedTakingOff; }
 };
 

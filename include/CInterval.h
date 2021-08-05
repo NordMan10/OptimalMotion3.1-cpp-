@@ -1,8 +1,37 @@
 #pragma once
+
+/** Крaткое описание класса
+ * Представление интервала времени
+ *
+ * File  : CInterval.h
+ * Author:
+ *
+ * Длинное описание класса
+ * Класс, представляющий интервал времени. Определяется начальным и конечным моментами. 
+ * Имеет методы для работы с интервалами.
+ */
+
+ // SYSTEM INCLUDES
+ //
+
+ // PROJECT INCLUDES
+ //
+
+ // LOCAL INCLUDES
+ //
+
+
 class CInterval
 {
-public:
+private:
+	/**
+	 * Начальный момент.
+	 */
 	int m_StartMoment;
+
+	/**
+	 * Конечный момент.
+	 */
 	int m_EndMoment;
 
 
@@ -13,22 +42,34 @@ public:
 
 
 public:
+	/**
+	 * Переопределяет оператор сложения.
+	 * 
+	 * \param summand Слагаемое, интервал, прибаляемый к текущему интервалу.
+	 * \return Новый интервал
+	 */
 	CInterval operator+(const CInterval& summand);
 
 
 public:
-	/// <summary>
-	/// Проверяет пересечение интервалов
-	/// </summary>
-	/// <param name="interval"></param>
-	/// <returns></returns>
-	bool IsIntervalsIntersects(const CInterval& interval);
+	int GetStartMoment() const { return m_StartMoment; }
 
-	/// <summary>
-	/// Возвращает true, если переданным момент попадаем в данный интервал (включая границы), и false, если нет
-	/// </summary>
-	/// <param name="moment"></param>
-	/// <returns></returns>
+	int GetEndMoment() const { return m_EndMoment; }
+
+	/**
+	 * Проверяет пересечение интервалов.
+	 * 
+	 * \param interval Интервал, с которым нужно проверить пересечение текущего интервала.
+	 * \return Значение типа bool, определяющее наличие пересечения
+	 */
+	bool IsIntervalsIntersects(const CInterval& interval) const;
+
+	/**
+	 * Проверяет, не попадает ли переданный момент в текущий интервал.
+	 * 
+	 * \param moment Значение момента
+	 * \return Значение true, если переданным момент попадаем в данный интервал (включая границы), и false, если нет.
+	 */
 	bool IsMomentInInterval(int moment) const;
 };
 

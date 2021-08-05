@@ -25,7 +25,7 @@
 // Если у вас получится разгадать эту загадку дыры, напишите мне по адресу yury.ten66@yandex.ru, в чем было дело
 class СTableRow
 {
-public:
+private:
 	bool m_IsReserved;
 
 	std::string m_PSWaitingTime;
@@ -53,13 +53,38 @@ public:
 
 	std::string m_AircraftPriority;
 
-	
-
 
 public:
 	СTableRow(std::string aircraftId, std::string plannedTakingOffMoment, std::string possibleTakingOffMoment,
 		std::string permittedTakingOffMoment, std::string startMoment, std::string totalMotionTime, std::string processingTime, bool
 		needProcessing, std::string prioriry, bool isReserved, std::string PSWaitingTime, std::string runwayId, std::string specialPlaceId);
-	
+
+
+public:
+	std::string GetAircraftId() const { return m_AircraftId; }
+
+	std::string GetPlannedTakingOffMoment() const { return m_PlannedTakingOffMoment; }
+
+	std::string GetPossibleTakingOffMoment() const { return m_PossibleTakingOffMoment; }
+
+	std::string GetPermittedTakingOffMoment() const { return m_PermittedTakingOffMoment; }
+
+	std::string GetStartMoment() const { return m_StartMoment; }
+
+	std::string GetTotalMotionTime() const { return m_TotalMotionTime; }
+
+	std::string GetProcessingTime() const { return ms_ProcessingTime; }
+
+	bool GetProcessingNecessity() const { return m_NeedProcessing; }
+
+	std::string GetAircraftPriority() const { return m_AircraftPriority; }
+
+	bool GetIsReserved() const { return m_IsReserved; }
+
+	std::string GetPSWaitingTime() const { return m_PSWaitingTime; }
+
+	std::string GetRunwayId() const { return m_RunwayId; }
+
+	std::string GetSpecialPlaceId() const { return m_SpecialPlaceId; }
 };
 

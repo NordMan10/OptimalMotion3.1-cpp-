@@ -21,12 +21,12 @@ private:
 	/**
 	 * ѕлановые моменты взлета.
 	 */
-	std::vector<int> m_OrderedPlannedMoments = std::vector<int>();
+	std::shared_ptr<std::vector<int>> m_OrderedPlannedMoments = nullptr;
 
 	/**
 	 * –азрешенные моменты взлета.
 	 */
-	std::vector<int> m_OrderedPermittedMoments = std::vector<int>();
+	std::shared_ptr<std::vector<int>> m_OrderedPermittedMoments = nullptr;
 
 	/**
 	 * »ндекс последнего использованного планового момента.
@@ -41,34 +41,22 @@ private:
 
 
 public:
-	/**
-	 *  онструктор по умолчанию.
-	 * 
-	 * \return 
-	 */
 	CInputTakingOffMoments();
 
-	/**
-	 * .
-	 * 
-	 * \param plannedMoments
-	 * \param permittedMoments
-	 */
-	CInputTakingOffMoments(std::vector<int> plannedMoments, std::vector<int> permittedMoments);
+	CInputTakingOffMoments(std::vector<int>& plannedMoments, std::vector<int>& permittedMoments);
 
-	// Copy constructor.
 	CInputTakingOffMoments(const CInputTakingOffMoments& from);
 
 
 public:
-	std::vector<int> GetPlannedMoments() const { return m_OrderedPlannedMoments; }
+	const std::vector<int>& GetPlannedMoments() const { return *m_OrderedPlannedMoments; }
 
-	std::vector<int> GetPermittedMoments() const { return m_OrderedPermittedMoments; }
+	const std::vector<int>& GetPermittedMoments() const { return *m_OrderedPermittedMoments; }
 
 	/**
-	 * ¬озвращает самый первый неиспользованный разрешенный момент взлета.
+	 * ¬озвращает неиспользованный разрешенный момент взлета, следующий за последним использованным 
 	 * 
-	 * \return —амый первый неиспользованный разрешенный момент взлета.
+	 * \return «начение момента типа int.
 	 */
 	int GetNextPermittedMoment();
 
@@ -76,21 +64,28 @@ public:
 	 * ¬озвращает ближайший разрешенный момент дл€ переданного возможного момента, если его возможно установить.
 	 * ≈сли невозможно, возвращает nullptr. ѕосле использовани€ указатель нужно удалить.
 	 * 
-	 * \param possibleMoment
-	 * \return 
+	 * \param possibleMoment ¬озможный момент, дл€ которого нужно найти разрешенный момент
+	 * \return «начение момента типа int.
 	 */
 	int* GetNearestPermittedMoment(int possibleMoment);
 
 	/**
 	 * ¬озвращает список неиспользованных плановых моментов.
 	 * 
-	 * \param unusedPlannedMoments
 	 * \return —сылку на переданный список
 	 */
 	std::shared_ptr<std::vector<int>> GetUnusedPlannedMoments();
 
+	/**
+	 * —брасывает значение индекса последнего использованного планового момента на начальное значение, равное -1.
+	 * 
+	 */
 	void ResetLastPlannedTakingOffMomentIndex();
 
+	/**
+	 * —брасывает значение индекса последнего использованного разрешенного момента на начальное значение, равное -1..
+	 * 
+	 */
 	void ResetLastPermittedTakingOffMomentIndex();
 };
 

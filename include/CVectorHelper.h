@@ -16,9 +16,6 @@ public:
 		return newList;
 	}
 
-	/*template<class T1, class T2>
-	std::shared_ptr<std::vector<T1>> CVectorHelper::Sort(std::vector<T1>& list, bool comparer(T2, T2));*/
-
 	template <class T>
 	static bool AscendingComparer(T a, T b)
 	{

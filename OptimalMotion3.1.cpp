@@ -25,7 +25,7 @@ auto permittedMoments = std::vector<LPCWSTR>();
 auto startMoments = std::vector<LPCWSTR>();
 auto PSDelay = std::vector<std::string>();
 
-// Это была попытка вывести данные на экран. Это вспомогательная функция
+// Это была вспомогательная функция для вывода данных на экран.
 //std::wstring s2ws(const std::string& s)
 //{
 //	int len;
@@ -50,10 +50,13 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 
     // TODO: Place code here.
 
+    // Создаем класс модели
     auto model = CModel(2, 2);
 
+    // Получаем список плановых неиспользованных моментов
     auto unusedPlannedMoments = CCommonInputData::GetInputTakingOffMoments().GetUnusedPlannedMoments();
 
+    // Получаем выходные данные
     auto outputData = model.GetOutputData(*unusedPlannedMoments);
 
     // Это была попытка вывести данные на экран

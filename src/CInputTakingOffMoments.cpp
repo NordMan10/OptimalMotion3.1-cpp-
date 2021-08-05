@@ -9,17 +9,17 @@
 
 CInputTakingOffMoments::CInputTakingOffMoments() 
 {
-	m_OrderedPlannedMoments = std::vector<int>();
-	m_OrderedPermittedMoments = std::vector<int>();
+	m_OrderedPlannedMoments = std::shared_ptr<std::vector<int>>(new std::vector<int>());
+    m_OrderedPermittedMoments = std::shared_ptr<std::vector<int>>(new std::vector<int>());
 }
 
 
-CInputTakingOffMoments::CInputTakingOffMoments(std::vector<int> plannedMoments, std::vector<int> permittedMoments)
+CInputTakingOffMoments::CInputTakingOffMoments(std::vector<int>& plannedMoments, std::vector<int>& permittedMoments)
 {
-	m_OrderedPlannedMoments = plannedMoments;
-    sort(m_OrderedPlannedMoments.begin(), m_OrderedPlannedMoments.end());
-	m_OrderedPermittedMoments = permittedMoments;
-	sort(m_OrderedPermittedMoments.begin(), m_OrderedPermittedMoments.end());
+	m_OrderedPlannedMoments = std::shared_ptr<std::vector<int>>(new std::vector<int>(plannedMoments));
+    sort(m_OrderedPlannedMoments->begin(), m_OrderedPlannedMoments->end());
+	m_OrderedPermittedMoments = std::shared_ptr<std::vector<int>>(new std::vector<int>(permittedMoments));
+	sort(m_OrderedPermittedMoments->begin(), m_OrderedPermittedMoments->end());
 }
 
 CInputTakingOffMoments::CInputTakingOffMoments(const CInputTakingOffMoments& from) :
@@ -31,7 +31,7 @@ CInputTakingOffMoments::CInputTakingOffMoments(const CInputTakingOffMoments& fro
 int CInputTakingOffMoments::GetNextPermittedMoment()
 {
     //assert(m_LastPermittedMomentIndex < m_OrderedPermittedMoments.size());
-    return m_OrderedPermittedMoments[++m_LastPermittedMomentIndex];
+    return m_OrderedPermittedMoments->at(++m_LastPermittedMomentIndex);
 }
 
 int* CInputTakingOffMoments::GetNearestPermittedMoment(int possibleMoment)
@@ -40,17 +40,17 @@ int* CInputTakingOffMoments::GetNearestPermittedMoment(int possibleMoment)
     auto orderedPermittedMoments = m_OrderedPermittedMoments;
 
     //  ”дал€ем уже использованные моменты
-	auto begin = orderedPermittedMoments.begin();
-	auto end = orderedPermittedMoments.begin() + (m_LastPermittedMomentIndex + 1);
-    orderedPermittedMoments.erase(begin, end);
+	auto begin = orderedPermittedMoments->begin();
+	auto end = orderedPermittedMoments->begin() + (m_LastPermittedMomentIndex + 1);
+    orderedPermittedMoments->erase(begin, end);
 
     // ѕровер€ем каждый разрешенный момент
-    for(auto permittedMoment : orderedPermittedMoments)
+    for(auto permittedMoment : *orderedPermittedMoments)
     {
         // ≈сли разрешенный момент - страховочное врем€ прибыти€ больше или равен возможному => возвращаем его
-        if (permittedMoment - CCommonInputData::GetSpareArrivalTimeInterval().m_StartMoment >= possibleMoment)
+        if (permittedMoment - CCommonInputData::GetSpareArrivalTimeInterval().GetStartMoment() >= possibleMoment)
         {
-            m_LastPermittedMomentIndex = CVectorHelper::IndexOf(m_OrderedPermittedMoments, permittedMoment);
+            m_LastPermittedMomentIndex = CVectorHelper::IndexOf(*m_OrderedPermittedMoments, permittedMoment);
 
             return new int(permittedMoment);
         }
@@ -62,7 +62,7 @@ int* CInputTakingOffMoments::GetNearestPermittedMoment(int possibleMoment)
 std::shared_ptr<std::vector<int>> CInputTakingOffMoments::GetUnusedPlannedMoments()
 {
 	//—оздаем копию списка плановых моментов
-    auto unusedPlannedMoments = std::shared_ptr<std::vector<int>>(new std::vector<int>(m_OrderedPlannedMoments));
+    auto unusedPlannedMoments = std::shared_ptr<std::vector<int>>(new std::vector<int>(*m_OrderedPlannedMoments));
 
     // ”пор€дочиваем плановые моменты
     std::sort(unusedPlannedMoments->begin(), unusedPlannedMoments->end());

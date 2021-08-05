@@ -7,7 +7,7 @@
  * Author:
  *
  * Длинное описание класса
- *
+ * Класс определяем набор входных данных, необходимый для каждого ВС и предоставляем методы доступа к ним
  */
 
  // SYSTEM INCLUDES
@@ -27,18 +27,39 @@
 class CAircraftInputData
 {
 private:
+	/**
+	 * Id ВПП.
+	 */
 	std::string m_RunwayId;
 
+	/**
+	 * Id Спец. площадки.
+	 */
 	int m_SpecialPlaceId;
 
+	/**
+	 * Тип ВС.
+	 */
 	std::string m_Type;
 
+	/**
+	 * Приоритет ВС.
+	 */
 	int m_Priority;
 
+	/**
+	 * Флаг необходимости противообледенительной обработки.
+	 */
 	bool m_ProcessingIsNeeded;
 
+	/**
+	 * Моменты ВС, задающиеся при создании ВС.
+	 */
 	std::shared_ptr<CTakingOffAircraftCreationMoments> m_CreationMoments;
 
+	/**
+	 * Интервалы Вс, задающиеся при создании ВС.
+	 */
 	std::shared_ptr<CTakingOffAircraftCreationIntervals> m_CreationIntervals;
 
 public:

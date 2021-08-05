@@ -1,7 +1,7 @@
 #pragma once
 
 /** Крaткое описание класса
- * Класс для общих входных данных
+ * Класс для входящих данных, общих для всей программы
  * File  : CCommonInputData.h
  * Author: Yury Ten
  *
@@ -21,42 +21,49 @@
 class CCommonInputData final
 {
 private:
+	/**
+	 * Количество ВПП.
+	 */
 	static int ms_RunwayCount;
 
+	/**
+	 * Количество спец. площадок.
+	 */
 	static int ms_SpecialPlaceCount;
 
+	/**
+	 * Наборы разрешенных и плановых моментов для инициализации класса CInputTakingOffMoments.
+	 */
+	static std::vector<int> ms_PlannedMoments;
+	static std::vector<int> ms_PermittedMoments;
+
+	/**
+	 * Класс с наборами плановых и разрешенных моментов и методами работы с ними
+	 */
 	static CInputTakingOffMoments ms_InputTakingOffMoments;
 
+	/**
+	 * Интервал запасного времени прибытия.
+	 */
 	static CInterval ms_SpareArrivalTimeInterval;
 
+	/**
+	 * Допустимое количество резервных ВС в зависимости от времени простоя.
+	 */
 	static std::map<int, int> ms_PermissibleReserveAircraftCount;
 
-	/// <summary>
-	/// Количество ВПП
-	/// </summary>
+	
 public:
 	static int GetRunwayCount();
 	static void SetRunwayCount(int value);
 
-	/// <summary>
-	/// Количество спец. площадок
-	/// </summary>
 	static int GetSpecialPlaceCount();
 	static void SetSpecialPlaceCount(int value);
 
-	/// <summary>
-	/// Наборы плановых и разрешенных моментов
-	/// </summary>
 	static CInputTakingOffMoments& GetInputTakingOffMoments();
 
-	/// <summary>
-	///  Интервал запасного времени прибытия
-	/// </summary>
 	static CInterval& GetSpareArrivalTimeInterval();
 	static void SetSpareArrivalTimeInterval(CInterval& value);
 
-	/// <summary>
-	/// Допустимое количество резервных ВС в зависимости от времени простоя
-	/// </summary>
 	static std::map<int, int>& GetPermissibleReserveAircraftCount();
 };

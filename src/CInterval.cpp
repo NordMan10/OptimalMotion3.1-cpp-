@@ -12,7 +12,7 @@ CInterval::CInterval(const CInterval& from)
 	m_EndMoment = from.m_EndMoment;
 }
 
-bool CInterval::IsIntervalsIntersects(const CInterval& interval)
+bool CInterval::IsIntervalsIntersects(const CInterval& interval) const
 {
 	return interval.m_EndMoment > m_StartMoment && interval.m_StartMoment < m_EndMoment;
 }
