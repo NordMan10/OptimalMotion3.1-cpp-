@@ -1,10 +1,10 @@
 #pragma once
 
 /** Крaткое описание класса
- * Интерваоы, получаемые во входных данных для взлетающего ВС
+ * Набор интервалов, получаемых во входных данных для взлетающего ВС
  *
  * File  : TakingOffAircraftCreationIntervals.h
- * Author:
+ * Author: Yury Ten.
  *
  * Длинное описание класса
  *
@@ -13,34 +13,34 @@
 class CTakingOffAircraftCreationIntervals
 {
 private:
-	/// <summary>
-	/// Время руления от парковки до ПРДВ
-	/// </summary>
+	/**
+	 * Время руления от парковки до ПРДВ.
+	 */
 	int m_MotionFromParkingToPS;
 
-	/// <summary>
-	/// Время руления от ПРДВ до ИСП
-	/// </summary>
+	/**
+	 * Время руления от ПРДВ до ИСП.
+	 */
 	int m_MotionFromPSToES;
 
-	/// <summary>
-	/// Время руления от парковки до Спец. площадки
-	/// </summary>
+	/**
+	 * Время руления от парковки до Спец. площадки.
+	 */
 	int m_MotionFromParkingToSP;
 
-	/// <summary>
-	/// Время руления от Спец. площадки до ПРДВ
-	/// </summary>
+	/**
+	 * Время руления от Спец. площадки до ПРДВ.
+	 */
 	int m_MotionFromSPToPS;
 
-	/// <summary>
-	/// Время обработки
-	/// </summary>
+	/**
+	 * Время обработки.
+	 */
 	int m_Processing;
 
-	/// <summary>
-	/// Время взлета
-	/// </summary>
+	/**
+	 * Время взлета.
+	 */
 	int m_TakingOff;
 
 

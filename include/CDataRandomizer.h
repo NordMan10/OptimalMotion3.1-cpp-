@@ -3,8 +3,8 @@
 /** Крaткое описание класса
  * Класс для рандомизации значений
  * File  : DataRandomizer.h
- * Author:
- *
+ * Author: Yury Ten.
+ * 
  * Длинное описание класса
  *
  */
@@ -28,19 +28,19 @@ public:
 	 /**
 	  * Возвращает случайное число в пределах переданного интервала значений.
 	  * 
-	  * \param min
-	  * \param max
-	  * \return 
+	  * \param min Минимальное значение.
+	  * \param max Максимальное значение.
+	  * \return Целое число.
 	  */
 	static int GetRandomInt(int min, int max);
 
 	/**
 	 * Возвращает случайное число с заданным шагом и разбросом от среднего значения.
 	 * 
-	 * \param value Среднее значение
-	 * \param dispersion Разброс
-	 * \param step Шаг
-	 * \return Целое число
+	 * \param value Среднее значение.
+	 * \param dispersion Разброс в процентах.
+	 * \param step Шаг в единицах передаваемой величины.
+	 * \return Целое число.
 	 */
 	static int GetRandomizedValue(int value, int dispersion, int step);
 };

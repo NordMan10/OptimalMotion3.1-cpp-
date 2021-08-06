@@ -1,0 +1,163 @@
+\hypertarget{class_c_input_taking_off_moments}{}\doxysection{Класс CInput\+Taking\+Off\+Moments}
+\label{class_c_input_taking_off_moments}\index{CInputTakingOffMoments@{CInputTakingOffMoments}}
+
+
+{\ttfamily \#include $<$CInput\+Taking\+Off\+Moments.\+h$>$}
+
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_c_input_taking_off_moments_a1328adcb393f42be2dfeaebaf6058bdf}{CInput\+Taking\+Off\+Moments}} ()
+\item 
+\mbox{\hyperlink{class_c_input_taking_off_moments_a58af07a83ad078af4219b5da7f7b5f62}{CInput\+Taking\+Off\+Moments}} (std\+::vector$<$ int $>$ \&planned\+Moments, std\+::vector$<$ int $>$ \&permitted\+Moments)
+\item 
+\mbox{\hyperlink{class_c_input_taking_off_moments_ab72f43a180a2272b649116cbb10e12a3}{CInput\+Taking\+Off\+Moments}} (const \mbox{\hyperlink{class_c_input_taking_off_moments}{CInput\+Taking\+Off\+Moments}} \&from)
+\item 
+const std\+::vector$<$ int $>$ \& \mbox{\hyperlink{class_c_input_taking_off_moments_a63adbe9286967073af245d6928997674}{Get\+Planned\+Moments}} () const
+\item 
+const std\+::vector$<$ int $>$ \& \mbox{\hyperlink{class_c_input_taking_off_moments_ab8bb2dfc00712eb039dc209a2abb323b}{Get\+Permitted\+Moments}} () const
+\item 
+int \mbox{\hyperlink{class_c_input_taking_off_moments_a1c660897cab21f2bc8780689c98bfba5}{Get\+Next\+Permitted\+Moment}} ()
+\item 
+int $\ast$ \mbox{\hyperlink{class_c_input_taking_off_moments_ad8f9709b95b5808bce2320448e8fe5da}{Get\+Nearest\+Permitted\+Moment}} (int possible\+Moment)
+\item 
+std\+::shared\+\_\+ptr$<$ std\+::vector$<$ int $>$ $>$ \mbox{\hyperlink{class_c_input_taking_off_moments_ac44dcc3627fa41f309e026beb8acdbcf}{Get\+Unused\+Planned\+Moments}} ()
+\item 
+void \mbox{\hyperlink{class_c_input_taking_off_moments_acb503fe61b765c3ff09330328b1685a2}{Reset\+Last\+Planned\+Taking\+Off\+Moment\+Index}} ()
+\item 
+void \mbox{\hyperlink{class_c_input_taking_off_moments_a657a7d35e92c313e111d627d0a26e88e}{Reset\+Last\+Permitted\+Taking\+Off\+Moment\+Index}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Закрытые данные}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ std\+::vector$<$ int $>$ $>$ \mbox{\hyperlink{class_c_input_taking_off_moments_a39b6781ffb4c5d97bcce0ab33c3733df}{m\+\_\+\+Ordered\+Planned\+Moments}} = nullptr
+\item 
+std\+::shared\+\_\+ptr$<$ std\+::vector$<$ int $>$ $>$ \mbox{\hyperlink{class_c_input_taking_off_moments_a83a42ff0ab76e657430801d75969b48f}{m\+\_\+\+Ordered\+Permitted\+Moments}} = nullptr
+\item 
+int \mbox{\hyperlink{class_c_input_taking_off_moments_ad0a21ef50fb9374b74a9d8fabf276d2c}{m\+\_\+\+Last\+Planned\+Taking\+Off\+Moment\+Index}} = -\/1
+\item 
+int \mbox{\hyperlink{class_c_input_taking_off_moments_abf56a1f8765e05bfc0a95cf600abce22}{m\+\_\+\+Last\+Permitted\+Moment\+Index}} = -\/1
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Крaткое описание класса Содержит набор плановых и разрешенных моментов взлета и методы для работы с ними File \+: \mbox{\hyperlink{_c_input_taking_off_moments_8h}{CInput\+Taking\+Off\+Moments.\+h}} Author\+: Yury Ten
+
+Длинное описание класса 
+
+\doxysubsection{Конструктор(ы)}
+\mbox{\Hypertarget{class_c_input_taking_off_moments_a1328adcb393f42be2dfeaebaf6058bdf}\label{class_c_input_taking_off_moments_a1328adcb393f42be2dfeaebaf6058bdf}} 
+\index{CInputTakingOffMoments@{CInputTakingOffMoments}!CInputTakingOffMoments@{CInputTakingOffMoments}}
+\index{CInputTakingOffMoments@{CInputTakingOffMoments}!CInputTakingOffMoments@{CInputTakingOffMoments}}
+\doxysubsubsection{\texorpdfstring{CInputTakingOffMoments()}{CInputTakingOffMoments()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily CInput\+Taking\+Off\+Moments\+::\+CInput\+Taking\+Off\+Moments (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_c_input_taking_off_moments_a58af07a83ad078af4219b5da7f7b5f62}\label{class_c_input_taking_off_moments_a58af07a83ad078af4219b5da7f7b5f62}} 
+\index{CInputTakingOffMoments@{CInputTakingOffMoments}!CInputTakingOffMoments@{CInputTakingOffMoments}}
+\index{CInputTakingOffMoments@{CInputTakingOffMoments}!CInputTakingOffMoments@{CInputTakingOffMoments}}
+\doxysubsubsection{\texorpdfstring{CInputTakingOffMoments()}{CInputTakingOffMoments()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily CInput\+Taking\+Off\+Moments\+::\+CInput\+Taking\+Off\+Moments (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int $>$ \&}]{planned\+Moments,  }\item[{std\+::vector$<$ int $>$ \&}]{permitted\+Moments }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_c_input_taking_off_moments_ab72f43a180a2272b649116cbb10e12a3}\label{class_c_input_taking_off_moments_ab72f43a180a2272b649116cbb10e12a3}} 
+\index{CInputTakingOffMoments@{CInputTakingOffMoments}!CInputTakingOffMoments@{CInputTakingOffMoments}}
+\index{CInputTakingOffMoments@{CInputTakingOffMoments}!CInputTakingOffMoments@{CInputTakingOffMoments}}
+\doxysubsubsection{\texorpdfstring{CInputTakingOffMoments()}{CInputTakingOffMoments()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily CInput\+Taking\+Off\+Moments\+::\+CInput\+Taking\+Off\+Moments (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_c_input_taking_off_moments}{CInput\+Taking\+Off\+Moments}} \&}]{from }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{class_c_input_taking_off_moments_ad8f9709b95b5808bce2320448e8fe5da}\label{class_c_input_taking_off_moments_ad8f9709b95b5808bce2320448e8fe5da}} 
+\index{CInputTakingOffMoments@{CInputTakingOffMoments}!GetNearestPermittedMoment@{GetNearestPermittedMoment}}
+\index{GetNearestPermittedMoment@{GetNearestPermittedMoment}!CInputTakingOffMoments@{CInputTakingOffMoments}}
+\doxysubsubsection{\texorpdfstring{GetNearestPermittedMoment()}{GetNearestPermittedMoment()}}
+{\footnotesize\ttfamily int$\ast$ CInput\+Taking\+Off\+Moments\+::\+Get\+Nearest\+Permitted\+Moment (\begin{DoxyParamCaption}\item[{int}]{possible\+Moment }\end{DoxyParamCaption})}
+
+Возвращает ближайший разрешенный момент для переданного возможного момента, если его возможно установить. Если невозможно, возвращает nullptr. После использования указатель нужно удалить.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em possible\+Moment} & Возможный момент, для которого нужно найти разрешенный момент \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Значение момента типа int. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_input_taking_off_moments_a1c660897cab21f2bc8780689c98bfba5}\label{class_c_input_taking_off_moments_a1c660897cab21f2bc8780689c98bfba5}} 
+\index{CInputTakingOffMoments@{CInputTakingOffMoments}!GetNextPermittedMoment@{GetNextPermittedMoment}}
+\index{GetNextPermittedMoment@{GetNextPermittedMoment}!CInputTakingOffMoments@{CInputTakingOffMoments}}
+\doxysubsubsection{\texorpdfstring{GetNextPermittedMoment()}{GetNextPermittedMoment()}}
+{\footnotesize\ttfamily int CInput\+Taking\+Off\+Moments\+::\+Get\+Next\+Permitted\+Moment (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Возвращает неиспользованный разрешенный момент взлета, следующий за последним использованным
+
+\begin{DoxyReturn}{Возвращает}
+Значение момента типа int. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_input_taking_off_moments_ab8bb2dfc00712eb039dc209a2abb323b}\label{class_c_input_taking_off_moments_ab8bb2dfc00712eb039dc209a2abb323b}} 
+\index{CInputTakingOffMoments@{CInputTakingOffMoments}!GetPermittedMoments@{GetPermittedMoments}}
+\index{GetPermittedMoments@{GetPermittedMoments}!CInputTakingOffMoments@{CInputTakingOffMoments}}
+\doxysubsubsection{\texorpdfstring{GetPermittedMoments()}{GetPermittedMoments()}}
+{\footnotesize\ttfamily const std\+::vector$<$int$>$\& CInput\+Taking\+Off\+Moments\+::\+Get\+Permitted\+Moments (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_c_input_taking_off_moments_a63adbe9286967073af245d6928997674}\label{class_c_input_taking_off_moments_a63adbe9286967073af245d6928997674}} 
+\index{CInputTakingOffMoments@{CInputTakingOffMoments}!GetPlannedMoments@{GetPlannedMoments}}
+\index{GetPlannedMoments@{GetPlannedMoments}!CInputTakingOffMoments@{CInputTakingOffMoments}}
+\doxysubsubsection{\texorpdfstring{GetPlannedMoments()}{GetPlannedMoments()}}
+{\footnotesize\ttfamily const std\+::vector$<$int$>$\& CInput\+Taking\+Off\+Moments\+::\+Get\+Planned\+Moments (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_c_input_taking_off_moments_ac44dcc3627fa41f309e026beb8acdbcf}\label{class_c_input_taking_off_moments_ac44dcc3627fa41f309e026beb8acdbcf}} 
+\index{CInputTakingOffMoments@{CInputTakingOffMoments}!GetUnusedPlannedMoments@{GetUnusedPlannedMoments}}
+\index{GetUnusedPlannedMoments@{GetUnusedPlannedMoments}!CInputTakingOffMoments@{CInputTakingOffMoments}}
+\doxysubsubsection{\texorpdfstring{GetUnusedPlannedMoments()}{GetUnusedPlannedMoments()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$std\+::vector$<$int$>$ $>$ CInput\+Taking\+Off\+Moments\+::\+Get\+Unused\+Planned\+Moments (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Возвращает список неиспользованных плановых моментов.
+
+\begin{DoxyReturn}{Возвращает}
+Ссылку на переданный список 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_input_taking_off_moments_a657a7d35e92c313e111d627d0a26e88e}\label{class_c_input_taking_off_moments_a657a7d35e92c313e111d627d0a26e88e}} 
+\index{CInputTakingOffMoments@{CInputTakingOffMoments}!ResetLastPermittedTakingOffMomentIndex@{ResetLastPermittedTakingOffMomentIndex}}
+\index{ResetLastPermittedTakingOffMomentIndex@{ResetLastPermittedTakingOffMomentIndex}!CInputTakingOffMoments@{CInputTakingOffMoments}}
+\doxysubsubsection{\texorpdfstring{ResetLastPermittedTakingOffMomentIndex()}{ResetLastPermittedTakingOffMomentIndex()}}
+{\footnotesize\ttfamily void CInput\+Taking\+Off\+Moments\+::\+Reset\+Last\+Permitted\+Taking\+Off\+Moment\+Index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Сбрасывает значение индекса последнего использованного разрешенного момента на начальное значение, равное -\/1.. \mbox{\Hypertarget{class_c_input_taking_off_moments_acb503fe61b765c3ff09330328b1685a2}\label{class_c_input_taking_off_moments_acb503fe61b765c3ff09330328b1685a2}} 
+\index{CInputTakingOffMoments@{CInputTakingOffMoments}!ResetLastPlannedTakingOffMomentIndex@{ResetLastPlannedTakingOffMomentIndex}}
+\index{ResetLastPlannedTakingOffMomentIndex@{ResetLastPlannedTakingOffMomentIndex}!CInputTakingOffMoments@{CInputTakingOffMoments}}
+\doxysubsubsection{\texorpdfstring{ResetLastPlannedTakingOffMomentIndex()}{ResetLastPlannedTakingOffMomentIndex()}}
+{\footnotesize\ttfamily void CInput\+Taking\+Off\+Moments\+::\+Reset\+Last\+Planned\+Taking\+Off\+Moment\+Index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Сбрасывает значение индекса последнего использованного планового момента на начальное значение, равное -\/1. 
+
+\doxysubsection{Данные класса}
+\mbox{\Hypertarget{class_c_input_taking_off_moments_abf56a1f8765e05bfc0a95cf600abce22}\label{class_c_input_taking_off_moments_abf56a1f8765e05bfc0a95cf600abce22}} 
+\index{CInputTakingOffMoments@{CInputTakingOffMoments}!m\_LastPermittedMomentIndex@{m\_LastPermittedMomentIndex}}
+\index{m\_LastPermittedMomentIndex@{m\_LastPermittedMomentIndex}!CInputTakingOffMoments@{CInputTakingOffMoments}}
+\doxysubsubsection{\texorpdfstring{m\_LastPermittedMomentIndex}{m\_LastPermittedMomentIndex}}
+{\footnotesize\ttfamily int CInput\+Taking\+Off\+Moments\+::m\+\_\+\+Last\+Permitted\+Moment\+Index = -\/1\hspace{0.3cm}{\ttfamily [private]}}
+
+Индекс последнего использованного разрешенного момента. \mbox{\Hypertarget{class_c_input_taking_off_moments_ad0a21ef50fb9374b74a9d8fabf276d2c}\label{class_c_input_taking_off_moments_ad0a21ef50fb9374b74a9d8fabf276d2c}} 
+\index{CInputTakingOffMoments@{CInputTakingOffMoments}!m\_LastPlannedTakingOffMomentIndex@{m\_LastPlannedTakingOffMomentIndex}}
+\index{m\_LastPlannedTakingOffMomentIndex@{m\_LastPlannedTakingOffMomentIndex}!CInputTakingOffMoments@{CInputTakingOffMoments}}
+\doxysubsubsection{\texorpdfstring{m\_LastPlannedTakingOffMomentIndex}{m\_LastPlannedTakingOffMomentIndex}}
+{\footnotesize\ttfamily int CInput\+Taking\+Off\+Moments\+::m\+\_\+\+Last\+Planned\+Taking\+Off\+Moment\+Index = -\/1\hspace{0.3cm}{\ttfamily [private]}}
+
+Индекс последнего использованного планового момента. \mbox{\Hypertarget{class_c_input_taking_off_moments_a83a42ff0ab76e657430801d75969b48f}\label{class_c_input_taking_off_moments_a83a42ff0ab76e657430801d75969b48f}} 
+\index{CInputTakingOffMoments@{CInputTakingOffMoments}!m\_OrderedPermittedMoments@{m\_OrderedPermittedMoments}}
+\index{m\_OrderedPermittedMoments@{m\_OrderedPermittedMoments}!CInputTakingOffMoments@{CInputTakingOffMoments}}
+\doxysubsubsection{\texorpdfstring{m\_OrderedPermittedMoments}{m\_OrderedPermittedMoments}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$std\+::vector$<$int$>$ $>$ CInput\+Taking\+Off\+Moments\+::m\+\_\+\+Ordered\+Permitted\+Moments = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+Разрешенные моменты взлета. \mbox{\Hypertarget{class_c_input_taking_off_moments_a39b6781ffb4c5d97bcce0ab33c3733df}\label{class_c_input_taking_off_moments_a39b6781ffb4c5d97bcce0ab33c3733df}} 
+\index{CInputTakingOffMoments@{CInputTakingOffMoments}!m\_OrderedPlannedMoments@{m\_OrderedPlannedMoments}}
+\index{m\_OrderedPlannedMoments@{m\_OrderedPlannedMoments}!CInputTakingOffMoments@{CInputTakingOffMoments}}
+\doxysubsubsection{\texorpdfstring{m\_OrderedPlannedMoments}{m\_OrderedPlannedMoments}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$std\+::vector$<$int$>$ $>$ CInput\+Taking\+Off\+Moments\+::m\+\_\+\+Ordered\+Planned\+Moments = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+Плановые моменты взлета. 
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_c_input_taking_off_moments_8h}{CInput\+Taking\+Off\+Moments.\+h}}\end{DoxyCompactItemize}

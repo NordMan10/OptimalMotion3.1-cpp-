@@ -1,0 +1,109 @@
+\hypertarget{class_c_i_mass_service_zone_extensions}{}\doxysection{Класс CIMass\+Service\+Zone\+Extensions}
+\label{class_c_i_mass_service_zone_extensions}\index{CIMassServiceZoneExtensions@{CIMassServiceZoneExtensions}}
+
+
+{\ttfamily \#include $<$CIMass\+Service\+Zone\+Extensions.\+h$>$}
+
+\doxysubsection*{Открытые статические члены}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_c_i_mass_service_zone_extensions_acd08547d8a735ac2a44cce2c1df9d552}{Add\+Aircraft\+Interval}} (\mbox{\hyperlink{class_i_mass_service_zone}{IMass\+Service\+Zone}} $\ast$zone, int aircraft\+Id, const \mbox{\hyperlink{class_c_interval}{CInterval}} \&free\+Interval, std\+::map$<$ int, \mbox{\hyperlink{class_c_interval}{CInterval}} $>$ \&zone\+Intervals)
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_interval}{CInterval}} $>$ \mbox{\hyperlink{class_c_i_mass_service_zone_extensions_a2200980b69359dea45740c80d7c2d52d}{Get\+Free\+Interval}} (\mbox{\hyperlink{class_i_mass_service_zone}{IMass\+Service\+Zone}} $\ast$zone, const \mbox{\hyperlink{class_c_interval}{CInterval}} \&interval, const std\+::map$<$ int, \mbox{\hyperlink{class_c_interval}{CInterval}} $>$ \&zone\+Intervals)
+\item 
+static void \mbox{\hyperlink{class_c_i_mass_service_zone_extensions_a56868c517485112e677389234c136eb3}{Remove\+Aircraft\+Interval}} (\mbox{\hyperlink{class_i_mass_service_zone}{IMass\+Service\+Zone}} $\ast$zone, int aircraft\+Id, std\+::map$<$ int, \mbox{\hyperlink{class_c_interval}{CInterval}} $>$ \&zone\+Intervals)
+\end{DoxyCompactItemize}
+\doxysubsection*{Закрытые статические члены}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{class_c_i_mass_service_zone_extensions_a853b089ba392c7ce2d5745160beac343}{Check\+Intervals\+Intersection}} (const \mbox{\hyperlink{class_c_interval}{CInterval}} \&interval, const std\+::map$<$ int, \mbox{\hyperlink{class_c_interval}{CInterval}} $>$ \&zone\+Intervals)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Крaткое описание класса Класс, содержащий реализацию общих методов для интерфейса \mbox{\hyperlink{class_i_mass_service_zone}{IMass\+Service\+Zone}}
+
+File \+: \mbox{\hyperlink{_c_i_mass_service_zone_extensions_8h}{CIMass\+Service\+Zone\+Extensions.\+h}} Author\+: Yury Ten
+
+Длинное описание класса Класс, содержащий реализацию общих методов для интерфейса зоны массового обслуживания (\mbox{\hyperlink{class_i_mass_service_zone}{IMass\+Service\+Zone}}). Описание данного интерфейса см. в определении интерфейса \mbox{\hyperlink{class_i_mass_service_zone}{IMass\+Service\+Zone}} 
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{class_c_i_mass_service_zone_extensions_acd08547d8a735ac2a44cce2c1df9d552}\label{class_c_i_mass_service_zone_extensions_acd08547d8a735ac2a44cce2c1df9d552}} 
+\index{CIMassServiceZoneExtensions@{CIMassServiceZoneExtensions}!AddAircraftInterval@{AddAircraftInterval}}
+\index{AddAircraftInterval@{AddAircraftInterval}!CIMassServiceZoneExtensions@{CIMassServiceZoneExtensions}}
+\doxysubsubsection{\texorpdfstring{AddAircraftInterval()}{AddAircraftInterval()}}
+{\footnotesize\ttfamily static void CIMass\+Service\+Zone\+Extensions\+::\+Add\+Aircraft\+Interval (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_i_mass_service_zone}{IMass\+Service\+Zone}} $\ast$}]{zone,  }\item[{int}]{aircraft\+Id,  }\item[{const \mbox{\hyperlink{class_c_interval}{CInterval}} \&}]{free\+Interval,  }\item[{std\+::map$<$ int, \mbox{\hyperlink{class_c_interval}{CInterval}} $>$ \&}]{zone\+Intervals }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Добавляет переданный интервал в список интервалов зоны, если он не пересекается с существующими интервалами. Подразумевается, что был передан свободный (не пересекающийся интервал), который был возвращен методом \mbox{\hyperlink{class_c_i_mass_service_zone_extensions_a2200980b69359dea45740c80d7c2d52d}{Get\+Free\+Interval()}}.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em zone} & Зона массового обслуживания \mbox{\hyperlink{class_i_mass_service_zone}{IMass\+Service\+Zone}} \\
+\hline
+{\em aircraft\+Id} & Id ВС \\
+\hline
+{\em free\+Interval} & Рассчитанный свободный интервал \\
+\hline
+{\em zone\+Intervals} & Список существующих интервалов зоны \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_i_mass_service_zone_extensions_a853b089ba392c7ce2d5745160beac343}\label{class_c_i_mass_service_zone_extensions_a853b089ba392c7ce2d5745160beac343}} 
+\index{CIMassServiceZoneExtensions@{CIMassServiceZoneExtensions}!CheckIntervalsIntersection@{CheckIntervalsIntersection}}
+\index{CheckIntervalsIntersection@{CheckIntervalsIntersection}!CIMassServiceZoneExtensions@{CIMassServiceZoneExtensions}}
+\doxysubsubsection{\texorpdfstring{CheckIntervalsIntersection()}{CheckIntervalsIntersection()}}
+{\footnotesize\ttfamily static bool CIMass\+Service\+Zone\+Extensions\+::\+Check\+Intervals\+Intersection (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_c_interval}{CInterval}} \&}]{interval,  }\item[{const std\+::map$<$ int, \mbox{\hyperlink{class_c_interval}{CInterval}} $>$ \&}]{zone\+Intervals }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+Проверяет пересечение переданного интервала с набором существующих интервалов.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em interval} & Интервал, который нужно проверить. \\
+\hline
+{\em zone\+Intervals} & Список существующих интервалов зоны. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Значение bool, определяющее наличие пересечения. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_i_mass_service_zone_extensions_a2200980b69359dea45740c80d7c2d52d}\label{class_c_i_mass_service_zone_extensions_a2200980b69359dea45740c80d7c2d52d}} 
+\index{CIMassServiceZoneExtensions@{CIMassServiceZoneExtensions}!GetFreeInterval@{GetFreeInterval}}
+\index{GetFreeInterval@{GetFreeInterval}!CIMassServiceZoneExtensions@{CIMassServiceZoneExtensions}}
+\doxysubsubsection{\texorpdfstring{GetFreeInterval()}{GetFreeInterval()}}
+{\footnotesize\ttfamily static std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_c_interval}{CInterval}}$>$ CIMass\+Service\+Zone\+Extensions\+::\+Get\+Free\+Interval (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_i_mass_service_zone}{IMass\+Service\+Zone}} $\ast$}]{zone,  }\item[{const \mbox{\hyperlink{class_c_interval}{CInterval}} \&}]{interval,  }\item[{const std\+::map$<$ int, \mbox{\hyperlink{class_c_interval}{CInterval}} $>$ \&}]{zone\+Intervals }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Проверяет, можно ли добавить переданный интервал в список уже существующих интервалов зоны без пересечений с ними. Если можно, то возвращает копию переданного интервала. Если нельзя, то рассчитывает новый, непересекающийся интервал.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em zone} & Зона массового обслуживания. \\
+\hline
+{\em interval} & Интервал, который нужно проверить. \\
+\hline
+{\em zone\+Intervals} & Список существующих интервалов зоны. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Свободный, непересекающийся с существующими интервалами зоны, интервал. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_i_mass_service_zone_extensions_a56868c517485112e677389234c136eb3}\label{class_c_i_mass_service_zone_extensions_a56868c517485112e677389234c136eb3}} 
+\index{CIMassServiceZoneExtensions@{CIMassServiceZoneExtensions}!RemoveAircraftInterval@{RemoveAircraftInterval}}
+\index{RemoveAircraftInterval@{RemoveAircraftInterval}!CIMassServiceZoneExtensions@{CIMassServiceZoneExtensions}}
+\doxysubsubsection{\texorpdfstring{RemoveAircraftInterval()}{RemoveAircraftInterval()}}
+{\footnotesize\ttfamily static void CIMass\+Service\+Zone\+Extensions\+::\+Remove\+Aircraft\+Interval (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_i_mass_service_zone}{IMass\+Service\+Zone}} $\ast$}]{zone,  }\item[{int}]{aircraft\+Id,  }\item[{std\+::map$<$ int, \mbox{\hyperlink{class_c_interval}{CInterval}} $>$ \&}]{zone\+Intervals }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Удаляет из списка интервалов занимания зоны интервал, принадлежащий ВС, Id которого был передан.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em zone} & Зона массового обслуживания. \\
+\hline
+{\em aircraft\+Id} & Id ВС, интервал которого нужно удалить. \\
+\hline
+{\em zone\+Intervals} & Список существующих интервалов зоны. \\
+\hline
+\end{DoxyParams}
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_c_i_mass_service_zone_extensions_8h}{CIMass\+Service\+Zone\+Extensions.\+h}}\end{DoxyCompactItemize}

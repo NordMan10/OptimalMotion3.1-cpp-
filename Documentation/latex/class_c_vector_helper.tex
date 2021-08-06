@@ -1,0 +1,129 @@
+\hypertarget{class_c_vector_helper}{}\doxysection{Класс CVector\+Helper}
+\label{class_c_vector_helper}\index{CVectorHelper@{CVectorHelper}}
+
+
+{\ttfamily \#include $<$CVector\+Helper.\+h$>$}
+
+\doxysubsection*{Открытые статические члены}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class T $>$ }\\static bool \mbox{\hyperlink{class_c_vector_helper_a9538287fa8ac00966407486ba2fa4345}{Ascending\+Comparer}} (T a, T b)
+\item 
+{\footnotesize template$<$class T $>$ }\\static bool \mbox{\hyperlink{class_c_vector_helper_a0e7adde852241349851d1ecf26119936}{Descending\+Comparer}} (T a, T b)
+\item 
+{\footnotesize template$<$class T $>$ }\\static std\+::shared\+\_\+ptr$<$ std\+::vector$<$ T $>$ $>$ \mbox{\hyperlink{class_c_vector_helper_a929ae6f2df79d414ea55efb89c72ee22}{Sort}} (std\+::vector$<$ T $>$ \&list, bool comparer(T, T)=\mbox{\hyperlink{class_c_vector_helper_a9538287fa8ac00966407486ba2fa4345}{Ascending\+Comparer}})
+\item 
+{\footnotesize template$<$class T $>$ }\\static bool \mbox{\hyperlink{class_c_vector_helper_a50067d3f0362dc23f9361fb5452489c6}{Is\+Contains}} (std\+::vector$<$ T $>$ \&list, T element)
+\item 
+{\footnotesize template$<$class T $>$ }\\static int \mbox{\hyperlink{class_c_vector_helper_a8a5fec7a9db958637ba7ab7b039d3c7c}{Index\+Of}} (std\+::vector$<$ T $>$ \&list, T element)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Крaткое описание класса Вспомогательный класс для класса vector$<$\+T$>$ с дополнительными методами работы с ним.
+
+File \+: \mbox{\hyperlink{_c_vector_helper_8h}{CVector\+Helper.\+h}} Author\+: Yury Ten.
+
+Длинное описание класса 
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{class_c_vector_helper_a9538287fa8ac00966407486ba2fa4345}\label{class_c_vector_helper_a9538287fa8ac00966407486ba2fa4345}} 
+\index{CVectorHelper@{CVectorHelper}!AscendingComparer@{AscendingComparer}}
+\index{AscendingComparer@{AscendingComparer}!CVectorHelper@{CVectorHelper}}
+\doxysubsubsection{\texorpdfstring{AscendingComparer()}{AscendingComparer()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+static bool CVector\+Helper\+::\+Ascending\+Comparer (\begin{DoxyParamCaption}\item[{T}]{a,  }\item[{T}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Компаратор, сортирующий элементы по возрастанию.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em a} & Первый элемент. \\
+\hline
+{\em b} & Второй элемент. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Значение bool, определяющее, меньше ли первый элемент, чем второй, или нет. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_vector_helper_a0e7adde852241349851d1ecf26119936}\label{class_c_vector_helper_a0e7adde852241349851d1ecf26119936}} 
+\index{CVectorHelper@{CVectorHelper}!DescendingComparer@{DescendingComparer}}
+\index{DescendingComparer@{DescendingComparer}!CVectorHelper@{CVectorHelper}}
+\doxysubsubsection{\texorpdfstring{DescendingComparer()}{DescendingComparer()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+static bool CVector\+Helper\+::\+Descending\+Comparer (\begin{DoxyParamCaption}\item[{T}]{a,  }\item[{T}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Компаратор, сортирующий элементы по убыванию.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em a} & Первый элемент. \\
+\hline
+{\em b} & Второй элемент. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Значение bool, определяющее, больше ли первый элемент, чем второй, или нет. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_vector_helper_a8a5fec7a9db958637ba7ab7b039d3c7c}\label{class_c_vector_helper_a8a5fec7a9db958637ba7ab7b039d3c7c}} 
+\index{CVectorHelper@{CVectorHelper}!IndexOf@{IndexOf}}
+\index{IndexOf@{IndexOf}!CVectorHelper@{CVectorHelper}}
+\doxysubsubsection{\texorpdfstring{IndexOf()}{IndexOf()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+static int CVector\+Helper\+::\+Index\+Of (\begin{DoxyParamCaption}\item[{std\+::vector$<$ T $>$ \&}]{list,  }\item[{T}]{element }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Определяет индекс указанного элемента в переданном списке, проверяя наличие элемента в нем. Если список не содержит указанного элемента, выбрасывает ошибку.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em list} & Список элементов. \\
+\hline
+{\em element} & Элемент, индекс которого нужно найти. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Индекс указанного элемента. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_vector_helper_a50067d3f0362dc23f9361fb5452489c6}\label{class_c_vector_helper_a50067d3f0362dc23f9361fb5452489c6}} 
+\index{CVectorHelper@{CVectorHelper}!IsContains@{IsContains}}
+\index{IsContains@{IsContains}!CVectorHelper@{CVectorHelper}}
+\doxysubsubsection{\texorpdfstring{IsContains()}{IsContains()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+static bool CVector\+Helper\+::\+Is\+Contains (\begin{DoxyParamCaption}\item[{std\+::vector$<$ T $>$ \&}]{list,  }\item[{T}]{element }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Определяет, содержит ли переданный список элементов указанный элемент.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em list} & Список элементов. \\
+\hline
+{\em element} & Элемент, наличие которого нужно определить. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Значение bool, определяющее, содержит ли список указанный элемент. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_vector_helper_a929ae6f2df79d414ea55efb89c72ee22}\label{class_c_vector_helper_a929ae6f2df79d414ea55efb89c72ee22}} 
+\index{CVectorHelper@{CVectorHelper}!Sort@{Sort}}
+\index{Sort@{Sort}!CVectorHelper@{CVectorHelper}}
+\doxysubsubsection{\texorpdfstring{Sort()}{Sort()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+static std\+::shared\+\_\+ptr$<$std\+::vector$<$T$>$ $>$ CVector\+Helper\+::\+Sort (\begin{DoxyParamCaption}\item[{std\+::vector$<$ T $>$ \&}]{list,  }\item[{bool }]{comparerT, T = {\ttfamily \mbox{\hyperlink{class_c_vector_helper_a9538287fa8ac00966407486ba2fa4345}{Ascending\+Comparer}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Сортирует переданный список элементов с помощью полученного компаратора.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em list} & Список элементов. \\
+\hline
+{\em comparer} & Компаратор для элементов типа T. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Новый отсортированный список элементов. 
+\end{DoxyReturn}
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_c_vector_helper_8h}{CVector\+Helper.\+h}}\end{DoxyCompactItemize}

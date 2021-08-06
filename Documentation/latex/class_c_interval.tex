@@ -1,0 +1,135 @@
+\hypertarget{class_c_interval}{}\doxysection{Класс CInterval}
+\label{class_c_interval}\index{CInterval@{CInterval}}
+
+
+{\ttfamily \#include $<$CInterval.\+h$>$}
+
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_c_interval_a7d7a8c09b88da1fbe9600cc9da470f71}{CInterval}} (int first\+Moment=0, int last\+Moment=0)
+\item 
+\mbox{\hyperlink{class_c_interval_af656e8106ce49a8ca7cc487afab05acf}{CInterval}} (const \mbox{\hyperlink{class_c_interval}{CInterval}} \&from)
+\item 
+\mbox{\hyperlink{class_c_interval}{CInterval}} \mbox{\hyperlink{class_c_interval_acdd0d6aa47946d01fae82c0e753b83c1}{operator+}} (const \mbox{\hyperlink{class_c_interval}{CInterval}} \&summand)
+\item 
+int \mbox{\hyperlink{class_c_interval_ac5ed93e0512731bdd91c1b30edebf384}{Get\+Start\+Moment}} () const
+\item 
+int \mbox{\hyperlink{class_c_interval_aa6004ca5b1d31d59a7deb71f3e6cf065}{Get\+End\+Moment}} () const
+\item 
+bool \mbox{\hyperlink{class_c_interval_aef48ea911993ca648b53aae3ad03a133}{Is\+Intervals\+Intersects}} (const \mbox{\hyperlink{class_c_interval}{CInterval}} \&interval) const
+\item 
+bool \mbox{\hyperlink{class_c_interval_ac8f7c4c255a1baf9c25f59724f02eee2}{Is\+Moment\+In\+Interval}} (int moment) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Закрытые данные}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_c_interval_ac05c346787ed997f89c46468f098dcaf}{m\+\_\+\+Start\+Moment}}
+\item 
+int \mbox{\hyperlink{class_c_interval_a6c8736db05258a628ea87353caa4ef9b}{m\+\_\+\+End\+Moment}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Крaткое описание класса Представление интервала времени
+
+File \+: \mbox{\hyperlink{_c_interval_8h}{CInterval.\+h}} Author\+: Yury Ten.
+
+Длинное описание класса Класс, представляющий интервал времени. Определяется начальным и конечным моментами. Имеет методы для работы с интервалами. 
+
+\doxysubsection{Конструктор(ы)}
+\mbox{\Hypertarget{class_c_interval_a7d7a8c09b88da1fbe9600cc9da470f71}\label{class_c_interval_a7d7a8c09b88da1fbe9600cc9da470f71}} 
+\index{CInterval@{CInterval}!CInterval@{CInterval}}
+\index{CInterval@{CInterval}!CInterval@{CInterval}}
+\doxysubsubsection{\texorpdfstring{CInterval()}{CInterval()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily CInterval\+::\+CInterval (\begin{DoxyParamCaption}\item[{int}]{first\+Moment = {\ttfamily 0},  }\item[{int}]{last\+Moment = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_c_interval_af656e8106ce49a8ca7cc487afab05acf}\label{class_c_interval_af656e8106ce49a8ca7cc487afab05acf}} 
+\index{CInterval@{CInterval}!CInterval@{CInterval}}
+\index{CInterval@{CInterval}!CInterval@{CInterval}}
+\doxysubsubsection{\texorpdfstring{CInterval()}{CInterval()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily CInterval\+::\+CInterval (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_c_interval}{CInterval}} \&}]{from }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{class_c_interval_aa6004ca5b1d31d59a7deb71f3e6cf065}\label{class_c_interval_aa6004ca5b1d31d59a7deb71f3e6cf065}} 
+\index{CInterval@{CInterval}!GetEndMoment@{GetEndMoment}}
+\index{GetEndMoment@{GetEndMoment}!CInterval@{CInterval}}
+\doxysubsubsection{\texorpdfstring{GetEndMoment()}{GetEndMoment()}}
+{\footnotesize\ttfamily int CInterval\+::\+Get\+End\+Moment (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_c_interval_ac5ed93e0512731bdd91c1b30edebf384}\label{class_c_interval_ac5ed93e0512731bdd91c1b30edebf384}} 
+\index{CInterval@{CInterval}!GetStartMoment@{GetStartMoment}}
+\index{GetStartMoment@{GetStartMoment}!CInterval@{CInterval}}
+\doxysubsubsection{\texorpdfstring{GetStartMoment()}{GetStartMoment()}}
+{\footnotesize\ttfamily int CInterval\+::\+Get\+Start\+Moment (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_c_interval_aef48ea911993ca648b53aae3ad03a133}\label{class_c_interval_aef48ea911993ca648b53aae3ad03a133}} 
+\index{CInterval@{CInterval}!IsIntervalsIntersects@{IsIntervalsIntersects}}
+\index{IsIntervalsIntersects@{IsIntervalsIntersects}!CInterval@{CInterval}}
+\doxysubsubsection{\texorpdfstring{IsIntervalsIntersects()}{IsIntervalsIntersects()}}
+{\footnotesize\ttfamily bool CInterval\+::\+Is\+Intervals\+Intersects (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_c_interval}{CInterval}} \&}]{interval }\end{DoxyParamCaption}) const}
+
+Проверяет пересечение интервалов.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em interval} & Интервал, с которым нужно проверить пересечение текущего интервала. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Значение типа bool, определяющее наличие пересечения 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_interval_ac8f7c4c255a1baf9c25f59724f02eee2}\label{class_c_interval_ac8f7c4c255a1baf9c25f59724f02eee2}} 
+\index{CInterval@{CInterval}!IsMomentInInterval@{IsMomentInInterval}}
+\index{IsMomentInInterval@{IsMomentInInterval}!CInterval@{CInterval}}
+\doxysubsubsection{\texorpdfstring{IsMomentInInterval()}{IsMomentInInterval()}}
+{\footnotesize\ttfamily bool CInterval\+::\+Is\+Moment\+In\+Interval (\begin{DoxyParamCaption}\item[{int}]{moment }\end{DoxyParamCaption}) const}
+
+Проверяет, не попадает ли переданный момент в текущий интервал.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em moment} & Значение момента \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Значение true, если переданным момент попадаем в данный интервал (включая границы), и false, если нет. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_interval_acdd0d6aa47946d01fae82c0e753b83c1}\label{class_c_interval_acdd0d6aa47946d01fae82c0e753b83c1}} 
+\index{CInterval@{CInterval}!operator+@{operator+}}
+\index{operator+@{operator+}!CInterval@{CInterval}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_interval}{CInterval}} CInterval\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_c_interval}{CInterval}} \&}]{summand }\end{DoxyParamCaption})}
+
+Переопределяет оператор сложения.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em summand} & Слагаемое, интервал, прибаляемый к текущему интервалу. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Новый интервал 
+\end{DoxyReturn}
+
+
+\doxysubsection{Данные класса}
+\mbox{\Hypertarget{class_c_interval_a6c8736db05258a628ea87353caa4ef9b}\label{class_c_interval_a6c8736db05258a628ea87353caa4ef9b}} 
+\index{CInterval@{CInterval}!m\_EndMoment@{m\_EndMoment}}
+\index{m\_EndMoment@{m\_EndMoment}!CInterval@{CInterval}}
+\doxysubsubsection{\texorpdfstring{m\_EndMoment}{m\_EndMoment}}
+{\footnotesize\ttfamily int CInterval\+::m\+\_\+\+End\+Moment\hspace{0.3cm}{\ttfamily [private]}}
+
+Конечный момент. \mbox{\Hypertarget{class_c_interval_ac05c346787ed997f89c46468f098dcaf}\label{class_c_interval_ac05c346787ed997f89c46468f098dcaf}} 
+\index{CInterval@{CInterval}!m\_StartMoment@{m\_StartMoment}}
+\index{m\_StartMoment@{m\_StartMoment}!CInterval@{CInterval}}
+\doxysubsubsection{\texorpdfstring{m\_StartMoment}{m\_StartMoment}}
+{\footnotesize\ttfamily int CInterval\+::m\+\_\+\+Start\+Moment\hspace{0.3cm}{\ttfamily [private]}}
+
+Начальный момент. 
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_c_interval_8h}{CInterval.\+h}}\end{DoxyCompactItemize}

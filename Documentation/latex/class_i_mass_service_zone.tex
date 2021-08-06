@@ -1,0 +1,104 @@
+\hypertarget{class_i_mass_service_zone}{}\doxysection{Класс IMass\+Service\+Zone}
+\label{class_i_mass_service_zone}\index{IMassServiceZone@{IMassServiceZone}}
+
+
+{\ttfamily \#include $<$IMass\+Service\+Zone.\+h$>$}
+
+Граф наследования\+:IMass\+Service\+Zone\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_i_mass_service_zone}
+\end{center}
+\end{figure}
+\doxysubsection*{Закрытые члены}
+\begin{DoxyCompactItemize}
+\item 
+virtual std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_interval}{CInterval}} $>$ \mbox{\hyperlink{class_i_mass_service_zone_a3834fbead45854a5eb2e9755d69152a4}{Get\+Free\+Interval}} (\mbox{\hyperlink{class_c_interval}{CInterval}} \&new\+Interval)=0
+\item 
+virtual void \mbox{\hyperlink{class_i_mass_service_zone_a58d8de1899e8b9822d08981d02168cea}{Add\+Aircraft\+Interval}} (int aircraft\+Id, \mbox{\hyperlink{class_c_interval}{CInterval}} \&free\+Interval)=0
+\item 
+virtual void \mbox{\hyperlink{class_i_mass_service_zone_a5b80777813711212f5d3eb8ec08bd657}{Remove\+Aircraft\+Interval}} (int aircraft\+Id)=0
+\item 
+virtual void \mbox{\hyperlink{class_i_mass_service_zone_a77ef9765ddca926ed9aaf06f7644b852}{Reset}} ()=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Крaткое описание класса
+
+File \+: \mbox{\hyperlink{_i_mass_service_zone_8h}{IMass\+Service\+Zone.\+h}} Author\+:
+
+Длинное описание класса 
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{class_i_mass_service_zone_a58d8de1899e8b9822d08981d02168cea}\label{class_i_mass_service_zone_a58d8de1899e8b9822d08981d02168cea}} 
+\index{IMassServiceZone@{IMassServiceZone}!AddAircraftInterval@{AddAircraftInterval}}
+\index{AddAircraftInterval@{AddAircraftInterval}!IMassServiceZone@{IMassServiceZone}}
+\doxysubsubsection{\texorpdfstring{AddAircraftInterval()}{AddAircraftInterval()}}
+{\footnotesize\ttfamily virtual void IMass\+Service\+Zone\+::\+Add\+Aircraft\+Interval (\begin{DoxyParamCaption}\item[{int}]{aircraft\+Id,  }\item[{\mbox{\hyperlink{class_c_interval}{CInterval}} \&}]{free\+Interval }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [pure virtual]}}
+
+Добавляет переданный интервал в список интервалов зоны, если он не пересекается с существующими интервалами. Подразумевается, что был передан свободный (не пересекающийся интервал), который был возвращен методом \mbox{\hyperlink{class_i_mass_service_zone_a3834fbead45854a5eb2e9755d69152a4}{Get\+Free\+Interval()}}.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em aircraft\+Id} & Id ВС. \\
+\hline
+{\em free\+Interval} & Рассчитанный свободный интервал. \\
+\hline
+\end{DoxyParams}
+
+
+Замещается в \mbox{\hyperlink{class_c_special_place_a1a88856d16b18d99fa3acad3ca5fe1ca}{CSpecial\+Place}}, \mbox{\hyperlink{class_c_runway_adf500ea13a96d988901cf30110c0a772}{CRunway}} и \mbox{\hyperlink{class_c_preliminary_start_a1c61314c1516c6b8eb082c204860ae1f}{CPreliminary\+Start}}.
+
+\mbox{\Hypertarget{class_i_mass_service_zone_a3834fbead45854a5eb2e9755d69152a4}\label{class_i_mass_service_zone_a3834fbead45854a5eb2e9755d69152a4}} 
+\index{IMassServiceZone@{IMassServiceZone}!GetFreeInterval@{GetFreeInterval}}
+\index{GetFreeInterval@{GetFreeInterval}!IMassServiceZone@{IMassServiceZone}}
+\doxysubsubsection{\texorpdfstring{GetFreeInterval()}{GetFreeInterval()}}
+{\footnotesize\ttfamily virtual std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_c_interval}{CInterval}}$>$ IMass\+Service\+Zone\+::\+Get\+Free\+Interval (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_interval}{CInterval}} \&}]{new\+Interval }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [pure virtual]}}
+
+Проверяет, можно ли добавить переданный интервал в список уже существующих интервалов зоны без пересечений с ними. Если можно, то возвращает копию переданного интервала. Если нельзя, то рассчитывает новый, непересекающийся интервал.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em new\+Interval} & Интервал, который нужно проверить. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Свободный, непересекающийся с существующими интервалами зоны, интервал. 
+\end{DoxyReturn}
+
+
+Замещается в \mbox{\hyperlink{class_c_special_place_a0857ed2fc03ba6a4b674661b5490b04f}{CSpecial\+Place}}, \mbox{\hyperlink{class_c_runway_aa0fa3225a0622d5c8c3ebb9d80a44fe4}{CRunway}} и \mbox{\hyperlink{class_c_preliminary_start_a2fcf86862206d5ff30cb0f888b0cf387}{CPreliminary\+Start}}.
+
+\mbox{\Hypertarget{class_i_mass_service_zone_a5b80777813711212f5d3eb8ec08bd657}\label{class_i_mass_service_zone_a5b80777813711212f5d3eb8ec08bd657}} 
+\index{IMassServiceZone@{IMassServiceZone}!RemoveAircraftInterval@{RemoveAircraftInterval}}
+\index{RemoveAircraftInterval@{RemoveAircraftInterval}!IMassServiceZone@{IMassServiceZone}}
+\doxysubsubsection{\texorpdfstring{RemoveAircraftInterval()}{RemoveAircraftInterval()}}
+{\footnotesize\ttfamily virtual void IMass\+Service\+Zone\+::\+Remove\+Aircraft\+Interval (\begin{DoxyParamCaption}\item[{int}]{aircraft\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [pure virtual]}}
+
+Удаляет из списка интервалов занимания зоны интервал, принадлежащий ВС, Id которого был передан.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em aircraft\+Id} & Id ВС, интервал которого нужно удалить. \\
+\hline
+\end{DoxyParams}
+
+
+Замещается в \mbox{\hyperlink{class_c_special_place_a531f6fce0e66b29a6ca7d189093768e8}{CSpecial\+Place}}, \mbox{\hyperlink{class_c_runway_a1e6ed39e9da8668bc3c5ea30ecca090a}{CRunway}} и \mbox{\hyperlink{class_c_preliminary_start_aa5b19d8a2e8b381c68fc0dfd8a1d7604}{CPreliminary\+Start}}.
+
+\mbox{\Hypertarget{class_i_mass_service_zone_a77ef9765ddca926ed9aaf06f7644b852}\label{class_i_mass_service_zone_a77ef9765ddca926ed9aaf06f7644b852}} 
+\index{IMassServiceZone@{IMassServiceZone}!Reset@{Reset}}
+\index{Reset@{Reset}!IMassServiceZone@{IMassServiceZone}}
+\doxysubsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily virtual void IMass\+Service\+Zone\+::\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [pure virtual]}}
+
+Очищает список интервалов занимания зоны. 
+
+Замещается в \mbox{\hyperlink{class_c_special_place_ab0bb0139b1c0e80ef99547412e3b9343}{CSpecial\+Place}}, \mbox{\hyperlink{class_c_runway_a31f1053f65e31eed15f21a3504692de4}{CRunway}} и \mbox{\hyperlink{class_c_preliminary_start_a5ae00ea98ebabbf751832d87de562456}{CPreliminary\+Start}}.
+
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_i_mass_service_zone_8h}{IMass\+Service\+Zone.\+h}}\end{DoxyCompactItemize}

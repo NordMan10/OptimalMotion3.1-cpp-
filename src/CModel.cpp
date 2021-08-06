@@ -4,18 +4,13 @@
 #include "../include/CVectorHelper.h"
 #include "../include/CCommonInputData.h"
 
-CModel::CModel() : CModel(2, 2)
-{
-	
-}
+CModel::CModel() : CModel(2, 2) {}
 
 
 CModel::CModel(int runwayCount, int specialPlaceCount)
 {
 	InitRunways(runwayCount);
 	InitSpecialPlaces(specialPlaceCount);
-
-
 }
 
 void CModel::InitRunways(int runwayCount)
@@ -109,7 +104,7 @@ std::shared_ptr<std::vector<std::shared_ptr<CTakingOffAircraft>>> CModel::GetOrd
 				takingOffAircraft->GetCreationIntervals()->GetMotionFromSPToPS() - takingOffAircraft->GetCreationIntervals()->GetProcessing();
 			
 			// Получаем задержку
-			startDelay += GetSpecialPlaceStartDelay(*takingOffAircraft, takingOffInterval, SPArriveMoment);
+			startDelay += GetSpecialPlaceStartDelay(*takingOffAircraft, SPArriveMoment);
 
 			startMoment = SPArriveMoment - takingOffAircraft->GetCreationIntervals()->GetMotionFromParkingToSP() + 
 				startDelay - CCommonInputData::GetSpareArrivalTimeInterval().GetEndMoment();
@@ -167,6 +162,7 @@ int CModel::GetRunwayStartDelay(std::shared_ptr<CTakingOffAircraft> takingOffAir
 
 int CModel::GetSpecialPlaceStartDelay(CTakingOffAircraft& takingOffAircraft, int SPArriveMoment) const
 {
+	// Находим Спец. площадку, на которую движется ВС
 	auto thisSpecialPlaceIterator = std::find_if(m_SpecialPlaces.begin(), m_SpecialPlaces.end(),
 		[takingOffAircraft](std::shared_ptr<CSpecialPlace> sp) -> bool
 		{
@@ -175,11 +171,15 @@ int CModel::GetSpecialPlaceStartDelay(CTakingOffAircraft& takingOffAircraft, int
 
 	auto thisSpecialPlace = *thisSpecialPlaceIterator;
 
+	// Создаем интервал обработки ВС
 	auto processingInterval = CInterval(SPArriveMoment, SPArriveMoment + takingOffAircraft.GetCreationIntervals()->GetProcessing());
+	// Передаем интервал обработки ВС и получаем свободный интервал от Спец. площадки
 	auto freeSPInterval = thisSpecialPlace->GetFreeInterval(processingInterval);
 
+	// Добавляем полученный новый интервал в Спец. площадку
 	thisSpecialPlace->AddAircraftInterval(takingOffAircraft.GetId(), *freeSPInterval);
 
+	// Рассчитываем и возвращаем задержку
 	return freeSPInterval->GetStartMoment() - processingInterval.GetStartMoment();
 }
 
@@ -193,7 +193,7 @@ void CModel::ReconfigureAircraftsWithReserve(std::vector<std::shared_ptr<CTaking
 	for (auto i = 0; i < (int)orderedTakingOffAircrafts.size(); i++)
 	{
 		// Проверяем, использовался ли уже этот индекс ВС
-		if (CVectorHelper::Contains(usedIndexes, i))
+		if (CVectorHelper::IsContains(usedIndexes, i))
 			// Если да, то пропускаем его
 			continue;
 
@@ -232,7 +232,7 @@ void CModel::ReconfigureAircraftsWithReserve(std::vector<std::shared_ptr<CTaking
 			allAircraftsStartMomentData.emplace(item.first, item.second);
 
 		// Задаем моменты старта для текущего и резервных ВС
-		SetSPreparedStartMoments(allAircraftsStartMomentData, orderedTakingOffAircrafts);
+		SetPreparedStartMoments(allAircraftsStartMomentData, orderedTakingOffAircrafts);
 
 		// Получаем индекс ВС, имеющего наибольший приоритет (среди текущего и резервных ВС)
 		auto mostPriorityAircraftIndex = GetMostPriorityAircraftIndex(allAircraftsStartMomentData, orderedTakingOffAircrafts);
@@ -261,6 +261,7 @@ void CModel::ReconfigureAircraftsWithReserve(std::vector<std::shared_ptr<CTaking
 std::shared_ptr<std::map<int, int>> CModel::GetReserveAircraftsStartMoments(int permittedMoment, int mainAircraftIndex,
 	std::vector<std::shared_ptr<CTakingOffAircraft>>& orderedTakingOffAircrafts) const
 {
+	// Создаем словарь с ключами в виде индексов ВС и значениями в виде моментов старта.
 	auto reserveStartMoments = std::shared_ptr<std::map<int, int>>(new std::map<int, int>());
 
 	// Получаем список возможных моментов взлета
@@ -294,12 +295,13 @@ std::shared_ptr<std::map<int, int>> CModel::GetReserveAircraftsStartMoments(int 
 		}
 	}
 
-	// Возаращаем либо пустой список, либо заполненный старовыми моментами
+	// Возаращаем либо пустой, либо заполненный старовыми моментами словарь
 	return reserveStartMoments;
 }
 
 int CModel::GetReserveAircraftCount(int permittedMoment, int aircraftIndex, std::vector<int>& possibleTakingOffMoments) const
 {
+	// Задаем  начальное количество резервных ВС
 	auto reserveAircraftCount = 0;
 
 	auto index = 1;
@@ -344,7 +346,7 @@ int CModel::GetReserveAircraftCount(int permittedMoment, int aircraftIndex, std:
 	return reserveAircraftCount;
 }
 
-void CModel::SetSPreparedStartMoments(std::map<int, int>& aircraftsStartMomentData, std::vector<std::shared_ptr<CTakingOffAircraft>>& takingOffAircrafts)
+void CModel::SetPreparedStartMoments(std::map<int, int>& aircraftsStartMomentData, std::vector<std::shared_ptr<CTakingOffAircraft>>& takingOffAircrafts)
 {
 	for (auto momentItem : aircraftsStartMomentData)
 	{
@@ -378,22 +380,19 @@ void CModel::SetPSWaitingTime(std::vector<std::shared_ptr<CTakingOffAircraft>>& 
 		else
 			arrivalToPSMoment = aircraft->GetCalculatingMoments()->GetStart() + aircraft->GetCreationIntervals()->GetMotionFromParkingToPS();
 
-		auto PSDelay1 = aircraft->GetCalculatingMoments()->GetReservePermittedTakingOff() - arrivalToPSMoment -
-			aircraft->GetCreationIntervals()->GetMotionFromPSToES() - aircraft->GetCreationIntervals()->GetTakingOff();
-
-		auto PSDelay2 = aircraft->GetCalculatingMoments()->GetPermittedTakingOff() - arrivalToPSMoment -
-			aircraft->GetCreationIntervals()->GetMotionFromPSToES() - aircraft->GetCreationIntervals()->GetTakingOff();
-
 		// Рассчитываем время простоя
 		if (aircraft->GetReserveFlag())
-			aircraft->GetCalculatingIntervals()->SetPSDelay(PSDelay1);
+			aircraft->GetCalculatingIntervals()->SetPSDelay(aircraft->GetCalculatingMoments()->GetReservePermittedTakingOff() - arrivalToPSMoment -
+				aircraft->GetCreationIntervals()->GetMotionFromPSToES() - aircraft->GetCreationIntervals()->GetTakingOff());
 		else
-			aircraft->GetCalculatingIntervals()->SetPSDelay(PSDelay2);
+			aircraft->GetCalculatingIntervals()->SetPSDelay(aircraft->GetCalculatingMoments()->GetPermittedTakingOff() - arrivalToPSMoment -
+				aircraft->GetCreationIntervals()->GetMotionFromPSToES() - aircraft->GetCreationIntervals()->GetTakingOff());
 	}
 }
 
 std::shared_ptr<СTableRow> CModel::GetTableRow(CTakingOffAircraft& aircraft) const
 {
+	// Получаем все необходимые данные из экземпляра переданного ВС
 	auto aircraftTotalMotionTime = aircraft.GetCreationIntervals()->GetTakingOff() + aircraft.GetCreationIntervals()->GetMotionFromPSToES();
 	if (aircraft.GetProcessingNecessity())
 		aircraftTotalMotionTime += aircraft.GetCreationIntervals()->GetMotionFromSPToPS() + aircraft.GetCreationIntervals()->GetMotionFromParkingToSP();
@@ -404,6 +403,7 @@ std::shared_ptr<СTableRow> CModel::GetTableRow(CTakingOffAircraft& aircraft) con
 	auto processingTime = aircraft.GetProcessingNecessity() ? std::to_string(aircraft.GetCreationIntervals()->GetProcessing()) : "-";
 	auto specialPlaceId = aircraft.GetProcessingNecessity() ? std::to_string(aircraft.GetSpecialPlaceId()) : "-";
 
+	// Возвращаем указатель на экземпляр класса CTableRow
 	return std::shared_ptr<СTableRow>(new СTableRow(std::to_string(aircraft.GetId()), std::to_string(aircraft.GetCreationMoments()->GetPlannedTakingOff()), 
 		std::to_string(aircraft.GetCalculatingMoments()->GetPossibleTakingOff()), permittedMoment, std::to_string(aircraft.GetCalculatingMoments()->GetStart()), 
 		std::to_string(aircraftTotalMotionTime), processingTime, aircraft.GetProcessingNecessity(), std::to_string(aircraft.GetPriority()), aircraft.GetReserveFlag(), 

@@ -1,10 +1,10 @@
 #pragma once
 
 /** Крaткое описание класса
- * Моменты, получаемые во входных данных для взлетающего ВС
+ * Набоор моментов, получаемых во входных данных для взлетающего ВС.
  *
- * File  : TakingOffAircraftCreationMoments	.h
- * Author:
+ * File  : TakingOffAircraftCreationMoments.h
+ * Author: Yury Ten.
  *
  * Длинное описание класса
  *
@@ -13,9 +13,9 @@
 class CTakingOffAircraftCreationMoments
 {
 private:
-	/// <summary>
-	/// Плановый момент вылета
-	/// </summary>
+	/**
+	 * Плановый момент вылета.
+	 */
 	int m_PlannedTakingOff = 0;
 
 

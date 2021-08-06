@@ -1,9 +1,9 @@
 #pragma once
 
 /** Крaткое описание класса
- * Какие-либо константные значения, общие для всего проекта
+ * Какие-либо константные значения, общие для всей программы
  * File  : ProgramConstants.h
- * Author:
+ * Author: Yury Ten
  *
  * Длинное описание класса
  *
@@ -22,39 +22,39 @@
 class CProgramConstants
 {
 public:
-	/// <summary>
-	/// Начальное значение Id для зон массового обслуживания
-	/// </summary>
+	/**
+	 * Начальное значение Id для зон массового обслуживания.
+	 */
 	static int ms_StartIdValue;
 
-	/// <summary>
-	/// Время руления от парковки до ПРДВ
-	/// </summary>
+	/**
+	 * Время руления от парковки до ПРДВ.
+	 */
 	static int ms_MotionFromParkingToPS;
 
-	/// <summary>
-	/// Время руления от ПРДВ до ИСП
-	/// </summary>
+	/**
+	 * Время руления от ПРДВ до ИСП.
+	 */
 	static int ms_MotionFromPSToES;
 
-	/// <summary>
-	/// Время руления от парковки до Спец. площадки
-	/// </summary>
+	/**
+	 * Время руления от парковки до Спец. площадки.
+	 */
 	static int ms_MotionFromParkingToSP;
 
-	/// <summary>
-	/// Время руления от Спец. площадки до ПРДВ
-	/// </summary>
+	/**
+	 * Время руления от Спец. площадки до ПРДВ.
+	 */
 	static int ms_MotionFromSPToPS;
 
-	/// <summary>
-	/// Время взлета
-	/// </summary>
+	/**
+	 * Время взлета.
+	 */
 	static int ms_TakingOffInterval;
 
-	/// <summary>
-	/// Время обработки
-	/// </summary>
+	/**
+	 * Время обработки.
+	 */
 	static int ms_ProcessingTime;
 
 };

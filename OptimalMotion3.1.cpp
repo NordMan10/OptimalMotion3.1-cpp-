@@ -20,10 +20,10 @@ LRESULT CALLBACK    WndProc(HWND, UINT, WPARAM, LPARAM);
 INT_PTR CALLBACK    About(HWND, UINT, WPARAM, LPARAM);
 
 
-// Мои переменные:
-auto permittedMoments = std::vector<LPCWSTR>();
-auto startMoments = std::vector<LPCWSTR>();
-auto PSDelay = std::vector<std::string>();
+// Это были тестовые переменные для вывода на экран
+//auto permittedMoments = std::vector<LPCWSTR>();
+//auto startMoments = std::vector<LPCWSTR>();
+//auto PSDelay = std::vector<std::string>();
 
 // Это была вспомогательная функция для вывода данных на экран.
 //std::wstring s2ws(const std::string& s)
@@ -59,6 +59,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
     // Получаем выходные данные
     auto outputData = model.GetOutputData(*unusedPlannedMoments);
 
+    auto temp = 5;
     // Это была попытка вывести данные на экран
 	/*for (auto dataItem : *outputData)
 	{

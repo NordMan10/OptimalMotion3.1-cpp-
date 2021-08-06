@@ -1,0 +1,64 @@
+\hypertarget{class_c_data_randomizer}{}\doxysection{Класс CData\+Randomizer}
+\label{class_c_data_randomizer}\index{CDataRandomizer@{CDataRandomizer}}
+
+
+{\ttfamily \#include $<$CData\+Randomizer.\+h$>$}
+
+\doxysubsection*{Открытые статические члены}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{class_c_data_randomizer_ab1b24ec67b9943756c138695faf56db9}{Get\+Random\+Int}} (int min, int max)
+\item 
+static int \mbox{\hyperlink{class_c_data_randomizer_afbf54d4af6a036eb9466d4e95322373f}{Get\+Randomized\+Value}} (int value, int dispersion, int step)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Крaткое описание класса Класс для рандомизации значений File \+: Data\+Randomizer.\+h Author\+: Yury Ten.
+
+Длинное описание класса 
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{class_c_data_randomizer_ab1b24ec67b9943756c138695faf56db9}\label{class_c_data_randomizer_ab1b24ec67b9943756c138695faf56db9}} 
+\index{CDataRandomizer@{CDataRandomizer}!GetRandomInt@{GetRandomInt}}
+\index{GetRandomInt@{GetRandomInt}!CDataRandomizer@{CDataRandomizer}}
+\doxysubsubsection{\texorpdfstring{GetRandomInt()}{GetRandomInt()}}
+{\footnotesize\ttfamily static int CData\+Randomizer\+::\+Get\+Random\+Int (\begin{DoxyParamCaption}\item[{int}]{min,  }\item[{int}]{max }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Возвращает случайное число в пределах переданного интервала значений.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em min} & Минимальное значение. \\
+\hline
+{\em max} & Максимальное значение. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Целое число. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_data_randomizer_afbf54d4af6a036eb9466d4e95322373f}\label{class_c_data_randomizer_afbf54d4af6a036eb9466d4e95322373f}} 
+\index{CDataRandomizer@{CDataRandomizer}!GetRandomizedValue@{GetRandomizedValue}}
+\index{GetRandomizedValue@{GetRandomizedValue}!CDataRandomizer@{CDataRandomizer}}
+\doxysubsubsection{\texorpdfstring{GetRandomizedValue()}{GetRandomizedValue()}}
+{\footnotesize\ttfamily static int CData\+Randomizer\+::\+Get\+Randomized\+Value (\begin{DoxyParamCaption}\item[{int}]{value,  }\item[{int}]{dispersion,  }\item[{int}]{step }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Возвращает случайное число с заданным шагом и разбросом от среднего значения.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em value} & Среднее значение. \\
+\hline
+{\em dispersion} & Разброс в процентах. \\
+\hline
+{\em step} & Шаг в единицах передаваемой величины. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Целое число. 
+\end{DoxyReturn}
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_c_data_randomizer_8h}{CData\+Randomizer.\+h}}\end{DoxyCompactItemize}

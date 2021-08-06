@@ -4,7 +4,7 @@
  * Класс, содержащий реализацию общих методов для интерфейса IMassServiceZone
  * 
  * File  : CIMassServiceZoneExtensions.h
- * Author:
+ * Author: Yury Ten
  *
  * Длинное описание класса
  * Класс, содержащий реализацию общих методов для интерфейса зоны массового обслуживания (IMassServiceZone).
@@ -27,32 +27,33 @@ class CIMassServiceZoneExtensions
 {
 public:
 	/**
-	 * Добавляет переданный интервал в список интервалов зоны, если он не пересекается с существующими интервалами. Подразумевает, что
-	   был передан свободный (не пересекающийся) интервал.
+	 * Добавляет переданный интервал в список интервалов зоны, если он не пересекается с существующими интервалами.
+	 * Подразумевается, что был передан свободный (не пересекающийся интервал), который был возвращен методом GetFreeInterval().
 	 * 
 	 * \param zone Зона массового обслуживания IMassServiceZone
 	 * \param aircraftId Id ВС
 	 * \param freeInterval Рассчитанный свободный интервал
-	 * \param zoneIntervals Набор существующих интервалов
+	 * \param zoneIntervals Список существующих интервалов зоны
 	 */
 	static void AddAircraftInterval(IMassServiceZone* zone, int aircraftId, const CInterval& freeInterval, std::map<int, CInterval>& zoneIntervals);
 
 	/**
-	 * Возвращает свободный (непересекающийся с существующими интервалами) интервал.
+	 * Проверяет, можно ли добавить переданный интервал в список уже существующих интервалов зоны без пересечений с ними.
+	 * Если можно, то возвращает копию переданного интервала. Если нельзя, то рассчитывает новый, непересекающийся интервал.
 	 * 
-	 * \param zone Зона массового обслуживания
-	 * \param interval Интервал, который нужно проверить
-	 * \param zoneIntervals Набор существующих интервалов
-	 * \return Указатель shared_ptr на экземпляр класса CInterval
+	 * \param zone Зона массового обслуживания.
+	 * \param interval Интервал, который нужно проверить.
+	 * \param zoneIntervals Список существующих интервалов зоны.
+	 * \return Свободный, непересекающийся с существующими интервалами зоны, интервал.
 	 */
 	static std::shared_ptr<CInterval> GetFreeInterval(IMassServiceZone* zone, const CInterval& interval, const std::map<int, CInterval>& zoneIntervals);
 
 	/**
-	 * Удаляет интервал из набора существующих интервалов по Id ВС.
+	 * Удаляет из списка интервалов занимания зоны интервал, принадлежащий ВС, Id которого был передан.
 	 * 
-	 * \param zone Зона массового обслуживания
-	 * \param aircraftId Id ВС
-	 * \param zoneIntervals Набор существующих интервалов
+	 * \param zone Зона массового обслуживания.
+	 * \param aircraftId Id ВС, интервал которого нужно удалить.
+	 * \param zoneIntervals Список существующих интервалов зоны.
 	 */
 	static void RemoveAircraftInterval(IMassServiceZone* zone, int aircraftId, std::map<int, CInterval>& zoneIntervals);
 
@@ -60,9 +61,9 @@ private:
 	/**
 	 * Проверяет пересечение переданного интервала с набором существующих интервалов.
 	 * 
-	 * \param interval Интервал для проверки
-	 * \param zoneIntervals Набор существующих интервалов
-	 * \return Значение bool, определяющее наличие пересечения
+	 * \param interval Интервал, который нужно проверить.
+	 * \param zoneIntervals Список существующих интервалов зоны.
+	 * \return Значение bool, определяющее наличие пересечения.
 	 */
 	static bool CheckIntervalsIntersection(const CInterval& interval, const std::map<int, CInterval>& zoneIntervals);
 };

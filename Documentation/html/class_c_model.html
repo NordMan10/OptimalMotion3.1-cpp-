@@ -1,0 +1,823 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>&#x202A;OptimalMotion3.1: &#x202A;Класс CModel</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">&#x202A;OptimalMotion3.1
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_c_model.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pri-methods">Закрытые члены</a> &#124;
+<a href="#pri-attribs">Закрытые данные</a> &#124;
+<a href="class_c_model-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс CModel</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_c_model_8h_source.html">CModel.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a1ea1e9d8dab5ad230fb3698ae3c7d742"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_model.html#a1ea1e9d8dab5ad230fb3698ae3c7d742">CModel</a> ()</td></tr>
+<tr class="separator:a1ea1e9d8dab5ad230fb3698ae3c7d742"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5e9e685371d25ecc13dbcfac46a20e6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_model.html#af5e9e685371d25ecc13dbcfac46a20e6">CModel</a> (int runwayCount, int specialPlaceCount)</td></tr>
+<tr class="separator:af5e9e685371d25ecc13dbcfac46a20e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41b4550e8ee6cd715afe6e9fd8f3ae4c"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_c_runway.html">CRunway</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_model.html#a41b4550e8ee6cd715afe6e9fd8f3ae4c">GetRunways</a> () const</td></tr>
+<tr class="separator:a41b4550e8ee6cd715afe6e9fd8f3ae4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91fe8d8868adcd743df934f821ac7066"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_c_special_place.html">CSpecialPlace</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_model.html#a91fe8d8868adcd743df934f821ac7066">GetSpecialPleces</a> () const</td></tr>
+<tr class="separator:a91fe8d8868adcd743df934f821ac7066"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af849d8029552cf6783eb7af3d5a7dfdd"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_xD0_xA1_table_row.html">СTableRow</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_model.html#af849d8029552cf6783eb7af3d5a7dfdd">GetOutputData</a> (std::vector&lt; int &gt; &amp;unusedPlannedTakingOffMoments)</td></tr>
+<tr class="separator:af849d8029552cf6783eb7af3d5a7dfdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Закрытые члены</h2></td></tr>
+<tr class="memitem:a2c581e11f20992f6199730f0b0645bb2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_model.html#a2c581e11f20992f6199730f0b0645bb2">InitRunways</a> (int runwayCount)</td></tr>
+<tr class="separator:a2c581e11f20992f6199730f0b0645bb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a630704464e691819b8a27a607105cd50"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_model.html#a630704464e691819b8a27a607105cd50">InitSpecialPlaces</a> (int specPlatformCount)</td></tr>
+<tr class="separator:a630704464e691819b8a27a607105cd50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa24eb8b696b196a3adf49b9c12bd8183"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_c_taking_off_aircraft.html">CTakingOffAircraft</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_model.html#aa24eb8b696b196a3adf49b9c12bd8183">GetOrderedConfiguredTakingOffAircrafts</a> (std::vector&lt; int &gt; &amp;plannedTakingOffMoments)</td></tr>
+<tr class="separator:aa24eb8b696b196a3adf49b9c12bd8183"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0aaec5c52466eea8492ffce207385fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_model.html#ab0aaec5c52466eea8492ffce207385fc">ReconfigureAircraftsWithReserve</a> (std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_c_taking_off_aircraft.html">CTakingOffAircraft</a> &gt;&gt; &amp;orderedTakingOffAircrafts)</td></tr>
+<tr class="separator:ab0aaec5c52466eea8492ffce207385fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22c4cad07efd930a70ba7e2658396d34"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_model.html#a22c4cad07efd930a70ba7e2658396d34">SetPSWaitingTime</a> (std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_c_taking_off_aircraft.html">CTakingOffAircraft</a> &gt;&gt; &amp;takingOffAircrafts)</td></tr>
+<tr class="separator:a22c4cad07efd930a70ba7e2658396d34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63e68557e8246efac56aef468494cf8e"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_xD0_xA1_table_row.html">СTableRow</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_model.html#a63e68557e8246efac56aef468494cf8e">GetTableRow</a> (<a class="el" href="class_c_taking_off_aircraft.html">CTakingOffAircraft</a> &amp;aircraft) const</td></tr>
+<tr class="separator:a63e68557e8246efac56aef468494cf8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c4752c3ce8fba5458d33beaa3c8170f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_model.html#a0c4752c3ce8fba5458d33beaa3c8170f">GetRunwayStartDelay</a> (std::shared_ptr&lt; <a class="el" href="class_c_taking_off_aircraft.html">CTakingOffAircraft</a> &gt; takingOffAircraft, <a class="el" href="class_c_interval.html">CInterval</a> &amp;takingOffInterval) const</td></tr>
+<tr class="separator:a0c4752c3ce8fba5458d33beaa3c8170f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ecb9f2d40d2a106f45cc7a10edbb3ea"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_model.html#a1ecb9f2d40d2a106f45cc7a10edbb3ea">GetSpecialPlaceStartDelay</a> (<a class="el" href="class_c_taking_off_aircraft.html">CTakingOffAircraft</a> &amp;takingOffAircraft, int SPArriveMoment) const</td></tr>
+<tr class="separator:a1ecb9f2d40d2a106f45cc7a10edbb3ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a881236ea5fda91ea21c29a5681a63dc1"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; std::map&lt; int, int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_model.html#a881236ea5fda91ea21c29a5681a63dc1">GetReserveAircraftsStartMoments</a> (int permittedMoment, int mainAircraftIndex, std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_c_taking_off_aircraft.html">CTakingOffAircraft</a> &gt;&gt; &amp;orderedTakingOffAircrafts) const</td></tr>
+<tr class="separator:a881236ea5fda91ea21c29a5681a63dc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65a2b8ed37914a410d92a20208996f5b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_model.html#a65a2b8ed37914a410d92a20208996f5b">GetReserveAircraftCount</a> (int permittedMoment, int aircraftIndex, std::vector&lt; int &gt; &amp;possibleTakingOffMoments) const</td></tr>
+<tr class="separator:a65a2b8ed37914a410d92a20208996f5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8afdb29a001f6b6e4613fe376629c185"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_model.html#a8afdb29a001f6b6e4613fe376629c185">SetPreparedStartMoments</a> (std::map&lt; int, int &gt; &amp;aircraftsStartMomentData, std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_c_taking_off_aircraft.html">CTakingOffAircraft</a> &gt;&gt; &amp;takingOffAircrafts)</td></tr>
+<tr class="separator:a8afdb29a001f6b6e4613fe376629c185"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad67757c77cc4b5e18652a719aef0529a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_model.html#ad67757c77cc4b5e18652a719aef0529a">GetMostPriorityAircraftIndex</a> (std::map&lt; int, int &gt; &amp;aircraftsStartMomentData, std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_c_taking_off_aircraft.html">CTakingOffAircraft</a> &gt;&gt; &amp;takingOffAircrafts) const</td></tr>
+<tr class="separator:ad67757c77cc4b5e18652a719aef0529a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Закрытые данные</h2></td></tr>
+<tr class="memitem:a8e9508d1008628d1effdf85870bead90"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_c_runway.html">CRunway</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_model.html#a8e9508d1008628d1effdf85870bead90">m_Runways</a> = std::vector&lt;std::shared_ptr&lt;<a class="el" href="class_c_runway.html">CRunway</a>&gt;&gt;{}</td></tr>
+<tr class="separator:a8e9508d1008628d1effdf85870bead90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad71308753c5a7d7c43f4043d90179a62"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_c_special_place.html">CSpecialPlace</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_model.html#ad71308753c5a7d7c43f4043d90179a62">m_SpecialPlaces</a> = std::vector&lt;std::shared_ptr&lt;<a class="el" href="class_c_special_place.html">CSpecialPlace</a>&gt;&gt;{}</td></tr>
+<tr class="separator:ad71308753c5a7d7c43f4043d90179a62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a925d82a1c15b0d4a97fcce8e820bcd83"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_c_aircraft_input_data_generator.html">CAircraftInputDataGenerator</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_model.html#a925d82a1c15b0d4a97fcce8e820bcd83">m_AircraftInputDataGenerator</a> = <a class="el" href="class_c_aircraft_input_data_generator.html#a2c0ffbf3430eeb1936030c4ef9501879">CAircraftInputDataGenerator::GetInstance</a>()</td></tr>
+<tr class="separator:a925d82a1c15b0d4a97fcce8e820bcd83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p class="DocNodeLTR">Крaткое описание класса Основной класс. Содержит главный метод <a class="el" href="class_c_model.html#af849d8029552cf6783eb7af3d5a7dfdd">GetOutputData()</a>.</p>
+<p class="DocNodeLTR">File : <a class="el" href="_c_model_8h.html">CModel.h</a> Author: Yury Ten</p>
+<p class="DocNodeLTR">Длинное описание класса Содержит главный метод <a class="el" href="class_c_model.html#af849d8029552cf6783eb7af3d5a7dfdd">GetOutputData()</a>, инициирующий работу всей программы, и вспомогательные методы. Метод <a class="el" href="class_c_model.html#af849d8029552cf6783eb7af3d5a7dfdd">GetOutputData()</a> предоставляет выходные данные для их графического представления </p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a1ea1e9d8dab5ad230fb3698ae3c7d742"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ea1e9d8dab5ad230fb3698ae3c7d742">&#9670;&nbsp;</a></span>CModel() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CModel::CModel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af5e9e685371d25ecc13dbcfac46a20e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5e9e685371d25ecc13dbcfac46a20e6">&#9670;&nbsp;</a></span>CModel() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CModel::CModel </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>runwayCount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>specialPlaceCount</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="ad67757c77cc4b5e18652a719aef0529a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad67757c77cc4b5e18652a719aef0529a">&#9670;&nbsp;</a></span>GetMostPriorityAircraftIndex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CModel::GetMostPriorityAircraftIndex </td>
+          <td>(</td>
+          <td class="paramtype">std::map&lt; int, int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>aircraftsStartMomentData</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_c_taking_off_aircraft.html">CTakingOffAircraft</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>takingOffAircrafts</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p class="DocNodeLTR">Определяет индекс ВС с наибольшим приоритетом из всех переданных ВС.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">aircraftsStartMomentData</td><td>&#x202A;Набор данных о ВС и их моментах старта. </td></tr>
+    <tr><td class="paramname">takingOffAircrafts</td><td>&#x202A;Список ВС. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>&#x202A;Найденный индекс ВС. </dd></dl>
+
+</div>
+</div>
+<a id="aa24eb8b696b196a3adf49b9c12bd8183"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa24eb8b696b196a3adf49b9c12bd8183">&#9670;&nbsp;</a></span>GetOrderedConfiguredTakingOffAircrafts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;std::vector&lt;std::shared_ptr&lt;<a class="el" href="class_c_taking_off_aircraft.html">CTakingOffAircraft</a>&gt; &gt; &gt; CModel::GetOrderedConfiguredTakingOffAircrafts </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>plannedTakingOffMoments</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p class="DocNodeLTR">Создает список ВС на основе переданных плановых моментов старта, рассчитывает возможный момент вылета и соответствующий ему момент старта для каждого ВС.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">plannedTakingOffMoments</td><td>&#x202A;Список плановых моментов взлета </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>&#x202A;Возвращает упорядоченный по возможным моментам список ВС с заданными возможными моментами взлета и соответствующими моментами старта. </dd></dl>
+
+</div>
+</div>
+<a id="af849d8029552cf6783eb7af3d5a7dfdd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af849d8029552cf6783eb7af3d5a7dfdd">&#9670;&nbsp;</a></span>GetOutputData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;std::vector&lt;std::shared_ptr&lt;<a class="el" href="class_xD0_xA1_table_row.html">СTableRow</a>&gt; &gt; &gt; CModel::GetOutputData </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>unusedPlannedTakingOffMoments</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p class="DocNodeLTR">Главный метод программы, инициирующий начало всей работы. На основе заданных и сгенерированных входящих данных рассчитывает все необходимые выходные данные и предоставляет их в виде списка экземпляров класса CTableRow.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">unusedPlannedTakingOffMoments</td><td>&#x202A;Список неиспользованных плановых моментов взлета </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>&#x202A;Список выходящих данных, содержащий экземпляры класса CTableRow, представляющие строки таблицы с выходными данными </dd></dl>
+
+</div>
+</div>
+<a id="a65a2b8ed37914a410d92a20208996f5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65a2b8ed37914a410d92a20208996f5b">&#9670;&nbsp;</a></span>GetReserveAircraftCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CModel::GetReserveAircraftCount </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>permittedMoment</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>aircraftIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>possibleTakingOffMoments</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p class="DocNodeLTR">На основе заданного в классе <a class="el" href="class_c_common_input_data.html">CCommonInputData</a> критерия допустимого количества резервных ВС и переданного разрешенного момента определяет возможное количество резервных ВС для переданного по индексу ВС.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">permittedMoment</td><td>&#x202A;Разрешенный момент. </td></tr>
+    <tr><td class="paramname">aircraftIndex</td><td>&#x202A;Индекс ВС, для которого нужно найти возможное количество резервных ВС. </td></tr>
+    <tr><td class="paramname">possibleTakingOffMoments</td><td>&#x202A;Список возможных моментов взлета. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>&#x202A;Возможное количество резервных ВС для переданного ВС. </dd></dl>
+
+</div>
+</div>
+<a id="a881236ea5fda91ea21c29a5681a63dc1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a881236ea5fda91ea21c29a5681a63dc1">&#9670;&nbsp;</a></span>GetReserveAircraftsStartMoments()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;std::map&lt;int, int&gt; &gt; CModel::GetReserveAircraftsStartMoments </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>permittedMoment</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mainAircraftIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_c_taking_off_aircraft.html">CTakingOffAircraft</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>orderedTakingOffAircrafts</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p class="DocNodeLTR">Рассчитывает моменты старта для резервных ВС по заданному разрешенному моменту.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">permittedMoment</td><td>&#x202A;Разрешенный момент. </td></tr>
+    <tr><td class="paramname">mainAircraftIndex</td><td>&#x202A;Индекс ВС в общем списке, которое является основным, опорным по отношению к резервным ВС. </td></tr>
+    <tr><td class="paramname">orderedTakingOffAircrafts</td><td>&#x202A;Общий список ВС. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>&#x202A;Словарь, с ключами в виде индексов ВС и значениями в виде моментов старта. </dd></dl>
+
+</div>
+</div>
+<a id="a41b4550e8ee6cd715afe6e9fd8f3ae4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41b4550e8ee6cd715afe6e9fd8f3ae4c">&#9670;&nbsp;</a></span>GetRunways()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::shared_ptr&lt;<a class="el" href="class_c_runway.html">CRunway</a>&gt; &gt; CModel::GetRunways </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0c4752c3ce8fba5458d33beaa3c8170f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c4752c3ce8fba5458d33beaa3c8170f">&#9670;&nbsp;</a></span>GetRunwayStartDelay()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CModel::GetRunwayStartDelay </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="class_c_taking_off_aircraft.html">CTakingOffAircraft</a> &gt;&#160;</td>
+          <td class="paramname"><em>takingOffAircraft</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_c_interval.html">CInterval</a> &amp;&#160;</td>
+          <td class="paramname"><em>takingOffInterval</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p class="DocNodeLTR">Рассчитывает задержку момента старта от ВПП. Задержка может образоваться из-за занятости ВПП другим ВС.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">takingOffAircraft</td><td>&#x202A;ВС, для которого нужно рассчитать задержку. </td></tr>
+    <tr><td class="paramname">takingOffInterval</td><td>&#x202A;Интервал взлета ВС (время, которое он будет занимать ВПП). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>&#x202A;Величину задержки в секундах . </dd></dl>
+
+</div>
+</div>
+<a id="a1ecb9f2d40d2a106f45cc7a10edbb3ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ecb9f2d40d2a106f45cc7a10edbb3ea">&#9670;&nbsp;</a></span>GetSpecialPlaceStartDelay()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CModel::GetSpecialPlaceStartDelay </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_c_taking_off_aircraft.html">CTakingOffAircraft</a> &amp;&#160;</td>
+          <td class="paramname"><em>takingOffAircraft</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>SPArriveMoment</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p class="DocNodeLTR">Рассчитывает задержку момента старта от Спец. площадки. Задержка может образоваться из-за занятости Спец. площадки другим ВС.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">takingOffAircraft</td><td>&#x202A;ВС, для которого нужно рассчитать задержку. </td></tr>
+    <tr><td class="paramname">SPArriveMoment</td><td>&#x202A;Момент прибытия ВС Спец. площадку. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>&#x202A;Величину задержки в секундах. </dd></dl>
+
+</div>
+</div>
+<a id="a91fe8d8868adcd743df934f821ac7066"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91fe8d8868adcd743df934f821ac7066">&#9670;&nbsp;</a></span>GetSpecialPleces()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::shared_ptr&lt;<a class="el" href="class_c_special_place.html">CSpecialPlace</a>&gt; &gt; CModel::GetSpecialPleces </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a63e68557e8246efac56aef468494cf8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63e68557e8246efac56aef468494cf8e">&#9670;&nbsp;</a></span>GetTableRow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="class_xD0_xA1_table_row.html">СTableRow</a>&gt; CModel::GetTableRow </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_c_taking_off_aircraft.html">CTakingOffAircraft</a> &amp;&#160;</td>
+          <td class="paramname"><em>aircraft</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p class="DocNodeLTR">Создает экземпляр класса CTableRow и заполняет его выходными данными ВС.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">aircraft</td><td>&#x202A;ВС, выходные данные которого нужно представить </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>&#x202A;Экземпляр класса CTableRow, представляющих формат выходных данных. </dd></dl>
+
+</div>
+</div>
+<a id="a2c581e11f20992f6199730f0b0645bb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c581e11f20992f6199730f0b0645bb2">&#9670;&nbsp;</a></span>InitRunways()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CModel::InitRunways </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>runwayCount</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p class="DocNodeLTR">Создает заданное количество ВПП.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">runwayCount</td><td>&#x202A;Количество ВПП </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a630704464e691819b8a27a607105cd50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a630704464e691819b8a27a607105cd50">&#9670;&nbsp;</a></span>InitSpecialPlaces()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CModel::InitSpecialPlaces </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>specPlatformCount</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p class="DocNodeLTR">Создает заданное количество Спец. площадок.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">specPlatformCount</td><td>&#x202A;Количество Спец. площадок </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab0aaec5c52466eea8492ffce207385fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0aaec5c52466eea8492ffce207385fc">&#9670;&nbsp;</a></span>ReconfigureAircraftsWithReserve()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CModel::ReconfigureAircraftsWithReserve </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_c_taking_off_aircraft.html">CTakingOffAircraft</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>orderedTakingOffAircrafts</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p class="DocNodeLTR">На основе переданного списка ВС с заданными возможными моментами взлета и моментами старта определяет возможность назначения и допустимое количество резервных ВС для каждого ВС, которое уже не назначено резервным. Находит и задает разрешенные моменты взлета для всех ВС. Рассчитывает и задает новые моменты старта для резервных ВС.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">orderedTakingOffAircrafts</td><td>&#x202A;Список ВС с заданными возможными моментами взлета и моментами старта </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8afdb29a001f6b6e4613fe376629c185"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8afdb29a001f6b6e4613fe376629c185">&#9670;&nbsp;</a></span>SetPreparedStartMoments()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CModel::SetPreparedStartMoments </td>
+          <td>(</td>
+          <td class="paramtype">std::map&lt; int, int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>aircraftsStartMomentData</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_c_taking_off_aircraft.html">CTakingOffAircraft</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>takingOffAircrafts</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p class="DocNodeLTR">Задает заранее подготовленные и переданные моменты старта для переданных ВС.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">aircraftsStartMomentData</td><td>&#x202A;Моменты старта. </td></tr>
+    <tr><td class="paramname">takingOffAircrafts</td><td>&#x202A;Список ВС. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a22c4cad07efd930a70ba7e2658396d34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22c4cad07efd930a70ba7e2658396d34">&#9670;&nbsp;</a></span>SetPSWaitingTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CModel::SetPSWaitingTime </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_c_taking_off_aircraft.html">CTakingOffAircraft</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>takingOffAircrafts</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p class="DocNodeLTR">Рассчитывает и задает время ожидания на ПРДВ для переданных ВС.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">takingOffAircrafts</td><td>&#x202A;Список ВС </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="a925d82a1c15b0d4a97fcce8e820bcd83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a925d82a1c15b0d4a97fcce8e820bcd83">&#9670;&nbsp;</a></span>m_AircraftInputDataGenerator</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="class_c_aircraft_input_data_generator.html">CAircraftInputDataGenerator</a>&gt; CModel::m_AircraftInputDataGenerator = <a class="el" href="class_c_aircraft_input_data_generator.html#a2c0ffbf3430eeb1936030c4ef9501879">CAircraftInputDataGenerator::GetInstance</a>()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p class="DocNodeLTR">Генератор входящих данных для кождого ВС. </p>
+
+</div>
+</div>
+<a id="a8e9508d1008628d1effdf85870bead90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e9508d1008628d1effdf85870bead90">&#9670;&nbsp;</a></span>m_Runways</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::shared_ptr&lt;<a class="el" href="class_c_runway.html">CRunway</a>&gt; &gt; CModel::m_Runways = std::vector&lt;std::shared_ptr&lt;<a class="el" href="class_c_runway.html">CRunway</a>&gt;&gt;{}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p class="DocNodeLTR">Список ВПП. </p>
+
+</div>
+</div>
+<a id="ad71308753c5a7d7c43f4043d90179a62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad71308753c5a7d7c43f4043d90179a62">&#9670;&nbsp;</a></span>m_SpecialPlaces</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::shared_ptr&lt;<a class="el" href="class_c_special_place.html">CSpecialPlace</a>&gt; &gt; CModel::m_SpecialPlaces = std::vector&lt;std::shared_ptr&lt;<a class="el" href="class_c_special_place.html">CSpecialPlace</a>&gt;&gt;{}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p class="DocNodeLTR">Список Спец. площадок. </p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>include/<a class="el" href="_c_model_8h_source.html">CModel.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_c_model.html">&#x202A;CModel</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

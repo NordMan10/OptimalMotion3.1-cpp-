@@ -1,0 +1,145 @@
+\hypertarget{class_c_preliminary_start}{}\doxysection{Класс CPreliminary\+Start}
+\label{class_c_preliminary_start}\index{CPreliminaryStart@{CPreliminaryStart}}
+
+
+{\ttfamily \#include $<$CPreliminary\+Start.\+h$>$}
+
+Граф наследования\+:CPreliminary\+Start\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_c_preliminary_start}
+\end{center}
+\end{figure}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_c_preliminary_start_ad2ca4f90f704ededd871e588dd3b5205}{CPreliminary\+Start}} (int id)
+\item 
+int \mbox{\hyperlink{class_c_preliminary_start_a29cb593980cc913302fd47ad892f26fd}{Get\+Id}} () const
+\item 
+void \mbox{\hyperlink{class_c_preliminary_start_a1c61314c1516c6b8eb082c204860ae1f}{Add\+Aircraft\+Interval}} (int aircraft\+Id, \mbox{\hyperlink{class_c_interval}{CInterval}} \&free\+Interval)
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_interval}{CInterval}} $>$ \mbox{\hyperlink{class_c_preliminary_start_a2fcf86862206d5ff30cb0f888b0cf387}{Get\+Free\+Interval}} (\mbox{\hyperlink{class_c_interval}{CInterval}} \&new\+Interval)
+\item 
+void \mbox{\hyperlink{class_c_preliminary_start_aa5b19d8a2e8b381c68fc0dfd8a1d7604}{Remove\+Aircraft\+Interval}} (int aircraft\+Id)
+\item 
+void \mbox{\hyperlink{class_c_preliminary_start_a5ae00ea98ebabbf751832d87de562456}{Reset}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Закрытые данные}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_c_preliminary_start_a35ec9a57ffbcbd9c3bd290c467956202}{m\+\_\+\+Id}} = 0
+\item 
+std\+::map$<$ int, \mbox{\hyperlink{class_c_interval}{CInterval}} $>$ \mbox{\hyperlink{class_c_preliminary_start_aece6b89fb223f3d5a8b4f62597027329}{m\+\_\+\+Occupied\+Intervals}} = std\+::map$<$int, \mbox{\hyperlink{class_c_interval}{CInterval}}$>$()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Крaткое описание класса Представление предварительного старта
+
+File \+: \mbox{\hyperlink{_c_preliminary_start_8h}{CPreliminary\+Start.\+h}} Author\+: Yury Ten
+
+Длинное описание класса 
+
+\doxysubsection{Конструктор(ы)}
+\mbox{\Hypertarget{class_c_preliminary_start_ad2ca4f90f704ededd871e588dd3b5205}\label{class_c_preliminary_start_ad2ca4f90f704ededd871e588dd3b5205}} 
+\index{CPreliminaryStart@{CPreliminaryStart}!CPreliminaryStart@{CPreliminaryStart}}
+\index{CPreliminaryStart@{CPreliminaryStart}!CPreliminaryStart@{CPreliminaryStart}}
+\doxysubsubsection{\texorpdfstring{CPreliminaryStart()}{CPreliminaryStart()}}
+{\footnotesize\ttfamily CPreliminary\+Start\+::\+CPreliminary\+Start (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{class_c_preliminary_start_a1c61314c1516c6b8eb082c204860ae1f}\label{class_c_preliminary_start_a1c61314c1516c6b8eb082c204860ae1f}} 
+\index{CPreliminaryStart@{CPreliminaryStart}!AddAircraftInterval@{AddAircraftInterval}}
+\index{AddAircraftInterval@{AddAircraftInterval}!CPreliminaryStart@{CPreliminaryStart}}
+\doxysubsubsection{\texorpdfstring{AddAircraftInterval()}{AddAircraftInterval()}}
+{\footnotesize\ttfamily void CPreliminary\+Start\+::\+Add\+Aircraft\+Interval (\begin{DoxyParamCaption}\item[{int}]{aircraft\+Id,  }\item[{\mbox{\hyperlink{class_c_interval}{CInterval}} \&}]{free\+Interval }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Добавляет переданный интервал в список интервалов зоны, если он не пересекается с существующими интервалами. Подразумевается, что был передан свободный (не пересекающийся интервал), который был возвращен методом \mbox{\hyperlink{class_c_preliminary_start_a2fcf86862206d5ff30cb0f888b0cf387}{Get\+Free\+Interval()}}.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em aircraft\+Id} & Id ВС. \\
+\hline
+{\em free\+Interval} & Рассчитанный свободный интервал. \\
+\hline
+\end{DoxyParams}
+
+
+Замещает \mbox{\hyperlink{class_i_mass_service_zone_a58d8de1899e8b9822d08981d02168cea}{IMass\+Service\+Zone}}.
+
+\mbox{\Hypertarget{class_c_preliminary_start_a2fcf86862206d5ff30cb0f888b0cf387}\label{class_c_preliminary_start_a2fcf86862206d5ff30cb0f888b0cf387}} 
+\index{CPreliminaryStart@{CPreliminaryStart}!GetFreeInterval@{GetFreeInterval}}
+\index{GetFreeInterval@{GetFreeInterval}!CPreliminaryStart@{CPreliminaryStart}}
+\doxysubsubsection{\texorpdfstring{GetFreeInterval()}{GetFreeInterval()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_c_interval}{CInterval}}$>$ CPreliminary\+Start\+::\+Get\+Free\+Interval (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_interval}{CInterval}} \&}]{new\+Interval }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Проверяет, можно ли добавить переданный интервал в список уже существующих интервалов зоны без пересечений с ними. Если можно, то возвращает копию переданного интервала. Если нельзя, то рассчитывает новый, непересекающийся интервал.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em new\+Interval} & Интервал, который нужно проверить. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Свободный, непересекающийся с существующими интервалами зоны, интервал. 
+\end{DoxyReturn}
+
+
+Замещает \mbox{\hyperlink{class_i_mass_service_zone_a3834fbead45854a5eb2e9755d69152a4}{IMass\+Service\+Zone}}.
+
+\mbox{\Hypertarget{class_c_preliminary_start_a29cb593980cc913302fd47ad892f26fd}\label{class_c_preliminary_start_a29cb593980cc913302fd47ad892f26fd}} 
+\index{CPreliminaryStart@{CPreliminaryStart}!GetId@{GetId}}
+\index{GetId@{GetId}!CPreliminaryStart@{CPreliminaryStart}}
+\doxysubsubsection{\texorpdfstring{GetId()}{GetId()}}
+{\footnotesize\ttfamily int CPreliminary\+Start\+::\+Get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_c_preliminary_start_aa5b19d8a2e8b381c68fc0dfd8a1d7604}\label{class_c_preliminary_start_aa5b19d8a2e8b381c68fc0dfd8a1d7604}} 
+\index{CPreliminaryStart@{CPreliminaryStart}!RemoveAircraftInterval@{RemoveAircraftInterval}}
+\index{RemoveAircraftInterval@{RemoveAircraftInterval}!CPreliminaryStart@{CPreliminaryStart}}
+\doxysubsubsection{\texorpdfstring{RemoveAircraftInterval()}{RemoveAircraftInterval()}}
+{\footnotesize\ttfamily void CPreliminary\+Start\+::\+Remove\+Aircraft\+Interval (\begin{DoxyParamCaption}\item[{int}]{aircraft\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Удаляет из списка интервалов занимания зоны интервал, принадлежащий ВС, Id которого был передан.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em aircraft\+Id} & Id ВС, интервал которого нужно удалить. \\
+\hline
+\end{DoxyParams}
+
+
+Замещает \mbox{\hyperlink{class_i_mass_service_zone_a5b80777813711212f5d3eb8ec08bd657}{IMass\+Service\+Zone}}.
+
+\mbox{\Hypertarget{class_c_preliminary_start_a5ae00ea98ebabbf751832d87de562456}\label{class_c_preliminary_start_a5ae00ea98ebabbf751832d87de562456}} 
+\index{CPreliminaryStart@{CPreliminaryStart}!Reset@{Reset}}
+\index{Reset@{Reset}!CPreliminaryStart@{CPreliminaryStart}}
+\doxysubsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily void CPreliminary\+Start\+::\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Очищает список интервалов занимания зоны. 
+
+Замещает \mbox{\hyperlink{class_i_mass_service_zone_a77ef9765ddca926ed9aaf06f7644b852}{IMass\+Service\+Zone}}.
+
+
+
+\doxysubsection{Данные класса}
+\mbox{\Hypertarget{class_c_preliminary_start_a35ec9a57ffbcbd9c3bd290c467956202}\label{class_c_preliminary_start_a35ec9a57ffbcbd9c3bd290c467956202}} 
+\index{CPreliminaryStart@{CPreliminaryStart}!m\_Id@{m\_Id}}
+\index{m\_Id@{m\_Id}!CPreliminaryStart@{CPreliminaryStart}}
+\doxysubsubsection{\texorpdfstring{m\_Id}{m\_Id}}
+{\footnotesize\ttfamily int CPreliminary\+Start\+::m\+\_\+\+Id = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_c_preliminary_start_aece6b89fb223f3d5a8b4f62597027329}\label{class_c_preliminary_start_aece6b89fb223f3d5a8b4f62597027329}} 
+\index{CPreliminaryStart@{CPreliminaryStart}!m\_OccupiedIntervals@{m\_OccupiedIntervals}}
+\index{m\_OccupiedIntervals@{m\_OccupiedIntervals}!CPreliminaryStart@{CPreliminaryStart}}
+\doxysubsubsection{\texorpdfstring{m\_OccupiedIntervals}{m\_OccupiedIntervals}}
+{\footnotesize\ttfamily std\+::map$<$int, \mbox{\hyperlink{class_c_interval}{CInterval}}$>$ CPreliminary\+Start\+::m\+\_\+\+Occupied\+Intervals = std\+::map$<$int, \mbox{\hyperlink{class_c_interval}{CInterval}}$>$()\hspace{0.3cm}{\ttfamily [private]}}
+
+Список интервалов занимания ПРДВ (время, когда ПРДВ занят ВС). 
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_c_preliminary_start_8h}{CPreliminary\+Start.\+h}}\end{DoxyCompactItemize}

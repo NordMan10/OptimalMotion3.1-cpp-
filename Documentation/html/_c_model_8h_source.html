@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>&#x202A;OptimalMotion3.1: &#x202A;Исходный файл include/CModel.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">&#x202A;OptimalMotion3.1
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('_c_model_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">CModel.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_c_model_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; <span class="comment">// SYSTEM INCLUDES</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; <span class="comment">//</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; <span class="comment">// PROJECT INCLUDES</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; <span class="comment">//</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; <span class="comment">// LOCAL INCLUDES</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; <span class="comment">//</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_c_runway_8h.html">CRunway.h</a>&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_c_special_place_8h.html">CSpecialPlace.h</a>&quot;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_c_aircraft_input_data_generator_8h.html">CAircraftInputDataGenerator.h</a>&quot;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_xD0_xA1_table_row_8h.html">СTableRow.h</a>&quot;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_c_taking_off_aircraft_8h.html">CTakingOffAircraft.h</a>&quot;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_c_model.html">   30</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_c_model.html">CModel</a></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="class_c_model.html#a8e9508d1008628d1effdf85870bead90">   36</a></span>&#160;    std::vector&lt;std::shared_ptr&lt;CRunway&gt;&gt; <a class="code" href="class_c_model.html#a8e9508d1008628d1effdf85870bead90">m_Runways</a> = std::vector&lt;std::shared_ptr&lt;CRunway&gt;&gt;{};</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_c_model.html#ad71308753c5a7d7c43f4043d90179a62">   41</a></span>&#160;    std::vector&lt;std::shared_ptr&lt;CSpecialPlace&gt;&gt; <a class="code" href="class_c_model.html#ad71308753c5a7d7c43f4043d90179a62">m_SpecialPlaces</a> = std::vector&lt;std::shared_ptr&lt;CSpecialPlace&gt;&gt;{};</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="class_c_model.html#a925d82a1c15b0d4a97fcce8e820bcd83">   47</a></span>&#160;    std::shared_ptr&lt;CAircraftInputDataGenerator&gt; <a class="code" href="class_c_model.html#a925d82a1c15b0d4a97fcce8e820bcd83">m_AircraftInputDataGenerator</a> = <a class="code" href="class_c_aircraft_input_data_generator.html#a2c0ffbf3430eeb1936030c4ef9501879">CAircraftInputDataGenerator::GetInstance</a>();</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="class_c_model.html#a1ea1e9d8dab5ad230fb3698ae3c7d742">   51</a></span>&#160;    <a class="code" href="class_c_model.html#a1ea1e9d8dab5ad230fb3698ae3c7d742">CModel</a>();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="class_c_model.html#af5e9e685371d25ecc13dbcfac46a20e6">   53</a></span>&#160;    <a class="code" href="class_c_model.html#af5e9e685371d25ecc13dbcfac46a20e6">CModel</a>(<span class="keywordtype">int</span> runwayCount, <span class="keywordtype">int</span> specialPlaceCount);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="class_c_model.html#a41b4550e8ee6cd715afe6e9fd8f3ae4c">   57</a></span>&#160;    std::vector&lt;std::shared_ptr&lt;CRunway&gt;&gt; <a class="code" href="class_c_model.html#a41b4550e8ee6cd715afe6e9fd8f3ae4c">GetRunways</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    </div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="class_c_model.html#a91fe8d8868adcd743df934f821ac7066">   59</a></span>&#160;    std::vector&lt;std::shared_ptr&lt;CSpecialPlace&gt;&gt; <a class="code" href="class_c_model.html#a91fe8d8868adcd743df934f821ac7066">GetSpecialPleces</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="class_c_model.html#af849d8029552cf6783eb7af3d5a7dfdd">   68</a></span>&#160;    std::shared_ptr&lt;std::vector&lt;std::shared_ptr&lt;СTableRow&gt;&gt;&gt; <a class="code" href="class_c_model.html#af849d8029552cf6783eb7af3d5a7dfdd">GetOutputData</a>(std::vector&lt;int&gt;&amp; unusedPlannedTakingOffMoments);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="class_c_model.html#a2c581e11f20992f6199730f0b0645bb2">   76</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_c_model.html#a2c581e11f20992f6199730f0b0645bb2">InitRunways</a>(<span class="keywordtype">int</span> runwayCount);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="class_c_model.html#a630704464e691819b8a27a607105cd50">   83</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_c_model.html#a630704464e691819b8a27a607105cd50">InitSpecialPlaces</a>(<span class="keywordtype">int</span> specPlatformCount);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="class_c_model.html#aa24eb8b696b196a3adf49b9c12bd8183">   92</a></span>&#160;    std::shared_ptr&lt;std::vector&lt;std::shared_ptr&lt;CTakingOffAircraft&gt;&gt;&gt; <a class="code" href="class_c_model.html#aa24eb8b696b196a3adf49b9c12bd8183">GetOrderedConfiguredTakingOffAircrafts</a>(std::vector&lt;int&gt;&amp; plannedTakingOffMoments);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="class_c_model.html#ab0aaec5c52466eea8492ffce207385fc">  101</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_c_model.html#ab0aaec5c52466eea8492ffce207385fc">ReconfigureAircraftsWithReserve</a>(std::vector&lt;std::shared_ptr&lt;CTakingOffAircraft&gt;&gt;&amp; orderedTakingOffAircrafts);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="class_c_model.html#a22c4cad07efd930a70ba7e2658396d34">  108</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_c_model.html#a22c4cad07efd930a70ba7e2658396d34">SetPSWaitingTime</a>(std::vector&lt;std::shared_ptr&lt;CTakingOffAircraft&gt;&gt;&amp; takingOffAircrafts);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="class_c_model.html#a63e68557e8246efac56aef468494cf8e">  116</a></span>&#160;    std::shared_ptr&lt;СTableRow&gt; <a class="code" href="class_c_model.html#a63e68557e8246efac56aef468494cf8e">GetTableRow</a>(<a class="code" href="class_c_taking_off_aircraft.html">CTakingOffAircraft</a>&amp; aircraft) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
+<div class="line"><a name="l00125"></a><span class="lineno"><a class="line" href="class_c_model.html#a0c4752c3ce8fba5458d33beaa3c8170f">  125</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_c_model.html#a0c4752c3ce8fba5458d33beaa3c8170f">GetRunwayStartDelay</a>(std::shared_ptr&lt;CTakingOffAircraft&gt; takingOffAircraft, <a class="code" href="class_c_interval.html">CInterval</a>&amp; takingOffInterval) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
+<div class="line"><a name="l00134"></a><span class="lineno"><a class="line" href="class_c_model.html#a1ecb9f2d40d2a106f45cc7a10edbb3ea">  134</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_c_model.html#a1ecb9f2d40d2a106f45cc7a10edbb3ea">GetSpecialPlaceStartDelay</a>(<a class="code" href="class_c_taking_off_aircraft.html">CTakingOffAircraft</a>&amp; takingOffAircraft, <span class="keywordtype">int</span> SPArriveMoment) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
+<div class="line"><a name="l00144"></a><span class="lineno"><a class="line" href="class_c_model.html#a881236ea5fda91ea21c29a5681a63dc1">  144</a></span>&#160;    std::shared_ptr&lt;std::map&lt;int, int&gt;&gt; <a class="code" href="class_c_model.html#a881236ea5fda91ea21c29a5681a63dc1">GetReserveAircraftsStartMoments</a>(<span class="keywordtype">int</span> permittedMoment, <span class="keywordtype">int</span> mainAircraftIndex,</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        std::vector&lt;std::shared_ptr&lt;CTakingOffAircraft&gt;&gt;&amp; orderedTakingOffAircrafts) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
+<div class="line"><a name="l00156"></a><span class="lineno"><a class="line" href="class_c_model.html#a65a2b8ed37914a410d92a20208996f5b">  156</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_c_model.html#a65a2b8ed37914a410d92a20208996f5b">GetReserveAircraftCount</a>(<span class="keywordtype">int</span> permittedMoment, <span class="keywordtype">int</span> aircraftIndex, std::vector&lt;int&gt;&amp; possibleTakingOffMoments) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160; </div>
+<div class="line"><a name="l00164"></a><span class="lineno"><a class="line" href="class_c_model.html#a8afdb29a001f6b6e4613fe376629c185">  164</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_c_model.html#a8afdb29a001f6b6e4613fe376629c185">SetPreparedStartMoments</a>(std::map&lt;int, int&gt;&amp; aircraftsStartMomentData, std::vector&lt;std::shared_ptr&lt;CTakingOffAircraft&gt;&gt;&amp; takingOffAircrafts);</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160; </div>
+<div class="line"><a name="l00173"></a><span class="lineno"><a class="line" href="class_c_model.html#ad67757c77cc4b5e18652a719aef0529a">  173</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_c_model.html#ad67757c77cc4b5e18652a719aef0529a">GetMostPriorityAircraftIndex</a>(std::map&lt;int, int&gt;&amp; aircraftsStartMomentData, std::vector&lt;std::shared_ptr&lt;CTakingOffAircraft&gt;&gt;&amp; takingOffAircrafts) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;};</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160; </div>
+<div class="ttc" id="a_c_aircraft_input_data_generator_8h_html"><div class="ttname"><a href="_c_aircraft_input_data_generator_8h.html">CAircraftInputDataGenerator.h</a></div></div>
+<div class="ttc" id="a_c_runway_8h_html"><div class="ttname"><a href="_c_runway_8h.html">CRunway.h</a></div></div>
+<div class="ttc" id="a_c_special_place_8h_html"><div class="ttname"><a href="_c_special_place_8h.html">CSpecialPlace.h</a></div></div>
+<div class="ttc" id="a_c_taking_off_aircraft_8h_html"><div class="ttname"><a href="_c_taking_off_aircraft_8h.html">CTakingOffAircraft.h</a></div></div>
+<div class="ttc" id="a_xD0_xA1_table_row_8h_html"><div class="ttname"><a href="_xD0_xA1_table_row_8h.html">СTableRow.h</a></div></div>
+<div class="ttc" id="aclass_c_aircraft_input_data_generator_html_a2c0ffbf3430eeb1936030c4ef9501879"><div class="ttname"><a href="class_c_aircraft_input_data_generator.html#a2c0ffbf3430eeb1936030c4ef9501879">CAircraftInputDataGenerator::GetInstance</a></div><div class="ttdeci">static std::shared_ptr&lt; CAircraftInputDataGenerator &gt; GetInstance()</div></div>
+<div class="ttc" id="aclass_c_interval_html"><div class="ttname"><a href="class_c_interval.html">CInterval</a></div><div class="ttdef"><b>Definition:</b> CInterval.h:25</div></div>
+<div class="ttc" id="aclass_c_model_html"><div class="ttname"><a href="class_c_model.html">CModel</a></div><div class="ttdef"><b>Definition:</b> CModel.h:31</div></div>
+<div class="ttc" id="aclass_c_model_html_a0c4752c3ce8fba5458d33beaa3c8170f"><div class="ttname"><a href="class_c_model.html#a0c4752c3ce8fba5458d33beaa3c8170f">CModel::GetRunwayStartDelay</a></div><div class="ttdeci">int GetRunwayStartDelay(std::shared_ptr&lt; CTakingOffAircraft &gt; takingOffAircraft, CInterval &amp;takingOffInterval) const</div></div>
+<div class="ttc" id="aclass_c_model_html_a1ea1e9d8dab5ad230fb3698ae3c7d742"><div class="ttname"><a href="class_c_model.html#a1ea1e9d8dab5ad230fb3698ae3c7d742">CModel::CModel</a></div><div class="ttdeci">CModel()</div></div>
+<div class="ttc" id="aclass_c_model_html_a1ecb9f2d40d2a106f45cc7a10edbb3ea"><div class="ttname"><a href="class_c_model.html#a1ecb9f2d40d2a106f45cc7a10edbb3ea">CModel::GetSpecialPlaceStartDelay</a></div><div class="ttdeci">int GetSpecialPlaceStartDelay(CTakingOffAircraft &amp;takingOffAircraft, int SPArriveMoment) const</div></div>
+<div class="ttc" id="aclass_c_model_html_a22c4cad07efd930a70ba7e2658396d34"><div class="ttname"><a href="class_c_model.html#a22c4cad07efd930a70ba7e2658396d34">CModel::SetPSWaitingTime</a></div><div class="ttdeci">void SetPSWaitingTime(std::vector&lt; std::shared_ptr&lt; CTakingOffAircraft &gt;&gt; &amp;takingOffAircrafts)</div></div>
+<div class="ttc" id="aclass_c_model_html_a2c581e11f20992f6199730f0b0645bb2"><div class="ttname"><a href="class_c_model.html#a2c581e11f20992f6199730f0b0645bb2">CModel::InitRunways</a></div><div class="ttdeci">void InitRunways(int runwayCount)</div></div>
+<div class="ttc" id="aclass_c_model_html_a41b4550e8ee6cd715afe6e9fd8f3ae4c"><div class="ttname"><a href="class_c_model.html#a41b4550e8ee6cd715afe6e9fd8f3ae4c">CModel::GetRunways</a></div><div class="ttdeci">std::vector&lt; std::shared_ptr&lt; CRunway &gt; &gt; GetRunways() const</div></div>
+<div class="ttc" id="aclass_c_model_html_a630704464e691819b8a27a607105cd50"><div class="ttname"><a href="class_c_model.html#a630704464e691819b8a27a607105cd50">CModel::InitSpecialPlaces</a></div><div class="ttdeci">void InitSpecialPlaces(int specPlatformCount)</div></div>
+<div class="ttc" id="aclass_c_model_html_a63e68557e8246efac56aef468494cf8e"><div class="ttname"><a href="class_c_model.html#a63e68557e8246efac56aef468494cf8e">CModel::GetTableRow</a></div><div class="ttdeci">std::shared_ptr&lt; СTableRow &gt; GetTableRow(CTakingOffAircraft &amp;aircraft) const</div></div>
+<div class="ttc" id="aclass_c_model_html_a65a2b8ed37914a410d92a20208996f5b"><div class="ttname"><a href="class_c_model.html#a65a2b8ed37914a410d92a20208996f5b">CModel::GetReserveAircraftCount</a></div><div class="ttdeci">int GetReserveAircraftCount(int permittedMoment, int aircraftIndex, std::vector&lt; int &gt; &amp;possibleTakingOffMoments) const</div></div>
+<div class="ttc" id="aclass_c_model_html_a881236ea5fda91ea21c29a5681a63dc1"><div class="ttname"><a href="class_c_model.html#a881236ea5fda91ea21c29a5681a63dc1">CModel::GetReserveAircraftsStartMoments</a></div><div class="ttdeci">std::shared_ptr&lt; std::map&lt; int, int &gt; &gt; GetReserveAircraftsStartMoments(int permittedMoment, int mainAircraftIndex, std::vector&lt; std::shared_ptr&lt; CTakingOffAircraft &gt;&gt; &amp;orderedTakingOffAircrafts) const</div></div>
+<div class="ttc" id="aclass_c_model_html_a8afdb29a001f6b6e4613fe376629c185"><div class="ttname"><a href="class_c_model.html#a8afdb29a001f6b6e4613fe376629c185">CModel::SetPreparedStartMoments</a></div><div class="ttdeci">void SetPreparedStartMoments(std::map&lt; int, int &gt; &amp;aircraftsStartMomentData, std::vector&lt; std::shared_ptr&lt; CTakingOffAircraft &gt;&gt; &amp;takingOffAircrafts)</div></div>
+<div class="ttc" id="aclass_c_model_html_a8e9508d1008628d1effdf85870bead90"><div class="ttname"><a href="class_c_model.html#a8e9508d1008628d1effdf85870bead90">CModel::m_Runways</a></div><div class="ttdeci">std::vector&lt; std::shared_ptr&lt; CRunway &gt; &gt; m_Runways</div><div class="ttdef"><b>Definition:</b> CModel.h:36</div></div>
+<div class="ttc" id="aclass_c_model_html_a91fe8d8868adcd743df934f821ac7066"><div class="ttname"><a href="class_c_model.html#a91fe8d8868adcd743df934f821ac7066">CModel::GetSpecialPleces</a></div><div class="ttdeci">std::vector&lt; std::shared_ptr&lt; CSpecialPlace &gt; &gt; GetSpecialPleces() const</div></div>
+<div class="ttc" id="aclass_c_model_html_a925d82a1c15b0d4a97fcce8e820bcd83"><div class="ttname"><a href="class_c_model.html#a925d82a1c15b0d4a97fcce8e820bcd83">CModel::m_AircraftInputDataGenerator</a></div><div class="ttdeci">std::shared_ptr&lt; CAircraftInputDataGenerator &gt; m_AircraftInputDataGenerator</div><div class="ttdef"><b>Definition:</b> CModel.h:47</div></div>
+<div class="ttc" id="aclass_c_model_html_aa24eb8b696b196a3adf49b9c12bd8183"><div class="ttname"><a href="class_c_model.html#aa24eb8b696b196a3adf49b9c12bd8183">CModel::GetOrderedConfiguredTakingOffAircrafts</a></div><div class="ttdeci">std::shared_ptr&lt; std::vector&lt; std::shared_ptr&lt; CTakingOffAircraft &gt; &gt; &gt; GetOrderedConfiguredTakingOffAircrafts(std::vector&lt; int &gt; &amp;plannedTakingOffMoments)</div></div>
+<div class="ttc" id="aclass_c_model_html_ab0aaec5c52466eea8492ffce207385fc"><div class="ttname"><a href="class_c_model.html#ab0aaec5c52466eea8492ffce207385fc">CModel::ReconfigureAircraftsWithReserve</a></div><div class="ttdeci">void ReconfigureAircraftsWithReserve(std::vector&lt; std::shared_ptr&lt; CTakingOffAircraft &gt;&gt; &amp;orderedTakingOffAircrafts)</div></div>
+<div class="ttc" id="aclass_c_model_html_ad67757c77cc4b5e18652a719aef0529a"><div class="ttname"><a href="class_c_model.html#ad67757c77cc4b5e18652a719aef0529a">CModel::GetMostPriorityAircraftIndex</a></div><div class="ttdeci">int GetMostPriorityAircraftIndex(std::map&lt; int, int &gt; &amp;aircraftsStartMomentData, std::vector&lt; std::shared_ptr&lt; CTakingOffAircraft &gt;&gt; &amp;takingOffAircrafts) const</div></div>
+<div class="ttc" id="aclass_c_model_html_ad71308753c5a7d7c43f4043d90179a62"><div class="ttname"><a href="class_c_model.html#ad71308753c5a7d7c43f4043d90179a62">CModel::m_SpecialPlaces</a></div><div class="ttdeci">std::vector&lt; std::shared_ptr&lt; CSpecialPlace &gt; &gt; m_SpecialPlaces</div><div class="ttdef"><b>Definition:</b> CModel.h:41</div></div>
+<div class="ttc" id="aclass_c_model_html_af5e9e685371d25ecc13dbcfac46a20e6"><div class="ttname"><a href="class_c_model.html#af5e9e685371d25ecc13dbcfac46a20e6">CModel::CModel</a></div><div class="ttdeci">CModel(int runwayCount, int specialPlaceCount)</div></div>
+<div class="ttc" id="aclass_c_model_html_af849d8029552cf6783eb7af3d5a7dfdd"><div class="ttname"><a href="class_c_model.html#af849d8029552cf6783eb7af3d5a7dfdd">CModel::GetOutputData</a></div><div class="ttdeci">std::shared_ptr&lt; std::vector&lt; std::shared_ptr&lt; СTableRow &gt; &gt; &gt; GetOutputData(std::vector&lt; int &gt; &amp;unusedPlannedTakingOffMoments)</div></div>
+<div class="ttc" id="aclass_c_taking_off_aircraft_html"><div class="ttname"><a href="class_c_taking_off_aircraft.html">CTakingOffAircraft</a></div><div class="ttdef"><b>Definition:</b> CTakingOffAircraft.h:30</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">&#x202A;include</a></li><li class="navelem"><a class="el" href="_c_model_8h.html">&#x202A;CModel.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

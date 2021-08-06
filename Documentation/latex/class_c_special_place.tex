@@ -1,0 +1,145 @@
+\hypertarget{class_c_special_place}{}\doxysection{Класс CSpecial\+Place}
+\label{class_c_special_place}\index{CSpecialPlace@{CSpecialPlace}}
+
+
+{\ttfamily \#include $<$CSpecial\+Place.\+h$>$}
+
+Граф наследования\+:CSpecial\+Place\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_c_special_place}
+\end{center}
+\end{figure}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_c_special_place_acfbe78bf7fa2a137530bf1a2fce3afb8}{CSpecial\+Place}} (int id)
+\item 
+int \mbox{\hyperlink{class_c_special_place_a054262a3905a611d1a88ca9359cac3df}{Get\+Id}} () const
+\item 
+void \mbox{\hyperlink{class_c_special_place_a1a88856d16b18d99fa3acad3ca5fe1ca}{Add\+Aircraft\+Interval}} (int aircraft\+Id, \mbox{\hyperlink{class_c_interval}{CInterval}} \&free\+Interval)
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_interval}{CInterval}} $>$ \mbox{\hyperlink{class_c_special_place_a0857ed2fc03ba6a4b674661b5490b04f}{Get\+Free\+Interval}} (\mbox{\hyperlink{class_c_interval}{CInterval}} \&new\+Interval)
+\item 
+void \mbox{\hyperlink{class_c_special_place_a531f6fce0e66b29a6ca7d189093768e8}{Remove\+Aircraft\+Interval}} (int aircraft\+Id)
+\item 
+void \mbox{\hyperlink{class_c_special_place_ab0bb0139b1c0e80ef99547412e3b9343}{Reset}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Закрытые данные}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_c_special_place_a87e94515d497e5176331be1cbbbf99eb}{m\+\_\+\+Id}} = 0
+\item 
+std\+::map$<$ int, \mbox{\hyperlink{class_c_interval}{CInterval}} $>$ \mbox{\hyperlink{class_c_special_place_a27bd5706d2b8e78dd25e88eaf3ebb048}{m\+\_\+\+Processing\+Intervals}} = std\+::map$<$int, \mbox{\hyperlink{class_c_interval}{CInterval}}$>$()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Крaткое описание класса.
+
+File \+: \mbox{\hyperlink{_c_special_place_8h}{CSpecial\+Place.\+h}} Author\+: Yury Ten.
+
+Длинное описание класса 
+
+\doxysubsection{Конструктор(ы)}
+\mbox{\Hypertarget{class_c_special_place_acfbe78bf7fa2a137530bf1a2fce3afb8}\label{class_c_special_place_acfbe78bf7fa2a137530bf1a2fce3afb8}} 
+\index{CSpecialPlace@{CSpecialPlace}!CSpecialPlace@{CSpecialPlace}}
+\index{CSpecialPlace@{CSpecialPlace}!CSpecialPlace@{CSpecialPlace}}
+\doxysubsubsection{\texorpdfstring{CSpecialPlace()}{CSpecialPlace()}}
+{\footnotesize\ttfamily CSpecial\+Place\+::\+CSpecial\+Place (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{class_c_special_place_a1a88856d16b18d99fa3acad3ca5fe1ca}\label{class_c_special_place_a1a88856d16b18d99fa3acad3ca5fe1ca}} 
+\index{CSpecialPlace@{CSpecialPlace}!AddAircraftInterval@{AddAircraftInterval}}
+\index{AddAircraftInterval@{AddAircraftInterval}!CSpecialPlace@{CSpecialPlace}}
+\doxysubsubsection{\texorpdfstring{AddAircraftInterval()}{AddAircraftInterval()}}
+{\footnotesize\ttfamily void CSpecial\+Place\+::\+Add\+Aircraft\+Interval (\begin{DoxyParamCaption}\item[{int}]{aircraft\+Id,  }\item[{\mbox{\hyperlink{class_c_interval}{CInterval}} \&}]{free\+Interval }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Добавляет переданный интервал в список интервалов зоны, если он не пересекается с существующими интервалами. Подразумевается, что был передан свободный (не пересекающийся интервал), который был возвращен методом \mbox{\hyperlink{class_c_special_place_a0857ed2fc03ba6a4b674661b5490b04f}{Get\+Free\+Interval()}}.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em aircraft\+Id} & Id ВС. \\
+\hline
+{\em free\+Interval} & Рассчитанный свободный интервал. \\
+\hline
+\end{DoxyParams}
+
+
+Замещает \mbox{\hyperlink{class_i_mass_service_zone_a58d8de1899e8b9822d08981d02168cea}{IMass\+Service\+Zone}}.
+
+\mbox{\Hypertarget{class_c_special_place_a0857ed2fc03ba6a4b674661b5490b04f}\label{class_c_special_place_a0857ed2fc03ba6a4b674661b5490b04f}} 
+\index{CSpecialPlace@{CSpecialPlace}!GetFreeInterval@{GetFreeInterval}}
+\index{GetFreeInterval@{GetFreeInterval}!CSpecialPlace@{CSpecialPlace}}
+\doxysubsubsection{\texorpdfstring{GetFreeInterval()}{GetFreeInterval()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_c_interval}{CInterval}}$>$ CSpecial\+Place\+::\+Get\+Free\+Interval (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_interval}{CInterval}} \&}]{new\+Interval }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Проверяет, можно ли добавить переданный интервал в список уже существующих интервалов зоны без пересечений с ними. Если можно, то возвращает копию переданного интервала. Если нельзя, то рассчитывает новый, непересекающийся интервал.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em new\+Interval} & Интервал, который нужно проверить. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Свободный, непересекающийся с существующими интервалами зоны, интервал. 
+\end{DoxyReturn}
+
+
+Замещает \mbox{\hyperlink{class_i_mass_service_zone_a3834fbead45854a5eb2e9755d69152a4}{IMass\+Service\+Zone}}.
+
+\mbox{\Hypertarget{class_c_special_place_a054262a3905a611d1a88ca9359cac3df}\label{class_c_special_place_a054262a3905a611d1a88ca9359cac3df}} 
+\index{CSpecialPlace@{CSpecialPlace}!GetId@{GetId}}
+\index{GetId@{GetId}!CSpecialPlace@{CSpecialPlace}}
+\doxysubsubsection{\texorpdfstring{GetId()}{GetId()}}
+{\footnotesize\ttfamily int CSpecial\+Place\+::\+Get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_c_special_place_a531f6fce0e66b29a6ca7d189093768e8}\label{class_c_special_place_a531f6fce0e66b29a6ca7d189093768e8}} 
+\index{CSpecialPlace@{CSpecialPlace}!RemoveAircraftInterval@{RemoveAircraftInterval}}
+\index{RemoveAircraftInterval@{RemoveAircraftInterval}!CSpecialPlace@{CSpecialPlace}}
+\doxysubsubsection{\texorpdfstring{RemoveAircraftInterval()}{RemoveAircraftInterval()}}
+{\footnotesize\ttfamily void CSpecial\+Place\+::\+Remove\+Aircraft\+Interval (\begin{DoxyParamCaption}\item[{int}]{aircraft\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Удаляет из списка интервалов занимания зоны интервал, принадлежащий ВС, Id которого был передан.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em aircraft\+Id} & Id ВС, интервал которого нужно удалить. \\
+\hline
+\end{DoxyParams}
+
+
+Замещает \mbox{\hyperlink{class_i_mass_service_zone_a5b80777813711212f5d3eb8ec08bd657}{IMass\+Service\+Zone}}.
+
+\mbox{\Hypertarget{class_c_special_place_ab0bb0139b1c0e80ef99547412e3b9343}\label{class_c_special_place_ab0bb0139b1c0e80ef99547412e3b9343}} 
+\index{CSpecialPlace@{CSpecialPlace}!Reset@{Reset}}
+\index{Reset@{Reset}!CSpecialPlace@{CSpecialPlace}}
+\doxysubsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily void CSpecial\+Place\+::\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Очищает список интервалов занимания зоны. 
+
+Замещает \mbox{\hyperlink{class_i_mass_service_zone_a77ef9765ddca926ed9aaf06f7644b852}{IMass\+Service\+Zone}}.
+
+
+
+\doxysubsection{Данные класса}
+\mbox{\Hypertarget{class_c_special_place_a87e94515d497e5176331be1cbbbf99eb}\label{class_c_special_place_a87e94515d497e5176331be1cbbbf99eb}} 
+\index{CSpecialPlace@{CSpecialPlace}!m\_Id@{m\_Id}}
+\index{m\_Id@{m\_Id}!CSpecialPlace@{CSpecialPlace}}
+\doxysubsubsection{\texorpdfstring{m\_Id}{m\_Id}}
+{\footnotesize\ttfamily int CSpecial\+Place\+::m\+\_\+\+Id = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_c_special_place_a27bd5706d2b8e78dd25e88eaf3ebb048}\label{class_c_special_place_a27bd5706d2b8e78dd25e88eaf3ebb048}} 
+\index{CSpecialPlace@{CSpecialPlace}!m\_ProcessingIntervals@{m\_ProcessingIntervals}}
+\index{m\_ProcessingIntervals@{m\_ProcessingIntervals}!CSpecialPlace@{CSpecialPlace}}
+\doxysubsubsection{\texorpdfstring{m\_ProcessingIntervals}{m\_ProcessingIntervals}}
+{\footnotesize\ttfamily std\+::map$<$int, \mbox{\hyperlink{class_c_interval}{CInterval}}$>$ CSpecial\+Place\+::m\+\_\+\+Processing\+Intervals = std\+::map$<$int, \mbox{\hyperlink{class_c_interval}{CInterval}}$>$()\hspace{0.3cm}{\ttfamily [private]}}
+
+Список интервалов занимания ПРДВ (время, когда ПРДВ занят ВС). 
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_c_special_place_8h}{CSpecial\+Place.\+h}}\end{DoxyCompactItemize}

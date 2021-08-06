@@ -1,0 +1,169 @@
+\hypertarget{class_c_aircraft_input_data}{}\doxysection{Класс CAircraft\+Input\+Data}
+\label{class_c_aircraft_input_data}\index{CAircraftInputData@{CAircraftInputData}}
+
+
+{\ttfamily \#include $<$CAircraft\+Input\+Data.\+h$>$}
+
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_c_aircraft_input_data_ae0033e687c7d5fbef283e75b82d3a6f1}{CAircraft\+Input\+Data}} (std\+::string runway\+Id, int special\+Place\+Id, std\+::string type, int priority, bool processing\+Is\+Needed, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_taking_off_aircraft_creation_moments}{CTaking\+Off\+Aircraft\+Creation\+Moments}} $>$ creation\+Moments, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_taking_off_aircraft_creation_intervals}{CTaking\+Off\+Aircraft\+Creation\+Intervals}} $>$ creation\+Intervals)
+\item 
+\mbox{\hyperlink{class_c_aircraft_input_data_a56372cc6e3981ca434f910e18daf4391}{CAircraft\+Input\+Data}} ()=default
+\item 
+\mbox{\hyperlink{class_c_aircraft_input_data_a350e1708678bf31628fc5e2d88a93ff2}{$\sim$\+CAircraft\+Input\+Data}} ()
+\item 
+std\+::string \mbox{\hyperlink{class_c_aircraft_input_data_ada5e55d4a9907c8745f04eb899b62c8c}{Get\+Runway\+Id}} () const
+\item 
+int \mbox{\hyperlink{class_c_aircraft_input_data_a6a0b1bfb4a14c1d5df036077d3cb1360}{Get\+Special\+Place\+Id}} () const
+\item 
+std\+::string \mbox{\hyperlink{class_c_aircraft_input_data_a8d6f0758256c6670c4e11c7edd55c798}{Get\+Type}} () const
+\item 
+int \mbox{\hyperlink{class_c_aircraft_input_data_a9a253ae7df10ab26b6bba792288092a0}{Get\+Priority}} () const
+\item 
+bool \mbox{\hyperlink{class_c_aircraft_input_data_ab60ba759c0b909d4350d73be66fe94ce}{Get\+Processing\+Necessity}} () const
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_taking_off_aircraft_creation_moments}{CTaking\+Off\+Aircraft\+Creation\+Moments}} $>$ \mbox{\hyperlink{class_c_aircraft_input_data_a99e26e9ae45e2953d473ac3dcfdd680e}{Get\+Creation\+Moments}} () const
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_taking_off_aircraft_creation_intervals}{CTaking\+Off\+Aircraft\+Creation\+Intervals}} $>$ \mbox{\hyperlink{class_c_aircraft_input_data_aa7ea62a27edaad908332b1614697a9cb}{Get\+Creation\+Intervals}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Закрытые данные}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_c_aircraft_input_data_a2817aab77bb341cf59e2ae98d57e7201}{m\+\_\+\+Runway\+Id}}
+\item 
+int \mbox{\hyperlink{class_c_aircraft_input_data_a6a110f631417e05c58f6cb6a06741332}{m\+\_\+\+Special\+Place\+Id}}
+\item 
+std\+::string \mbox{\hyperlink{class_c_aircraft_input_data_a553edc59b4b5635c2622b5537b621d9c}{m\+\_\+\+Type}}
+\item 
+int \mbox{\hyperlink{class_c_aircraft_input_data_a611afa0f6c5b2127cca340a7c9580d18}{m\+\_\+\+Priority}}
+\item 
+bool \mbox{\hyperlink{class_c_aircraft_input_data_aa62d6f7387f63a3f5460dd3ba1cdc933}{m\+\_\+\+Processing\+Is\+Needed}}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_taking_off_aircraft_creation_moments}{CTaking\+Off\+Aircraft\+Creation\+Moments}} $>$ \mbox{\hyperlink{class_c_aircraft_input_data_a31b27cf7d432a3f5356888bf8a2b9ae7}{m\+\_\+\+Creation\+Moments}}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_taking_off_aircraft_creation_intervals}{CTaking\+Off\+Aircraft\+Creation\+Intervals}} $>$ \mbox{\hyperlink{class_c_aircraft_input_data_ab1718557b3f1a2d56f062587bfae736b}{m\+\_\+\+Creation\+Intervals}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Крaткое описание класса Набор входных данных, необходимый для каждого ВС
+
+File \+: \mbox{\hyperlink{_c_aircraft_input_data_8h}{CAircraft\+Input\+Data.\+h}} Author\+: Yury Ten.
+
+Длинное описание класса Класс определяем набор входных данных, необходимый для каждого ВС и предоставляем методы доступа к ним 
+
+\doxysubsection{Конструктор(ы)}
+\mbox{\Hypertarget{class_c_aircraft_input_data_ae0033e687c7d5fbef283e75b82d3a6f1}\label{class_c_aircraft_input_data_ae0033e687c7d5fbef283e75b82d3a6f1}} 
+\index{CAircraftInputData@{CAircraftInputData}!CAircraftInputData@{CAircraftInputData}}
+\index{CAircraftInputData@{CAircraftInputData}!CAircraftInputData@{CAircraftInputData}}
+\doxysubsubsection{\texorpdfstring{CAircraftInputData()}{CAircraftInputData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily CAircraft\+Input\+Data\+::\+CAircraft\+Input\+Data (\begin{DoxyParamCaption}\item[{std\+::string}]{runway\+Id,  }\item[{int}]{special\+Place\+Id,  }\item[{std\+::string}]{type,  }\item[{int}]{priority,  }\item[{bool}]{processing\+Is\+Needed,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_taking_off_aircraft_creation_moments}{CTaking\+Off\+Aircraft\+Creation\+Moments}} $>$}]{creation\+Moments,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_taking_off_aircraft_creation_intervals}{CTaking\+Off\+Aircraft\+Creation\+Intervals}} $>$}]{creation\+Intervals }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_c_aircraft_input_data_a56372cc6e3981ca434f910e18daf4391}\label{class_c_aircraft_input_data_a56372cc6e3981ca434f910e18daf4391}} 
+\index{CAircraftInputData@{CAircraftInputData}!CAircraftInputData@{CAircraftInputData}}
+\index{CAircraftInputData@{CAircraftInputData}!CAircraftInputData@{CAircraftInputData}}
+\doxysubsubsection{\texorpdfstring{CAircraftInputData()}{CAircraftInputData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily CAircraft\+Input\+Data\+::\+CAircraft\+Input\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{class_c_aircraft_input_data_a350e1708678bf31628fc5e2d88a93ff2}\label{class_c_aircraft_input_data_a350e1708678bf31628fc5e2d88a93ff2}} 
+\index{CAircraftInputData@{CAircraftInputData}!````~CAircraftInputData@{$\sim$CAircraftInputData}}
+\index{````~CAircraftInputData@{$\sim$CAircraftInputData}!CAircraftInputData@{CAircraftInputData}}
+\doxysubsubsection{\texorpdfstring{$\sim$CAircraftInputData()}{~CAircraftInputData()}}
+{\footnotesize\ttfamily CAircraft\+Input\+Data\+::$\sim$\+CAircraft\+Input\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{class_c_aircraft_input_data_aa7ea62a27edaad908332b1614697a9cb}\label{class_c_aircraft_input_data_aa7ea62a27edaad908332b1614697a9cb}} 
+\index{CAircraftInputData@{CAircraftInputData}!GetCreationIntervals@{GetCreationIntervals}}
+\index{GetCreationIntervals@{GetCreationIntervals}!CAircraftInputData@{CAircraftInputData}}
+\doxysubsubsection{\texorpdfstring{GetCreationIntervals()}{GetCreationIntervals()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_c_taking_off_aircraft_creation_intervals}{CTaking\+Off\+Aircraft\+Creation\+Intervals}}$>$ CAircraft\+Input\+Data\+::\+Get\+Creation\+Intervals (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_c_aircraft_input_data_a99e26e9ae45e2953d473ac3dcfdd680e}\label{class_c_aircraft_input_data_a99e26e9ae45e2953d473ac3dcfdd680e}} 
+\index{CAircraftInputData@{CAircraftInputData}!GetCreationMoments@{GetCreationMoments}}
+\index{GetCreationMoments@{GetCreationMoments}!CAircraftInputData@{CAircraftInputData}}
+\doxysubsubsection{\texorpdfstring{GetCreationMoments()}{GetCreationMoments()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_c_taking_off_aircraft_creation_moments}{CTaking\+Off\+Aircraft\+Creation\+Moments}}$>$ CAircraft\+Input\+Data\+::\+Get\+Creation\+Moments (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_c_aircraft_input_data_a9a253ae7df10ab26b6bba792288092a0}\label{class_c_aircraft_input_data_a9a253ae7df10ab26b6bba792288092a0}} 
+\index{CAircraftInputData@{CAircraftInputData}!GetPriority@{GetPriority}}
+\index{GetPriority@{GetPriority}!CAircraftInputData@{CAircraftInputData}}
+\doxysubsubsection{\texorpdfstring{GetPriority()}{GetPriority()}}
+{\footnotesize\ttfamily int CAircraft\+Input\+Data\+::\+Get\+Priority (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_c_aircraft_input_data_ab60ba759c0b909d4350d73be66fe94ce}\label{class_c_aircraft_input_data_ab60ba759c0b909d4350d73be66fe94ce}} 
+\index{CAircraftInputData@{CAircraftInputData}!GetProcessingNecessity@{GetProcessingNecessity}}
+\index{GetProcessingNecessity@{GetProcessingNecessity}!CAircraftInputData@{CAircraftInputData}}
+\doxysubsubsection{\texorpdfstring{GetProcessingNecessity()}{GetProcessingNecessity()}}
+{\footnotesize\ttfamily bool CAircraft\+Input\+Data\+::\+Get\+Processing\+Necessity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_c_aircraft_input_data_ada5e55d4a9907c8745f04eb899b62c8c}\label{class_c_aircraft_input_data_ada5e55d4a9907c8745f04eb899b62c8c}} 
+\index{CAircraftInputData@{CAircraftInputData}!GetRunwayId@{GetRunwayId}}
+\index{GetRunwayId@{GetRunwayId}!CAircraftInputData@{CAircraftInputData}}
+\doxysubsubsection{\texorpdfstring{GetRunwayId()}{GetRunwayId()}}
+{\footnotesize\ttfamily std\+::string CAircraft\+Input\+Data\+::\+Get\+Runway\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_c_aircraft_input_data_a6a0b1bfb4a14c1d5df036077d3cb1360}\label{class_c_aircraft_input_data_a6a0b1bfb4a14c1d5df036077d3cb1360}} 
+\index{CAircraftInputData@{CAircraftInputData}!GetSpecialPlaceId@{GetSpecialPlaceId}}
+\index{GetSpecialPlaceId@{GetSpecialPlaceId}!CAircraftInputData@{CAircraftInputData}}
+\doxysubsubsection{\texorpdfstring{GetSpecialPlaceId()}{GetSpecialPlaceId()}}
+{\footnotesize\ttfamily int CAircraft\+Input\+Data\+::\+Get\+Special\+Place\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_c_aircraft_input_data_a8d6f0758256c6670c4e11c7edd55c798}\label{class_c_aircraft_input_data_a8d6f0758256c6670c4e11c7edd55c798}} 
+\index{CAircraftInputData@{CAircraftInputData}!GetType@{GetType}}
+\index{GetType@{GetType}!CAircraftInputData@{CAircraftInputData}}
+\doxysubsubsection{\texorpdfstring{GetType()}{GetType()}}
+{\footnotesize\ttfamily std\+::string CAircraft\+Input\+Data\+::\+Get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Данные класса}
+\mbox{\Hypertarget{class_c_aircraft_input_data_ab1718557b3f1a2d56f062587bfae736b}\label{class_c_aircraft_input_data_ab1718557b3f1a2d56f062587bfae736b}} 
+\index{CAircraftInputData@{CAircraftInputData}!m\_CreationIntervals@{m\_CreationIntervals}}
+\index{m\_CreationIntervals@{m\_CreationIntervals}!CAircraftInputData@{CAircraftInputData}}
+\doxysubsubsection{\texorpdfstring{m\_CreationIntervals}{m\_CreationIntervals}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_c_taking_off_aircraft_creation_intervals}{CTaking\+Off\+Aircraft\+Creation\+Intervals}}$>$ CAircraft\+Input\+Data\+::m\+\_\+\+Creation\+Intervals\hspace{0.3cm}{\ttfamily [private]}}
+
+Интервалы Вс, задающиеся при создании ВС. \mbox{\Hypertarget{class_c_aircraft_input_data_a31b27cf7d432a3f5356888bf8a2b9ae7}\label{class_c_aircraft_input_data_a31b27cf7d432a3f5356888bf8a2b9ae7}} 
+\index{CAircraftInputData@{CAircraftInputData}!m\_CreationMoments@{m\_CreationMoments}}
+\index{m\_CreationMoments@{m\_CreationMoments}!CAircraftInputData@{CAircraftInputData}}
+\doxysubsubsection{\texorpdfstring{m\_CreationMoments}{m\_CreationMoments}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_c_taking_off_aircraft_creation_moments}{CTaking\+Off\+Aircraft\+Creation\+Moments}}$>$ CAircraft\+Input\+Data\+::m\+\_\+\+Creation\+Moments\hspace{0.3cm}{\ttfamily [private]}}
+
+Моменты ВС, задающиеся при создании ВС. \mbox{\Hypertarget{class_c_aircraft_input_data_a611afa0f6c5b2127cca340a7c9580d18}\label{class_c_aircraft_input_data_a611afa0f6c5b2127cca340a7c9580d18}} 
+\index{CAircraftInputData@{CAircraftInputData}!m\_Priority@{m\_Priority}}
+\index{m\_Priority@{m\_Priority}!CAircraftInputData@{CAircraftInputData}}
+\doxysubsubsection{\texorpdfstring{m\_Priority}{m\_Priority}}
+{\footnotesize\ttfamily int CAircraft\+Input\+Data\+::m\+\_\+\+Priority\hspace{0.3cm}{\ttfamily [private]}}
+
+Приоритет ВС. \mbox{\Hypertarget{class_c_aircraft_input_data_aa62d6f7387f63a3f5460dd3ba1cdc933}\label{class_c_aircraft_input_data_aa62d6f7387f63a3f5460dd3ba1cdc933}} 
+\index{CAircraftInputData@{CAircraftInputData}!m\_ProcessingIsNeeded@{m\_ProcessingIsNeeded}}
+\index{m\_ProcessingIsNeeded@{m\_ProcessingIsNeeded}!CAircraftInputData@{CAircraftInputData}}
+\doxysubsubsection{\texorpdfstring{m\_ProcessingIsNeeded}{m\_ProcessingIsNeeded}}
+{\footnotesize\ttfamily bool CAircraft\+Input\+Data\+::m\+\_\+\+Processing\+Is\+Needed\hspace{0.3cm}{\ttfamily [private]}}
+
+Флаг необходимости противообледенительной обработки. \mbox{\Hypertarget{class_c_aircraft_input_data_a2817aab77bb341cf59e2ae98d57e7201}\label{class_c_aircraft_input_data_a2817aab77bb341cf59e2ae98d57e7201}} 
+\index{CAircraftInputData@{CAircraftInputData}!m\_RunwayId@{m\_RunwayId}}
+\index{m\_RunwayId@{m\_RunwayId}!CAircraftInputData@{CAircraftInputData}}
+\doxysubsubsection{\texorpdfstring{m\_RunwayId}{m\_RunwayId}}
+{\footnotesize\ttfamily std\+::string CAircraft\+Input\+Data\+::m\+\_\+\+Runway\+Id\hspace{0.3cm}{\ttfamily [private]}}
+
+Id ВПП. \mbox{\Hypertarget{class_c_aircraft_input_data_a6a110f631417e05c58f6cb6a06741332}\label{class_c_aircraft_input_data_a6a110f631417e05c58f6cb6a06741332}} 
+\index{CAircraftInputData@{CAircraftInputData}!m\_SpecialPlaceId@{m\_SpecialPlaceId}}
+\index{m\_SpecialPlaceId@{m\_SpecialPlaceId}!CAircraftInputData@{CAircraftInputData}}
+\doxysubsubsection{\texorpdfstring{m\_SpecialPlaceId}{m\_SpecialPlaceId}}
+{\footnotesize\ttfamily int CAircraft\+Input\+Data\+::m\+\_\+\+Special\+Place\+Id\hspace{0.3cm}{\ttfamily [private]}}
+
+Id Спец. площадки. \mbox{\Hypertarget{class_c_aircraft_input_data_a553edc59b4b5635c2622b5537b621d9c}\label{class_c_aircraft_input_data_a553edc59b4b5635c2622b5537b621d9c}} 
+\index{CAircraftInputData@{CAircraftInputData}!m\_Type@{m\_Type}}
+\index{m\_Type@{m\_Type}!CAircraftInputData@{CAircraftInputData}}
+\doxysubsubsection{\texorpdfstring{m\_Type}{m\_Type}}
+{\footnotesize\ttfamily std\+::string CAircraft\+Input\+Data\+::m\+\_\+\+Type\hspace{0.3cm}{\ttfamily [private]}}
+
+Тип ВС. 
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_c_aircraft_input_data_8h}{CAircraft\+Input\+Data.\+h}}\end{DoxyCompactItemize}

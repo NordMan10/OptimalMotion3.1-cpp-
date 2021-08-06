@@ -3,7 +3,7 @@
 
 CTakingOffAircraft::CTakingOffAircraft(const CAircraftInputData& inputData)
 {
-	m_Id = ms_IdGenerator++;
+	m_Id = GetNewUniqueId();
 	m_Type = inputData.GetType();
 	m_Priority = inputData.GetPriority();
 	m_RunwayId = inputData.GetRunwayId();
@@ -13,7 +13,7 @@ CTakingOffAircraft::CTakingOffAircraft(const CAircraftInputData& inputData)
 	m_ProcessingIsNeeded = inputData.GetProcessingNecessity();
 }
 
-int CTakingOffAircraft::ms_IdGenerator = CProgramConstants::ms_StartIdValue;
+int CTakingOffAircraft::ms_NextTakingOffAircraftId = CProgramConstants::ms_StartIdValue;
 
 
 bool CTakingOffAircraft::PermittedMomentComparer(std::shared_ptr<CTakingOffAircraft> a1, std::shared_ptr<CTakingOffAircraft> a2)
@@ -24,4 +24,9 @@ bool CTakingOffAircraft::PermittedMomentComparer(std::shared_ptr<CTakingOffAircr
 bool CTakingOffAircraft::PossibleMomentComparer(std::shared_ptr<CTakingOffAircraft> a1, std::shared_ptr<CTakingOffAircraft> a2)
 {
 	return a1->GetCalculatingMoments()->GetPossibleTakingOff() < a2->GetCalculatingMoments()->GetPossibleTakingOff();
+}
+
+int CTakingOffAircraft::GetNewUniqueId()
+{
+	return ms_NextTakingOffAircraftId++;
 }

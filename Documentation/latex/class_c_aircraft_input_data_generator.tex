@@ -1,0 +1,128 @@
+\hypertarget{class_c_aircraft_input_data_generator}{}\doxysection{Класс CAircraft\+Input\+Data\+Generator}
+\label{class_c_aircraft_input_data_generator}\index{CAircraftInputDataGenerator@{CAircraftInputDataGenerator}}
+
+
+{\ttfamily \#include $<$CAircraft\+Input\+Data\+Generator.\+h$>$}
+
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_aircraft_input_data}{CAircraft\+Input\+Data}} $>$ \mbox{\hyperlink{class_c_aircraft_input_data_generator_a976c0b593e0fcaa530dc64ab1e110ec0}{Get\+Aircraft\+Input\+Data}} (int planned\+Taking\+Off\+Moment)
+\end{DoxyCompactItemize}
+\doxysubsection*{Открытые статические члены}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_aircraft_input_data_generator}{CAircraft\+Input\+Data\+Generator}} $>$ \mbox{\hyperlink{class_c_aircraft_input_data_generator_a2c0ffbf3430eeb1936030c4ef9501879}{Get\+Instance}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Статические открытые данные}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_aircraft_input_data_generator}{CAircraft\+Input\+Data\+Generator}} $>$ \mbox{\hyperlink{class_c_aircraft_input_data_generator_ae3af31ca3fed32f8bfc0cabc749625b2}{m\+\_\+\+Instance}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Закрытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_c_aircraft_input_data_generator_a9ba43414cc7abf622529d31eeb6ab76e}{CAircraft\+Input\+Data\+Generator}} ()
+\item 
+\mbox{\hyperlink{class_c_aircraft_input_data_generator_abc96ccb7379d9111100421effa836531}{CAircraft\+Input\+Data\+Generator}} (\mbox{\hyperlink{class_c_aircraft_input_data_generator}{CAircraft\+Input\+Data\+Generator}} \&from)
+\item 
+int \mbox{\hyperlink{class_c_aircraft_input_data_generator_a97f9a45bf0f3637cfd37c118529b5e04}{Get\+Aircraft\+Priority}} ()
+\item 
+bool \mbox{\hyperlink{class_c_aircraft_input_data_generator_a5cd99a8cf6573233145382ea6dac6b4e}{Get\+Processing\+Necessity}} ()
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_taking_off_aircraft_creation_intervals}{CTaking\+Off\+Aircraft\+Creation\+Intervals}} $>$ \mbox{\hyperlink{class_c_aircraft_input_data_generator_a91d09c98771d3f96eebca1aefdafc040}{Get\+Taking\+Off\+Aircraft\+Creation\+Intervals}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Крaткое описание класса Класс для генерации входных данных для каждого ВС. Синглтон
+
+File \+: \mbox{\hyperlink{_c_aircraft_input_data_generator_8h}{CAircraft\+Input\+Data\+Generator.\+h}} Author\+: Yury Ten.
+
+Длинное описание класса Генерирует входные данные для конкретного ВС, используя заранее созданные данные из классов \mbox{\hyperlink{class_c_program_constants}{CProgram\+Constants}}, \mbox{\hyperlink{class_c_common_input_data}{CCommon\+Input\+Data}}, а также данные, прописаные напрямую в методах. 
+
+\doxysubsection{Конструктор(ы)}
+\mbox{\Hypertarget{class_c_aircraft_input_data_generator_a9ba43414cc7abf622529d31eeb6ab76e}\label{class_c_aircraft_input_data_generator_a9ba43414cc7abf622529d31eeb6ab76e}} 
+\index{CAircraftInputDataGenerator@{CAircraftInputDataGenerator}!CAircraftInputDataGenerator@{CAircraftInputDataGenerator}}
+\index{CAircraftInputDataGenerator@{CAircraftInputDataGenerator}!CAircraftInputDataGenerator@{CAircraftInputDataGenerator}}
+\doxysubsubsection{\texorpdfstring{CAircraftInputDataGenerator()}{CAircraftInputDataGenerator()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily CAircraft\+Input\+Data\+Generator\+::\+CAircraft\+Input\+Data\+Generator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_c_aircraft_input_data_generator_abc96ccb7379d9111100421effa836531}\label{class_c_aircraft_input_data_generator_abc96ccb7379d9111100421effa836531}} 
+\index{CAircraftInputDataGenerator@{CAircraftInputDataGenerator}!CAircraftInputDataGenerator@{CAircraftInputDataGenerator}}
+\index{CAircraftInputDataGenerator@{CAircraftInputDataGenerator}!CAircraftInputDataGenerator@{CAircraftInputDataGenerator}}
+\doxysubsubsection{\texorpdfstring{CAircraftInputDataGenerator()}{CAircraftInputDataGenerator()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily CAircraft\+Input\+Data\+Generator\+::\+CAircraft\+Input\+Data\+Generator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_aircraft_input_data_generator}{CAircraft\+Input\+Data\+Generator}} \&}]{from }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{class_c_aircraft_input_data_generator_a976c0b593e0fcaa530dc64ab1e110ec0}\label{class_c_aircraft_input_data_generator_a976c0b593e0fcaa530dc64ab1e110ec0}} 
+\index{CAircraftInputDataGenerator@{CAircraftInputDataGenerator}!GetAircraftInputData@{GetAircraftInputData}}
+\index{GetAircraftInputData@{GetAircraftInputData}!CAircraftInputDataGenerator@{CAircraftInputDataGenerator}}
+\doxysubsubsection{\texorpdfstring{GetAircraftInputData()}{GetAircraftInputData()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_c_aircraft_input_data}{CAircraft\+Input\+Data}}$>$ CAircraft\+Input\+Data\+Generator\+::\+Get\+Aircraft\+Input\+Data (\begin{DoxyParamCaption}\item[{int}]{planned\+Taking\+Off\+Moment }\end{DoxyParamCaption})}
+
+Составляет набор входящих данных для ВС по указанному плановыму моменту.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em planned\+Taking\+Off\+Moment.} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Входные данные для ВС в виде экземпляра класса \mbox{\hyperlink{class_c_aircraft_input_data}{CAircraft\+Input\+Data}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_aircraft_input_data_generator_a97f9a45bf0f3637cfd37c118529b5e04}\label{class_c_aircraft_input_data_generator_a97f9a45bf0f3637cfd37c118529b5e04}} 
+\index{CAircraftInputDataGenerator@{CAircraftInputDataGenerator}!GetAircraftPriority@{GetAircraftPriority}}
+\index{GetAircraftPriority@{GetAircraftPriority}!CAircraftInputDataGenerator@{CAircraftInputDataGenerator}}
+\doxysubsubsection{\texorpdfstring{GetAircraftPriority()}{GetAircraftPriority()}}
+{\footnotesize\ttfamily int CAircraft\+Input\+Data\+Generator\+::\+Get\+Aircraft\+Priority (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Определяет значение приритета для ВС с неравномерным распределением.
+
+\begin{DoxyReturn}{Возвращает}
+Значение приоритета в виде int. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_aircraft_input_data_generator_a2c0ffbf3430eeb1936030c4ef9501879}\label{class_c_aircraft_input_data_generator_a2c0ffbf3430eeb1936030c4ef9501879}} 
+\index{CAircraftInputDataGenerator@{CAircraftInputDataGenerator}!GetInstance@{GetInstance}}
+\index{GetInstance@{GetInstance}!CAircraftInputDataGenerator@{CAircraftInputDataGenerator}}
+\doxysubsubsection{\texorpdfstring{GetInstance()}{GetInstance()}}
+{\footnotesize\ttfamily static std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_c_aircraft_input_data_generator}{CAircraft\+Input\+Data\+Generator}}$>$ CAircraft\+Input\+Data\+Generator\+::\+Get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_c_aircraft_input_data_generator_a5cd99a8cf6573233145382ea6dac6b4e}\label{class_c_aircraft_input_data_generator_a5cd99a8cf6573233145382ea6dac6b4e}} 
+\index{CAircraftInputDataGenerator@{CAircraftInputDataGenerator}!GetProcessingNecessity@{GetProcessingNecessity}}
+\index{GetProcessingNecessity@{GetProcessingNecessity}!CAircraftInputDataGenerator@{CAircraftInputDataGenerator}}
+\doxysubsubsection{\texorpdfstring{GetProcessingNecessity()}{GetProcessingNecessity()}}
+{\footnotesize\ttfamily bool CAircraft\+Input\+Data\+Generator\+::\+Get\+Processing\+Necessity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Определяет признак необходимости обработки, генерируемый случайным образом.
+
+\begin{DoxyReturn}{Возвращает}
+Значение bool, определяющее необходимость обработки. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_aircraft_input_data_generator_a91d09c98771d3f96eebca1aefdafc040}\label{class_c_aircraft_input_data_generator_a91d09c98771d3f96eebca1aefdafc040}} 
+\index{CAircraftInputDataGenerator@{CAircraftInputDataGenerator}!GetTakingOffAircraftCreationIntervals@{GetTakingOffAircraftCreationIntervals}}
+\index{GetTakingOffAircraftCreationIntervals@{GetTakingOffAircraftCreationIntervals}!CAircraftInputDataGenerator@{CAircraftInputDataGenerator}}
+\doxysubsubsection{\texorpdfstring{GetTakingOffAircraftCreationIntervals()}{GetTakingOffAircraftCreationIntervals()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_c_taking_off_aircraft_creation_intervals}{CTaking\+Off\+Aircraft\+Creation\+Intervals}}$>$ CAircraft\+Input\+Data\+Generator\+::\+Get\+Taking\+Off\+Aircraft\+Creation\+Intervals (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Создает набор интервалов для ВС в виде экземпляра класса \mbox{\hyperlink{class_c_taking_off_aircraft_creation_intervals}{CTaking\+Off\+Aircraft\+Creation\+Intervals}} (нужен, пока данные для каждого ВС не будут передаваться другим способом). Значения интервалов задаются с некоторым разбросом от среднего значения.
+
+\begin{DoxyReturn}{Возвращает}
+Набор интервалов для ВС. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Данные класса}
+\mbox{\Hypertarget{class_c_aircraft_input_data_generator_ae3af31ca3fed32f8bfc0cabc749625b2}\label{class_c_aircraft_input_data_generator_ae3af31ca3fed32f8bfc0cabc749625b2}} 
+\index{CAircraftInputDataGenerator@{CAircraftInputDataGenerator}!m\_Instance@{m\_Instance}}
+\index{m\_Instance@{m\_Instance}!CAircraftInputDataGenerator@{CAircraftInputDataGenerator}}
+\doxysubsubsection{\texorpdfstring{m\_Instance}{m\_Instance}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_c_aircraft_input_data_generator}{CAircraft\+Input\+Data\+Generator}}$>$ CAircraft\+Input\+Data\+Generator\+::m\+\_\+\+Instance\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_c_aircraft_input_data_generator_8h}{CAircraft\+Input\+Data\+Generator.\+h}}\end{DoxyCompactItemize}

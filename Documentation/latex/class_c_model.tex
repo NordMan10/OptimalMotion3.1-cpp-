@@ -1,0 +1,327 @@
+\hypertarget{class_c_model}{}\doxysection{Класс CModel}
+\label{class_c_model}\index{CModel@{CModel}}
+
+
+{\ttfamily \#include $<$CModel.\+h$>$}
+
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_c_model_a1ea1e9d8dab5ad230fb3698ae3c7d742}{CModel}} ()
+\item 
+\mbox{\hyperlink{class_c_model_af5e9e685371d25ecc13dbcfac46a20e6}{CModel}} (int runway\+Count, int special\+Place\+Count)
+\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_runway}{CRunway}} $>$ $>$ \mbox{\hyperlink{class_c_model_a41b4550e8ee6cd715afe6e9fd8f3ae4c}{Get\+Runways}} () const
+\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_special_place}{CSpecial\+Place}} $>$ $>$ \mbox{\hyperlink{class_c_model_a91fe8d8868adcd743df934f821ac7066}{Get\+Special\+Pleces}} () const
+\item 
+std\+::shared\+\_\+ptr$<$ std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_xD0_xA1_table_row}{С\+Table\+Row}} $>$ $>$ $>$ \mbox{\hyperlink{class_c_model_af849d8029552cf6783eb7af3d5a7dfdd}{Get\+Output\+Data}} (std\+::vector$<$ int $>$ \&unused\+Planned\+Taking\+Off\+Moments)
+\end{DoxyCompactItemize}
+\doxysubsection*{Закрытые члены}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_c_model_a2c581e11f20992f6199730f0b0645bb2}{Init\+Runways}} (int runway\+Count)
+\item 
+void \mbox{\hyperlink{class_c_model_a630704464e691819b8a27a607105cd50}{Init\+Special\+Places}} (int spec\+Platform\+Count)
+\item 
+std\+::shared\+\_\+ptr$<$ std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_taking_off_aircraft}{CTaking\+Off\+Aircraft}} $>$ $>$ $>$ \mbox{\hyperlink{class_c_model_aa24eb8b696b196a3adf49b9c12bd8183}{Get\+Ordered\+Configured\+Taking\+Off\+Aircrafts}} (std\+::vector$<$ int $>$ \&planned\+Taking\+Off\+Moments)
+\item 
+void \mbox{\hyperlink{class_c_model_ab0aaec5c52466eea8492ffce207385fc}{Reconfigure\+Aircrafts\+With\+Reserve}} (std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_taking_off_aircraft}{CTaking\+Off\+Aircraft}} $>$$>$ \&ordered\+Taking\+Off\+Aircrafts)
+\item 
+void \mbox{\hyperlink{class_c_model_a22c4cad07efd930a70ba7e2658396d34}{Set\+PSWaiting\+Time}} (std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_taking_off_aircraft}{CTaking\+Off\+Aircraft}} $>$$>$ \&taking\+Off\+Aircrafts)
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_xD0_xA1_table_row}{С\+Table\+Row}} $>$ \mbox{\hyperlink{class_c_model_a63e68557e8246efac56aef468494cf8e}{Get\+Table\+Row}} (\mbox{\hyperlink{class_c_taking_off_aircraft}{CTaking\+Off\+Aircraft}} \&aircraft) const
+\item 
+int \mbox{\hyperlink{class_c_model_a0c4752c3ce8fba5458d33beaa3c8170f}{Get\+Runway\+Start\+Delay}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_taking_off_aircraft}{CTaking\+Off\+Aircraft}} $>$ taking\+Off\+Aircraft, \mbox{\hyperlink{class_c_interval}{CInterval}} \&taking\+Off\+Interval) const
+\item 
+int \mbox{\hyperlink{class_c_model_a1ecb9f2d40d2a106f45cc7a10edbb3ea}{Get\+Special\+Place\+Start\+Delay}} (\mbox{\hyperlink{class_c_taking_off_aircraft}{CTaking\+Off\+Aircraft}} \&taking\+Off\+Aircraft, int SPArrive\+Moment) const
+\item 
+std\+::shared\+\_\+ptr$<$ std\+::map$<$ int, int $>$ $>$ \mbox{\hyperlink{class_c_model_a881236ea5fda91ea21c29a5681a63dc1}{Get\+Reserve\+Aircrafts\+Start\+Moments}} (int permitted\+Moment, int main\+Aircraft\+Index, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_taking_off_aircraft}{CTaking\+Off\+Aircraft}} $>$$>$ \&ordered\+Taking\+Off\+Aircrafts) const
+\item 
+int \mbox{\hyperlink{class_c_model_a65a2b8ed37914a410d92a20208996f5b}{Get\+Reserve\+Aircraft\+Count}} (int permitted\+Moment, int aircraft\+Index, std\+::vector$<$ int $>$ \&possible\+Taking\+Off\+Moments) const
+\item 
+void \mbox{\hyperlink{class_c_model_a8afdb29a001f6b6e4613fe376629c185}{Set\+Prepared\+Start\+Moments}} (std\+::map$<$ int, int $>$ \&aircrafts\+Start\+Moment\+Data, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_taking_off_aircraft}{CTaking\+Off\+Aircraft}} $>$$>$ \&taking\+Off\+Aircrafts)
+\item 
+int \mbox{\hyperlink{class_c_model_ad67757c77cc4b5e18652a719aef0529a}{Get\+Most\+Priority\+Aircraft\+Index}} (std\+::map$<$ int, int $>$ \&aircrafts\+Start\+Moment\+Data, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_taking_off_aircraft}{CTaking\+Off\+Aircraft}} $>$$>$ \&taking\+Off\+Aircrafts) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Закрытые данные}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_runway}{CRunway}} $>$ $>$ \mbox{\hyperlink{class_c_model_a8e9508d1008628d1effdf85870bead90}{m\+\_\+\+Runways}} = std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_c_runway}{CRunway}}$>$$>$\{\}
+\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_special_place}{CSpecial\+Place}} $>$ $>$ \mbox{\hyperlink{class_c_model_ad71308753c5a7d7c43f4043d90179a62}{m\+\_\+\+Special\+Places}} = std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_c_special_place}{CSpecial\+Place}}$>$$>$\{\}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_aircraft_input_data_generator}{CAircraft\+Input\+Data\+Generator}} $>$ \mbox{\hyperlink{class_c_model_a925d82a1c15b0d4a97fcce8e820bcd83}{m\+\_\+\+Aircraft\+Input\+Data\+Generator}} = \mbox{\hyperlink{class_c_aircraft_input_data_generator_a2c0ffbf3430eeb1936030c4ef9501879}{CAircraft\+Input\+Data\+Generator\+::\+Get\+Instance}}()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Крaткое описание класса Основной класс. Содержит главный метод \mbox{\hyperlink{class_c_model_af849d8029552cf6783eb7af3d5a7dfdd}{Get\+Output\+Data()}}.
+
+File \+: \mbox{\hyperlink{_c_model_8h}{CModel.\+h}} Author\+: Yury Ten
+
+Длинное описание класса Содержит главный метод \mbox{\hyperlink{class_c_model_af849d8029552cf6783eb7af3d5a7dfdd}{Get\+Output\+Data()}}, инициирующий работу всей программы, и вспомогательные методы. Метод \mbox{\hyperlink{class_c_model_af849d8029552cf6783eb7af3d5a7dfdd}{Get\+Output\+Data()}} предоставляет выходные данные для их графического представления 
+
+\doxysubsection{Конструктор(ы)}
+\mbox{\Hypertarget{class_c_model_a1ea1e9d8dab5ad230fb3698ae3c7d742}\label{class_c_model_a1ea1e9d8dab5ad230fb3698ae3c7d742}} 
+\index{CModel@{CModel}!CModel@{CModel}}
+\index{CModel@{CModel}!CModel@{CModel}}
+\doxysubsubsection{\texorpdfstring{CModel()}{CModel()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily CModel\+::\+CModel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_c_model_af5e9e685371d25ecc13dbcfac46a20e6}\label{class_c_model_af5e9e685371d25ecc13dbcfac46a20e6}} 
+\index{CModel@{CModel}!CModel@{CModel}}
+\index{CModel@{CModel}!CModel@{CModel}}
+\doxysubsubsection{\texorpdfstring{CModel()}{CModel()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily CModel\+::\+CModel (\begin{DoxyParamCaption}\item[{int}]{runway\+Count,  }\item[{int}]{special\+Place\+Count }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{class_c_model_ad67757c77cc4b5e18652a719aef0529a}\label{class_c_model_ad67757c77cc4b5e18652a719aef0529a}} 
+\index{CModel@{CModel}!GetMostPriorityAircraftIndex@{GetMostPriorityAircraftIndex}}
+\index{GetMostPriorityAircraftIndex@{GetMostPriorityAircraftIndex}!CModel@{CModel}}
+\doxysubsubsection{\texorpdfstring{GetMostPriorityAircraftIndex()}{GetMostPriorityAircraftIndex()}}
+{\footnotesize\ttfamily int CModel\+::\+Get\+Most\+Priority\+Aircraft\+Index (\begin{DoxyParamCaption}\item[{std\+::map$<$ int, int $>$ \&}]{aircrafts\+Start\+Moment\+Data,  }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_taking_off_aircraft}{CTaking\+Off\+Aircraft}} $>$$>$ \&}]{taking\+Off\+Aircrafts }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+Определяет индекс ВС с наибольшим приоритетом из всех переданных ВС.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em aircrafts\+Start\+Moment\+Data} & Набор данных о ВС и их моментах старта. \\
+\hline
+{\em taking\+Off\+Aircrafts} & Список ВС. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Найденный индекс ВС. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_model_aa24eb8b696b196a3adf49b9c12bd8183}\label{class_c_model_aa24eb8b696b196a3adf49b9c12bd8183}} 
+\index{CModel@{CModel}!GetOrderedConfiguredTakingOffAircrafts@{GetOrderedConfiguredTakingOffAircrafts}}
+\index{GetOrderedConfiguredTakingOffAircrafts@{GetOrderedConfiguredTakingOffAircrafts}!CModel@{CModel}}
+\doxysubsubsection{\texorpdfstring{GetOrderedConfiguredTakingOffAircrafts()}{GetOrderedConfiguredTakingOffAircrafts()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_c_taking_off_aircraft}{CTaking\+Off\+Aircraft}}$>$ $>$ $>$ CModel\+::\+Get\+Ordered\+Configured\+Taking\+Off\+Aircrafts (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int $>$ \&}]{planned\+Taking\+Off\+Moments }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Создает список ВС на основе переданных плановых моментов старта, рассчитывает возможный момент вылета и соответствующий ему момент старта для каждого ВС.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em planned\+Taking\+Off\+Moments} & Список плановых моментов взлета \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Возвращает упорядоченный по возможным моментам список ВС с заданными возможными моментами взлета и соответствующими моментами старта. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_model_af849d8029552cf6783eb7af3d5a7dfdd}\label{class_c_model_af849d8029552cf6783eb7af3d5a7dfdd}} 
+\index{CModel@{CModel}!GetOutputData@{GetOutputData}}
+\index{GetOutputData@{GetOutputData}!CModel@{CModel}}
+\doxysubsubsection{\texorpdfstring{GetOutputData()}{GetOutputData()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_xD0_xA1_table_row}{С\+Table\+Row}}$>$ $>$ $>$ CModel\+::\+Get\+Output\+Data (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int $>$ \&}]{unused\+Planned\+Taking\+Off\+Moments }\end{DoxyParamCaption})}
+
+Главный метод программы, инициирующий начало всей работы. На основе заданных и сгенерированных входящих данных рассчитывает все необходимые выходные данные и предоставляет их в виде списка экземпляров класса CTable\+Row.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em unused\+Planned\+Taking\+Off\+Moments} & Список неиспользованных плановых моментов взлета \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Список выходящих данных, содержащий экземпляры класса CTable\+Row, представляющие строки таблицы с выходными данными 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_model_a65a2b8ed37914a410d92a20208996f5b}\label{class_c_model_a65a2b8ed37914a410d92a20208996f5b}} 
+\index{CModel@{CModel}!GetReserveAircraftCount@{GetReserveAircraftCount}}
+\index{GetReserveAircraftCount@{GetReserveAircraftCount}!CModel@{CModel}}
+\doxysubsubsection{\texorpdfstring{GetReserveAircraftCount()}{GetReserveAircraftCount()}}
+{\footnotesize\ttfamily int CModel\+::\+Get\+Reserve\+Aircraft\+Count (\begin{DoxyParamCaption}\item[{int}]{permitted\+Moment,  }\item[{int}]{aircraft\+Index,  }\item[{std\+::vector$<$ int $>$ \&}]{possible\+Taking\+Off\+Moments }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+На основе заданного в классе \mbox{\hyperlink{class_c_common_input_data}{CCommon\+Input\+Data}} критерия допустимого количества резервных ВС и переданного разрешенного момента определяет возможное количество резервных ВС для переданного по индексу ВС.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em permitted\+Moment} & Разрешенный момент. \\
+\hline
+{\em aircraft\+Index} & Индекс ВС, для которого нужно найти возможное количество резервных ВС. \\
+\hline
+{\em possible\+Taking\+Off\+Moments} & Список возможных моментов взлета. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Возможное количество резервных ВС для переданного ВС. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_model_a881236ea5fda91ea21c29a5681a63dc1}\label{class_c_model_a881236ea5fda91ea21c29a5681a63dc1}} 
+\index{CModel@{CModel}!GetReserveAircraftsStartMoments@{GetReserveAircraftsStartMoments}}
+\index{GetReserveAircraftsStartMoments@{GetReserveAircraftsStartMoments}!CModel@{CModel}}
+\doxysubsubsection{\texorpdfstring{GetReserveAircraftsStartMoments()}{GetReserveAircraftsStartMoments()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$std\+::map$<$int, int$>$ $>$ CModel\+::\+Get\+Reserve\+Aircrafts\+Start\+Moments (\begin{DoxyParamCaption}\item[{int}]{permitted\+Moment,  }\item[{int}]{main\+Aircraft\+Index,  }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_taking_off_aircraft}{CTaking\+Off\+Aircraft}} $>$$>$ \&}]{ordered\+Taking\+Off\+Aircrafts }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+Рассчитывает моменты старта для резервных ВС по заданному разрешенному моменту.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em permitted\+Moment} & Разрешенный момент. \\
+\hline
+{\em main\+Aircraft\+Index} & Индекс ВС в общем списке, которое является основным, опорным по отношению к резервным ВС. \\
+\hline
+{\em ordered\+Taking\+Off\+Aircrafts} & Общий список ВС. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Словарь, с ключами в виде индексов ВС и значениями в виде моментов старта. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_model_a41b4550e8ee6cd715afe6e9fd8f3ae4c}\label{class_c_model_a41b4550e8ee6cd715afe6e9fd8f3ae4c}} 
+\index{CModel@{CModel}!GetRunways@{GetRunways}}
+\index{GetRunways@{GetRunways}!CModel@{CModel}}
+\doxysubsubsection{\texorpdfstring{GetRunways()}{GetRunways()}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_c_runway}{CRunway}}$>$ $>$ CModel\+::\+Get\+Runways (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_c_model_a0c4752c3ce8fba5458d33beaa3c8170f}\label{class_c_model_a0c4752c3ce8fba5458d33beaa3c8170f}} 
+\index{CModel@{CModel}!GetRunwayStartDelay@{GetRunwayStartDelay}}
+\index{GetRunwayStartDelay@{GetRunwayStartDelay}!CModel@{CModel}}
+\doxysubsubsection{\texorpdfstring{GetRunwayStartDelay()}{GetRunwayStartDelay()}}
+{\footnotesize\ttfamily int CModel\+::\+Get\+Runway\+Start\+Delay (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_taking_off_aircraft}{CTaking\+Off\+Aircraft}} $>$}]{taking\+Off\+Aircraft,  }\item[{\mbox{\hyperlink{class_c_interval}{CInterval}} \&}]{taking\+Off\+Interval }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+Рассчитывает задержку момента старта от ВПП. Задержка может образоваться из-\/за занятости ВПП другим ВС.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em taking\+Off\+Aircraft} & ВС, для которого нужно рассчитать задержку. \\
+\hline
+{\em taking\+Off\+Interval} & Интервал взлета ВС (время, которое он будет занимать ВПП). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Величину задержки в секундах . 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_model_a1ecb9f2d40d2a106f45cc7a10edbb3ea}\label{class_c_model_a1ecb9f2d40d2a106f45cc7a10edbb3ea}} 
+\index{CModel@{CModel}!GetSpecialPlaceStartDelay@{GetSpecialPlaceStartDelay}}
+\index{GetSpecialPlaceStartDelay@{GetSpecialPlaceStartDelay}!CModel@{CModel}}
+\doxysubsubsection{\texorpdfstring{GetSpecialPlaceStartDelay()}{GetSpecialPlaceStartDelay()}}
+{\footnotesize\ttfamily int CModel\+::\+Get\+Special\+Place\+Start\+Delay (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_taking_off_aircraft}{CTaking\+Off\+Aircraft}} \&}]{taking\+Off\+Aircraft,  }\item[{int}]{SPArrive\+Moment }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+Рассчитывает задержку момента старта от Спец. площадки. Задержка может образоваться из-\/за занятости Спец. площадки другим ВС.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em taking\+Off\+Aircraft} & ВС, для которого нужно рассчитать задержку. \\
+\hline
+{\em SPArrive\+Moment} & Момент прибытия ВС Спец. площадку. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Величину задержки в секундах. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_model_a91fe8d8868adcd743df934f821ac7066}\label{class_c_model_a91fe8d8868adcd743df934f821ac7066}} 
+\index{CModel@{CModel}!GetSpecialPleces@{GetSpecialPleces}}
+\index{GetSpecialPleces@{GetSpecialPleces}!CModel@{CModel}}
+\doxysubsubsection{\texorpdfstring{GetSpecialPleces()}{GetSpecialPleces()}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_c_special_place}{CSpecial\+Place}}$>$ $>$ CModel\+::\+Get\+Special\+Pleces (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_c_model_a63e68557e8246efac56aef468494cf8e}\label{class_c_model_a63e68557e8246efac56aef468494cf8e}} 
+\index{CModel@{CModel}!GetTableRow@{GetTableRow}}
+\index{GetTableRow@{GetTableRow}!CModel@{CModel}}
+\doxysubsubsection{\texorpdfstring{GetTableRow()}{GetTableRow()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_xD0_xA1_table_row}{С\+Table\+Row}}$>$ CModel\+::\+Get\+Table\+Row (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_taking_off_aircraft}{CTaking\+Off\+Aircraft}} \&}]{aircraft }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+Создает экземпляр класса CTable\+Row и заполняет его выходными данными ВС.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em aircraft} & ВС, выходные данные которого нужно представить \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Экземпляр класса CTable\+Row, представляющих формат выходных данных. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_model_a2c581e11f20992f6199730f0b0645bb2}\label{class_c_model_a2c581e11f20992f6199730f0b0645bb2}} 
+\index{CModel@{CModel}!InitRunways@{InitRunways}}
+\index{InitRunways@{InitRunways}!CModel@{CModel}}
+\doxysubsubsection{\texorpdfstring{InitRunways()}{InitRunways()}}
+{\footnotesize\ttfamily void CModel\+::\+Init\+Runways (\begin{DoxyParamCaption}\item[{int}]{runway\+Count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Создает заданное количество ВПП.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em runway\+Count} & Количество ВПП \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_model_a630704464e691819b8a27a607105cd50}\label{class_c_model_a630704464e691819b8a27a607105cd50}} 
+\index{CModel@{CModel}!InitSpecialPlaces@{InitSpecialPlaces}}
+\index{InitSpecialPlaces@{InitSpecialPlaces}!CModel@{CModel}}
+\doxysubsubsection{\texorpdfstring{InitSpecialPlaces()}{InitSpecialPlaces()}}
+{\footnotesize\ttfamily void CModel\+::\+Init\+Special\+Places (\begin{DoxyParamCaption}\item[{int}]{spec\+Platform\+Count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Создает заданное количество Спец. площадок.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em spec\+Platform\+Count} & Количество Спец. площадок \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_model_ab0aaec5c52466eea8492ffce207385fc}\label{class_c_model_ab0aaec5c52466eea8492ffce207385fc}} 
+\index{CModel@{CModel}!ReconfigureAircraftsWithReserve@{ReconfigureAircraftsWithReserve}}
+\index{ReconfigureAircraftsWithReserve@{ReconfigureAircraftsWithReserve}!CModel@{CModel}}
+\doxysubsubsection{\texorpdfstring{ReconfigureAircraftsWithReserve()}{ReconfigureAircraftsWithReserve()}}
+{\footnotesize\ttfamily void CModel\+::\+Reconfigure\+Aircrafts\+With\+Reserve (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_taking_off_aircraft}{CTaking\+Off\+Aircraft}} $>$$>$ \&}]{ordered\+Taking\+Off\+Aircrafts }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+На основе переданного списка ВС с заданными возможными моментами взлета и моментами старта определяет возможность назначения и допустимое количество резервных ВС для каждого ВС, которое уже не назначено резервным. Находит и задает разрешенные моменты взлета для всех ВС. Рассчитывает и задает новые моменты старта для резервных ВС.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em ordered\+Taking\+Off\+Aircrafts} & Список ВС с заданными возможными моментами взлета и моментами старта \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_model_a8afdb29a001f6b6e4613fe376629c185}\label{class_c_model_a8afdb29a001f6b6e4613fe376629c185}} 
+\index{CModel@{CModel}!SetPreparedStartMoments@{SetPreparedStartMoments}}
+\index{SetPreparedStartMoments@{SetPreparedStartMoments}!CModel@{CModel}}
+\doxysubsubsection{\texorpdfstring{SetPreparedStartMoments()}{SetPreparedStartMoments()}}
+{\footnotesize\ttfamily void CModel\+::\+Set\+Prepared\+Start\+Moments (\begin{DoxyParamCaption}\item[{std\+::map$<$ int, int $>$ \&}]{aircrafts\+Start\+Moment\+Data,  }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_taking_off_aircraft}{CTaking\+Off\+Aircraft}} $>$$>$ \&}]{taking\+Off\+Aircrafts }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Задает заранее подготовленные и переданные моменты старта для переданных ВС.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em aircrafts\+Start\+Moment\+Data} & Моменты старта. \\
+\hline
+{\em taking\+Off\+Aircrafts} & Список ВС. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_model_a22c4cad07efd930a70ba7e2658396d34}\label{class_c_model_a22c4cad07efd930a70ba7e2658396d34}} 
+\index{CModel@{CModel}!SetPSWaitingTime@{SetPSWaitingTime}}
+\index{SetPSWaitingTime@{SetPSWaitingTime}!CModel@{CModel}}
+\doxysubsubsection{\texorpdfstring{SetPSWaitingTime()}{SetPSWaitingTime()}}
+{\footnotesize\ttfamily void CModel\+::\+Set\+PSWaiting\+Time (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_c_taking_off_aircraft}{CTaking\+Off\+Aircraft}} $>$$>$ \&}]{taking\+Off\+Aircrafts }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Рассчитывает и задает время ожидания на ПРДВ для переданных ВС.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em taking\+Off\+Aircrafts} & Список ВС \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Данные класса}
+\mbox{\Hypertarget{class_c_model_a925d82a1c15b0d4a97fcce8e820bcd83}\label{class_c_model_a925d82a1c15b0d4a97fcce8e820bcd83}} 
+\index{CModel@{CModel}!m\_AircraftInputDataGenerator@{m\_AircraftInputDataGenerator}}
+\index{m\_AircraftInputDataGenerator@{m\_AircraftInputDataGenerator}!CModel@{CModel}}
+\doxysubsubsection{\texorpdfstring{m\_AircraftInputDataGenerator}{m\_AircraftInputDataGenerator}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_c_aircraft_input_data_generator}{CAircraft\+Input\+Data\+Generator}}$>$ CModel\+::m\+\_\+\+Aircraft\+Input\+Data\+Generator = \mbox{\hyperlink{class_c_aircraft_input_data_generator_a2c0ffbf3430eeb1936030c4ef9501879}{CAircraft\+Input\+Data\+Generator\+::\+Get\+Instance}}()\hspace{0.3cm}{\ttfamily [private]}}
+
+Генератор входящих данных для кождого ВС. \mbox{\Hypertarget{class_c_model_a8e9508d1008628d1effdf85870bead90}\label{class_c_model_a8e9508d1008628d1effdf85870bead90}} 
+\index{CModel@{CModel}!m\_Runways@{m\_Runways}}
+\index{m\_Runways@{m\_Runways}!CModel@{CModel}}
+\doxysubsubsection{\texorpdfstring{m\_Runways}{m\_Runways}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_c_runway}{CRunway}}$>$ $>$ CModel\+::m\+\_\+\+Runways = std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_c_runway}{CRunway}}$>$$>$\{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+Список ВПП. \mbox{\Hypertarget{class_c_model_ad71308753c5a7d7c43f4043d90179a62}\label{class_c_model_ad71308753c5a7d7c43f4043d90179a62}} 
+\index{CModel@{CModel}!m\_SpecialPlaces@{m\_SpecialPlaces}}
+\index{m\_SpecialPlaces@{m\_SpecialPlaces}!CModel@{CModel}}
+\doxysubsubsection{\texorpdfstring{m\_SpecialPlaces}{m\_SpecialPlaces}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_c_special_place}{CSpecial\+Place}}$>$ $>$ CModel\+::m\+\_\+\+Special\+Places = std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_c_special_place}{CSpecial\+Place}}$>$$>$\{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+Список Спец. площадок. 
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_c_model_8h}{CModel.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,148 @@
+\hypertarget{class_c_common_input_data}{}\doxysection{Класс CCommon\+Input\+Data}
+\label{class_c_common_input_data}\index{CCommonInputData@{CCommonInputData}}
+
+
+{\ttfamily \#include $<$CCommon\+Input\+Data.\+h$>$}
+
+\doxysubsection*{Открытые статические члены}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{class_c_common_input_data_a8c1e9ae8c9dffca93d545f345e7c04c3}{Get\+Runway\+Count}} ()
+\item 
+static void \mbox{\hyperlink{class_c_common_input_data_ada6acc1acf86f9bcefca8f20cf0ffbfd}{Set\+Runway\+Count}} (int value)
+\item 
+static int \mbox{\hyperlink{class_c_common_input_data_a879c5603da5ffa363d8ef4e1fdbde0a7}{Get\+Special\+Place\+Count}} ()
+\item 
+static void \mbox{\hyperlink{class_c_common_input_data_a257c450e3242b73a2133f5fb3a3033b6}{Set\+Special\+Place\+Count}} (int value)
+\item 
+static \mbox{\hyperlink{class_c_input_taking_off_moments}{CInput\+Taking\+Off\+Moments}} \& \mbox{\hyperlink{class_c_common_input_data_a980ebe680119657f65159832cfc98fac}{Get\+Input\+Taking\+Off\+Moments}} ()
+\item 
+static \mbox{\hyperlink{class_c_interval}{CInterval}} \& \mbox{\hyperlink{class_c_common_input_data_a4a607f2d766b32432f1025011a172b0e}{Get\+Spare\+Arrival\+Time\+Interval}} ()
+\item 
+static void \mbox{\hyperlink{class_c_common_input_data_a1d5d9b475113e26b0c02db445889ff5a}{Set\+Spare\+Arrival\+Time\+Interval}} (\mbox{\hyperlink{class_c_interval}{CInterval}} \&value)
+\item 
+static std\+::map$<$ int, int $>$ \& \mbox{\hyperlink{class_c_common_input_data_ab57aa1cdc8d1413a81339ca03b69edf3}{Get\+Permissible\+Reserve\+Aircraft\+Count}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Закрытые статические данные}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{class_c_common_input_data_a1559ed95b0a1f10a60b237b8cb61176c}{ms\+\_\+\+Runway\+Count}}
+\item 
+static int \mbox{\hyperlink{class_c_common_input_data_a8c83babfc878da951670e1f067de18b9}{ms\+\_\+\+Special\+Place\+Count}}
+\item 
+static std\+::vector$<$ int $>$ \mbox{\hyperlink{class_c_common_input_data_aad24f772ef017334f074867260fafc2c}{ms\+\_\+\+Planned\+Moments}}
+\item 
+static std\+::vector$<$ int $>$ \mbox{\hyperlink{class_c_common_input_data_afc80f623a1b77de5be6c351aa30b70e3}{ms\+\_\+\+Permitted\+Moments}}
+\item 
+static \mbox{\hyperlink{class_c_input_taking_off_moments}{CInput\+Taking\+Off\+Moments}} \mbox{\hyperlink{class_c_common_input_data_a19e3ed9576552889f20045f48f4456de}{ms\+\_\+\+Input\+Taking\+Off\+Moments}}
+\item 
+static \mbox{\hyperlink{class_c_interval}{CInterval}} \mbox{\hyperlink{class_c_common_input_data_a632fce075e5e4964e7418c8cdd310c5d}{ms\+\_\+\+Spare\+Arrival\+Time\+Interval}}
+\item 
+static std\+::map$<$ int, int $>$ \mbox{\hyperlink{class_c_common_input_data_abe4a2430fc6d373d8c69d250c381fb37}{ms\+\_\+\+Permissible\+Reserve\+Aircraft\+Count}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Крaткое описание класса Класс для входящих данных, общих для всей программы File \+: \mbox{\hyperlink{_c_common_input_data_8h}{CCommon\+Input\+Data.\+h}} Author\+: Yury Ten
+
+Длинное описание класса 
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{class_c_common_input_data_a980ebe680119657f65159832cfc98fac}\label{class_c_common_input_data_a980ebe680119657f65159832cfc98fac}} 
+\index{CCommonInputData@{CCommonInputData}!GetInputTakingOffMoments@{GetInputTakingOffMoments}}
+\index{GetInputTakingOffMoments@{GetInputTakingOffMoments}!CCommonInputData@{CCommonInputData}}
+\doxysubsubsection{\texorpdfstring{GetInputTakingOffMoments()}{GetInputTakingOffMoments()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_c_input_taking_off_moments}{CInput\+Taking\+Off\+Moments}}\& CCommon\+Input\+Data\+::\+Get\+Input\+Taking\+Off\+Moments (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_c_common_input_data_ab57aa1cdc8d1413a81339ca03b69edf3}\label{class_c_common_input_data_ab57aa1cdc8d1413a81339ca03b69edf3}} 
+\index{CCommonInputData@{CCommonInputData}!GetPermissibleReserveAircraftCount@{GetPermissibleReserveAircraftCount}}
+\index{GetPermissibleReserveAircraftCount@{GetPermissibleReserveAircraftCount}!CCommonInputData@{CCommonInputData}}
+\doxysubsubsection{\texorpdfstring{GetPermissibleReserveAircraftCount()}{GetPermissibleReserveAircraftCount()}}
+{\footnotesize\ttfamily static std\+::map$<$int, int$>$\& CCommon\+Input\+Data\+::\+Get\+Permissible\+Reserve\+Aircraft\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_c_common_input_data_a8c1e9ae8c9dffca93d545f345e7c04c3}\label{class_c_common_input_data_a8c1e9ae8c9dffca93d545f345e7c04c3}} 
+\index{CCommonInputData@{CCommonInputData}!GetRunwayCount@{GetRunwayCount}}
+\index{GetRunwayCount@{GetRunwayCount}!CCommonInputData@{CCommonInputData}}
+\doxysubsubsection{\texorpdfstring{GetRunwayCount()}{GetRunwayCount()}}
+{\footnotesize\ttfamily static int CCommon\+Input\+Data\+::\+Get\+Runway\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_c_common_input_data_a4a607f2d766b32432f1025011a172b0e}\label{class_c_common_input_data_a4a607f2d766b32432f1025011a172b0e}} 
+\index{CCommonInputData@{CCommonInputData}!GetSpareArrivalTimeInterval@{GetSpareArrivalTimeInterval}}
+\index{GetSpareArrivalTimeInterval@{GetSpareArrivalTimeInterval}!CCommonInputData@{CCommonInputData}}
+\doxysubsubsection{\texorpdfstring{GetSpareArrivalTimeInterval()}{GetSpareArrivalTimeInterval()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_c_interval}{CInterval}}\& CCommon\+Input\+Data\+::\+Get\+Spare\+Arrival\+Time\+Interval (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_c_common_input_data_a879c5603da5ffa363d8ef4e1fdbde0a7}\label{class_c_common_input_data_a879c5603da5ffa363d8ef4e1fdbde0a7}} 
+\index{CCommonInputData@{CCommonInputData}!GetSpecialPlaceCount@{GetSpecialPlaceCount}}
+\index{GetSpecialPlaceCount@{GetSpecialPlaceCount}!CCommonInputData@{CCommonInputData}}
+\doxysubsubsection{\texorpdfstring{GetSpecialPlaceCount()}{GetSpecialPlaceCount()}}
+{\footnotesize\ttfamily static int CCommon\+Input\+Data\+::\+Get\+Special\+Place\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_c_common_input_data_ada6acc1acf86f9bcefca8f20cf0ffbfd}\label{class_c_common_input_data_ada6acc1acf86f9bcefca8f20cf0ffbfd}} 
+\index{CCommonInputData@{CCommonInputData}!SetRunwayCount@{SetRunwayCount}}
+\index{SetRunwayCount@{SetRunwayCount}!CCommonInputData@{CCommonInputData}}
+\doxysubsubsection{\texorpdfstring{SetRunwayCount()}{SetRunwayCount()}}
+{\footnotesize\ttfamily static void CCommon\+Input\+Data\+::\+Set\+Runway\+Count (\begin{DoxyParamCaption}\item[{int}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_c_common_input_data_a1d5d9b475113e26b0c02db445889ff5a}\label{class_c_common_input_data_a1d5d9b475113e26b0c02db445889ff5a}} 
+\index{CCommonInputData@{CCommonInputData}!SetSpareArrivalTimeInterval@{SetSpareArrivalTimeInterval}}
+\index{SetSpareArrivalTimeInterval@{SetSpareArrivalTimeInterval}!CCommonInputData@{CCommonInputData}}
+\doxysubsubsection{\texorpdfstring{SetSpareArrivalTimeInterval()}{SetSpareArrivalTimeInterval()}}
+{\footnotesize\ttfamily static void CCommon\+Input\+Data\+::\+Set\+Spare\+Arrival\+Time\+Interval (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_interval}{CInterval}} \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_c_common_input_data_a257c450e3242b73a2133f5fb3a3033b6}\label{class_c_common_input_data_a257c450e3242b73a2133f5fb3a3033b6}} 
+\index{CCommonInputData@{CCommonInputData}!SetSpecialPlaceCount@{SetSpecialPlaceCount}}
+\index{SetSpecialPlaceCount@{SetSpecialPlaceCount}!CCommonInputData@{CCommonInputData}}
+\doxysubsubsection{\texorpdfstring{SetSpecialPlaceCount()}{SetSpecialPlaceCount()}}
+{\footnotesize\ttfamily static void CCommon\+Input\+Data\+::\+Set\+Special\+Place\+Count (\begin{DoxyParamCaption}\item[{int}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\doxysubsection{Данные класса}
+\mbox{\Hypertarget{class_c_common_input_data_a19e3ed9576552889f20045f48f4456de}\label{class_c_common_input_data_a19e3ed9576552889f20045f48f4456de}} 
+\index{CCommonInputData@{CCommonInputData}!ms\_InputTakingOffMoments@{ms\_InputTakingOffMoments}}
+\index{ms\_InputTakingOffMoments@{ms\_InputTakingOffMoments}!CCommonInputData@{CCommonInputData}}
+\doxysubsubsection{\texorpdfstring{ms\_InputTakingOffMoments}{ms\_InputTakingOffMoments}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_input_taking_off_moments}{CInput\+Taking\+Off\+Moments}} CCommon\+Input\+Data\+::ms\+\_\+\+Input\+Taking\+Off\+Moments\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+Класс с наборами плановых и разрешенных моментов и методами работы с ними \mbox{\Hypertarget{class_c_common_input_data_abe4a2430fc6d373d8c69d250c381fb37}\label{class_c_common_input_data_abe4a2430fc6d373d8c69d250c381fb37}} 
+\index{CCommonInputData@{CCommonInputData}!ms\_PermissibleReserveAircraftCount@{ms\_PermissibleReserveAircraftCount}}
+\index{ms\_PermissibleReserveAircraftCount@{ms\_PermissibleReserveAircraftCount}!CCommonInputData@{CCommonInputData}}
+\doxysubsubsection{\texorpdfstring{ms\_PermissibleReserveAircraftCount}{ms\_PermissibleReserveAircraftCount}}
+{\footnotesize\ttfamily std\+::map$<$int, int$>$ CCommon\+Input\+Data\+::ms\+\_\+\+Permissible\+Reserve\+Aircraft\+Count\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+Допустимое количество резервных ВС в зависимости от времени простоя. \mbox{\Hypertarget{class_c_common_input_data_afc80f623a1b77de5be6c351aa30b70e3}\label{class_c_common_input_data_afc80f623a1b77de5be6c351aa30b70e3}} 
+\index{CCommonInputData@{CCommonInputData}!ms\_PermittedMoments@{ms\_PermittedMoments}}
+\index{ms\_PermittedMoments@{ms\_PermittedMoments}!CCommonInputData@{CCommonInputData}}
+\doxysubsubsection{\texorpdfstring{ms\_PermittedMoments}{ms\_PermittedMoments}}
+{\footnotesize\ttfamily std\+::vector$<$int$>$ CCommon\+Input\+Data\+::ms\+\_\+\+Permitted\+Moments\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_c_common_input_data_aad24f772ef017334f074867260fafc2c}\label{class_c_common_input_data_aad24f772ef017334f074867260fafc2c}} 
+\index{CCommonInputData@{CCommonInputData}!ms\_PlannedMoments@{ms\_PlannedMoments}}
+\index{ms\_PlannedMoments@{ms\_PlannedMoments}!CCommonInputData@{CCommonInputData}}
+\doxysubsubsection{\texorpdfstring{ms\_PlannedMoments}{ms\_PlannedMoments}}
+{\footnotesize\ttfamily std\+::vector$<$int$>$ CCommon\+Input\+Data\+::ms\+\_\+\+Planned\+Moments\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+Наборы разрешенных и плановых моментов для инициализации класса \mbox{\hyperlink{class_c_input_taking_off_moments}{CInput\+Taking\+Off\+Moments}}. \mbox{\Hypertarget{class_c_common_input_data_a1559ed95b0a1f10a60b237b8cb61176c}\label{class_c_common_input_data_a1559ed95b0a1f10a60b237b8cb61176c}} 
+\index{CCommonInputData@{CCommonInputData}!ms\_RunwayCount@{ms\_RunwayCount}}
+\index{ms\_RunwayCount@{ms\_RunwayCount}!CCommonInputData@{CCommonInputData}}
+\doxysubsubsection{\texorpdfstring{ms\_RunwayCount}{ms\_RunwayCount}}
+{\footnotesize\ttfamily int CCommon\+Input\+Data\+::ms\+\_\+\+Runway\+Count\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+Количество ВПП. \mbox{\Hypertarget{class_c_common_input_data_a632fce075e5e4964e7418c8cdd310c5d}\label{class_c_common_input_data_a632fce075e5e4964e7418c8cdd310c5d}} 
+\index{CCommonInputData@{CCommonInputData}!ms\_SpareArrivalTimeInterval@{ms\_SpareArrivalTimeInterval}}
+\index{ms\_SpareArrivalTimeInterval@{ms\_SpareArrivalTimeInterval}!CCommonInputData@{CCommonInputData}}
+\doxysubsubsection{\texorpdfstring{ms\_SpareArrivalTimeInterval}{ms\_SpareArrivalTimeInterval}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_interval}{CInterval}} CCommon\+Input\+Data\+::ms\+\_\+\+Spare\+Arrival\+Time\+Interval\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+Интервал запасного времени прибытия. \mbox{\Hypertarget{class_c_common_input_data_a8c83babfc878da951670e1f067de18b9}\label{class_c_common_input_data_a8c83babfc878da951670e1f067de18b9}} 
+\index{CCommonInputData@{CCommonInputData}!ms\_SpecialPlaceCount@{ms\_SpecialPlaceCount}}
+\index{ms\_SpecialPlaceCount@{ms\_SpecialPlaceCount}!CCommonInputData@{CCommonInputData}}
+\doxysubsubsection{\texorpdfstring{ms\_SpecialPlaceCount}{ms\_SpecialPlaceCount}}
+{\footnotesize\ttfamily int CCommon\+Input\+Data\+::ms\+\_\+\+Special\+Place\+Count\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+Количество спец. площадок. 
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_c_common_input_data_8h}{CCommon\+Input\+Data.\+h}}\end{DoxyCompactItemize}

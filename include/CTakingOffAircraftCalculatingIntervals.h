@@ -1,9 +1,10 @@
 #pragma once
 
 /** Крaткое описание класса
- * Рассчитываемые интервалы для взлетающего ВС
+ * Набор рассчитываемых интервалов для взлетающего ВС
+ * 
  * File  : TakingOffAircraftCalculatingIntervals.h
- * Author:
+ * Author: Yury Ten
  *
  * Длинное описание класса
  *
@@ -12,6 +13,9 @@
 class CTakingOffAircraftCalculatingIntervals
 {
 private:
+	/**
+	 * Время апростоя на ПРДВ.
+	 */
 	int m_PSDelay = 0;
 
 
