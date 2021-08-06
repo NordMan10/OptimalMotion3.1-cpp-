@@ -24,7 +24,7 @@
 #include "CRunway.h"
 #include "CSpecialPlace.h"
 #include "CAircraftInputDataGenerator.h"
-#include "СTableRow.h"
+#include "CTableRow.h"
 #include "CTakingOffAircraft.h"
 
 class CModel
@@ -65,7 +65,7 @@ public:
 	 * \param unusedPlannedTakingOffMoments Список неиспользованных плановых моментов взлета
 	 * \return Список выходящих данных, содержащий экземпляры класса CTableRow, представляющие строки таблицы с выходными данными
 	 */
-	std::shared_ptr<std::vector<std::shared_ptr<СTableRow>>> GetOutputData(std::vector<int>& unusedPlannedTakingOffMoments);
+	std::shared_ptr<std::vector<std::shared_ptr<CTableRow>>> GetOutputData(std::vector<int>& unusedPlannedTakingOffMoments);
 
 private:
 	/**
@@ -113,7 +113,7 @@ private:
 	 * \param aircraft ВС, выходные данные которого нужно представить
 	 * \return Экземпляр класса CTableRow, представляющих формат выходных данных.
 	 */
-	std::shared_ptr<СTableRow> GetTableRow(CTakingOffAircraft& aircraft) const;
+	std::shared_ptr<CTableRow> GetTableRow(CTakingOffAircraft& aircraft) const;
 
 	/**
 	 * Рассчитывает задержку момента старта от ВПП. Задержка может образоваться из-за занятости ВПП другим ВС.

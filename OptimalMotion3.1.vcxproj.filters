@@ -87,7 +87,7 @@
     <ClInclude Include="include\CModel.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\СTableRow.h">
+    <ClInclude Include="include\CTableRow.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\CVectorHelper.h">
@@ -152,7 +152,7 @@
     <ClCompile Include="src\CModel.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\СTableRow.cpp">
+    <ClCompile Include="src\CTableRow.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\CVectorHelper.cpp">

@@ -41,10 +41,10 @@ std::vector<std::shared_ptr<CSpecialPlace>> CModel::GetSpecialPleces() const
 	return m_SpecialPlaces;
 }
 
-std::shared_ptr<std::vector<std::shared_ptr<СTableRow>>> CModel::GetOutputData(std::vector<int>& unusedPlannedTakingOffMoments)
+std::shared_ptr<std::vector<std::shared_ptr<CTableRow>>> CModel::GetOutputData(std::vector<int>& unusedPlannedTakingOffMoments)
 {
 	// Создаем набор данных о ВС в формате строки таблицы
-	auto tableRows = std::shared_ptr<std::vector<std::shared_ptr<СTableRow>>>(new std::vector<std::shared_ptr<СTableRow>>());
+	auto tableRows = std::shared_ptr<std::vector<std::shared_ptr<CTableRow>>>(new std::vector<std::shared_ptr<CTableRow>>());
 
 	// Получаем список ВС с заданными возможными и стартовыми моментами, упорядоченный по возможным моментам
 	auto orderedConfiguredTakingOffAircrafts = GetOrderedConfiguredTakingOffAircrafts(unusedPlannedTakingOffMoments);
@@ -390,7 +390,7 @@ void CModel::SetPSWaitingTime(std::vector<std::shared_ptr<CTakingOffAircraft>>& 
 	}
 }
 
-std::shared_ptr<СTableRow> CModel::GetTableRow(CTakingOffAircraft& aircraft) const
+std::shared_ptr<CTableRow> CModel::GetTableRow(CTakingOffAircraft& aircraft) const
 {
 	// Получаем все необходимые данные из экземпляра переданного ВС
 	auto aircraftTotalMotionTime = aircraft.GetCreationIntervals()->GetTakingOff() + aircraft.GetCreationIntervals()->GetMotionFromPSToES();
@@ -404,7 +404,7 @@ std::shared_ptr<СTableRow> CModel::GetTableRow(CTakingOffAircraft& aircraft) con
 	auto specialPlaceId = aircraft.GetProcessingNecessity() ? std::to_string(aircraft.GetSpecialPlaceId()) : "-";
 
 	// Возвращаем указатель на экземпляр класса CTableRow
-	return std::shared_ptr<СTableRow>(new СTableRow(std::to_string(aircraft.GetId()), std::to_string(aircraft.GetCreationMoments()->GetPlannedTakingOff()), 
+	return std::shared_ptr<CTableRow>(new CTableRow(std::to_string(aircraft.GetId()), std::to_string(aircraft.GetCreationMoments()->GetPlannedTakingOff()), 
 		std::to_string(aircraft.GetCalculatingMoments()->GetPossibleTakingOff()), permittedMoment, std::to_string(aircraft.GetCalculatingMoments()->GetStart()), 
 		std::to_string(aircraftTotalMotionTime), processingTime, aircraft.GetProcessingNecessity(), std::to_string(aircraft.GetPriority()), aircraft.GetReserveFlag(), 
 		std::to_string(aircraft.GetCalculatingIntervals()->GetPSDelay()), aircraft.GetRunwayId(), specialPlaceId));

@@ -163,7 +163,7 @@
     <ClInclude Include="include\CTakingOffAircraftCreationMoments.h" />
     <ClInclude Include="include\CTakingOffAircraft.h" />
     <ClInclude Include="targetver.h" />
-    <ClInclude Include="include\СTableRow.h" />
+    <ClInclude Include="include\CTableRow.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\CVectorHelper.cpp" />
@@ -186,7 +186,7 @@
     <ClCompile Include="src\CTakingOffAircraftCreationIntervals.cpp" />
     <ClCompile Include="src\CTakingOffAircraftCreationMoments.cpp" />
     <ClCompile Include="src\CTakingOffAircraft.cpp" />
-    <ClCompile Include="src\СTableRow.cpp" />
+    <ClCompile Include="src\CTableRow.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="OptimalMotion3.1.rc" />

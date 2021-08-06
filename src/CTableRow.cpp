@@ -1,6 +1,6 @@
-#include "../include/ÑTableRow.h"
+#include "../include/CTableRow.h"
 
-ÑTableRow::ÑTableRow(std::string aircraftId, std::string plannedTakingOffMoment, std::string possibleTakingOffMoment, 
+CTableRow::CTableRow(std::string aircraftId, std::string plannedTakingOffMoment, std::string possibleTakingOffMoment, 
 	std::string permittedTakingOffMoment, std::string startMoment, std::string totalMotionTime, std::string processingTime, 
 	bool needProcessing, std::string prioriry, bool isReserved, std::string PSWaitingTime, std::string runwayId, std::string specialPlaceId)
 {

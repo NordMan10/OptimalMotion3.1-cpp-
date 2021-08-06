@@ -3,15 +3,11 @@
 /** Крaткое описание класса
  * Представление объекта Строки Таблицы. Поля класса определяют столбцы. По сути — это формат выходных данных
  *
- * File  : СTableRow.h
+ * File  : CTableRow.h
  * Author: Yury Ten.
  *
  * Длинное описание класса
  * 
- * \bug 
- * При использовании этого класса, лично на моей машине возникает странный глюк: если в другом файле написать "СTableRow" руками, 
- * то компилятор не распознает этот класс, хотя заголовочник к файлу подключен. Но если скопировать имя класса отсюда, то все работает. 
- * Если у вас получится разгадать эту загадку дыры, напишите мне по адресу yury.ten66@yandex.ru, в чем было дело. Спасибо)
  *
  */
 
@@ -26,7 +22,7 @@
  //
 
 
-class СTableRow
+class CTableRow
 {
 private:
 	/**
@@ -96,7 +92,7 @@ private:
 
 
 public:
-	СTableRow(std::string aircraftId, std::string plannedTakingOffMoment, std::string possibleTakingOffMoment,
+	CTableRow(std::string aircraftId, std::string plannedTakingOffMoment, std::string possibleTakingOffMoment,
 		std::string permittedTakingOffMoment, std::string startMoment, std::string totalMotionTime, std::string processingTime, bool
 		needProcessing, std::string prioriry, bool isReserved, std::string PSWaitingTime, std::string runwayId, std::string specialPlaceId);
 
