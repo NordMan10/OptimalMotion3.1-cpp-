@@ -24,7 +24,6 @@
 */
 var menudata={children:[
 {text:"\u202AТитульная страница",url:"index.html"},
-{text:"\u202AОписания",url:"pages.html"},
 {text:"\u202AКлассы",url:"annotated.html",children:[
 {text:"\u202AКлассы",url:"annotated.html"},
 {text:"\u202AАлфавитный указатель классов",url:"classes.html"},
@@ -41,8 +40,7 @@ var menudata={children:[
 {text:"\u202Ap",url:"functions_p.html#index_p"},
 {text:"\u202Ar",url:"functions_r.html#index_r"},
 {text:"\u202As",url:"functions_s.html#index_s"},
-{text:"~",url:"functions_~.html#index__7E"},
-{text:"\u202AС",url:"functions_0xd0a1.html#index_a0xd0a1"}]},
+{text:"~",url:"functions_~.html#index__7E"}]},
 {text:"\u202AФункции",url:"functions_func.html",children:[
 {text:"\u202Aa",url:"functions_func.html#index_a"},
 {text:"\u202Ac",url:"functions_func.html#index_c"},
@@ -53,8 +51,7 @@ var menudata={children:[
 {text:"\u202Ap",url:"functions_func.html#index_p"},
 {text:"\u202Ar",url:"functions_func.html#index_r"},
 {text:"\u202As",url:"functions_func.html#index_s"},
-{text:"~",url:"functions_func.html#index__7E"},
-{text:"\u202AС",url:"functions_func.html#index_a0xd0a1"}]},
+{text:"~",url:"functions_func.html#index__7E"}]},
 {text:"\u202AПеременные",url:"functions_vars.html",children:[
 {text:"\u202Am",url:"functions_vars.html#index_m"}]}]}]},
 {text:"\u202AФайлы",url:"files.html",children:[

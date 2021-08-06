@@ -9,6 +9,7 @@ var hierarchy =
     [ "\u202ACInterval", "class_c_interval.html", null ],
     [ "\u202ACModel", "class_c_model.html", null ],
     [ "\u202ACProgramConstants", "class_c_program_constants.html", null ],
+    [ "\u202ACTableRow", "class_c_table_row.html", null ],
     [ "\u202ACTakingOffAircraft", "class_c_taking_off_aircraft.html", null ],
     [ "\u202ACTakingOffAircraftCalculatingIntervals", "class_c_taking_off_aircraft_calculating_intervals.html", null ],
     [ "\u202ACTakingOffAircraftCalculatingMoments", "class_c_taking_off_aircraft_calculating_moments.html", null ],
@@ -19,6 +20,5 @@ var hierarchy =
       [ "\u202ACPreliminaryStart", "class_c_preliminary_start.html", null ],
       [ "\u202ACRunway", "class_c_runway.html", null ],
       [ "\u202ACSpecialPlace", "class_c_special_place.html", null ]
-    ] ],
-    [ "\u202AСTableRow", "class_xD0_xA1_table_row.html", null ]
+    ] ]
 ];

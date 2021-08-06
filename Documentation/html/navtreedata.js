@@ -25,7 +25,6 @@
 var NAVTREE =
 [
   [ "\u202AOptimalMotion3.1", "index.html", [
-    [ "\u202AОшибки", "bug.html", null ],
     [ "\u202AКлассы", "annotated.html", [
       [ "\u202AКлассы", "annotated.html", "annotated_dup" ],
       [ "\u202AАлфавитный указатель классов", "classes.html", null ],
@@ -45,7 +44,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_c_aircraft_input_data_8h.html",
-"class_i_mass_service_zone.html#a3834fbead45854a5eb2e9755d69152a4"
+"class_c_taking_off_aircraft_creation_intervals.html"
 ];
 
 var SYNCONMSG = 'нажмите на выключить для синхронизации панелей';

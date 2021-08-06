@@ -58,7 +58,7 @@ private:
 	/**
 	 * Время противообледенительной обработки.
 	 */
-	std::string ms_ProcessingTime;
+	std::string m_ProcessingTime;
 
 	/**
 	 * Признак необходимости обработки.
@@ -110,7 +110,7 @@ public:
 
 	std::string GetTotalMotionTime() const { return m_TotalMotionTime; }
 
-	std::string GetProcessingTime() const { return ms_ProcessingTime; }
+	std::string GetProcessingTime() const { return m_ProcessingTime; }
 
 	bool GetProcessingNecessity() const { return m_NeedProcessing; }
 

@@ -1,0 +1,204 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>&#x202A;OptimalMotion3.1: &#x202A;Исходный файл include/CTableRow.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">&#x202A;OptimalMotion3.1
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('_c_table_row_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">CTableRow.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_c_table_row_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; <span class="comment">// SYSTEM INCLUDES</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; <span class="comment">//</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; <span class="comment">// PROJECT INCLUDES</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; <span class="comment">//</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; <span class="comment">// LOCAL INCLUDES</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; <span class="comment">//</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_c_table_row.html">   25</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_c_table_row.html">CTableRow</a></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_c_table_row.html#a4ed66580de5bf868e8c0d973150608fb">   31</a></span>&#160;    std::string <a class="code" href="class_c_table_row.html#a4ed66580de5bf868e8c0d973150608fb">m_AircraftId</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="class_c_table_row.html#a3dbc0f91af88daaecb5a37f9a3c0fbff">   36</a></span>&#160;    std::string <a class="code" href="class_c_table_row.html#a3dbc0f91af88daaecb5a37f9a3c0fbff">m_PlannedTakingOffMoment</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_c_table_row.html#a8ba8ee8ef74896219018005a6784baf1">   41</a></span>&#160;    std::string <a class="code" href="class_c_table_row.html#a8ba8ee8ef74896219018005a6784baf1">m_PossibleTakingOffMoment</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_c_table_row.html#af1a23096470fc16ef2c61c9df6dd123c">   46</a></span>&#160;    std::string <a class="code" href="class_c_table_row.html#af1a23096470fc16ef2c61c9df6dd123c">m_PermittedTakingOffMoment</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="class_c_table_row.html#a65dafb81295c1453460ee1090876e287">   51</a></span>&#160;    std::string <a class="code" href="class_c_table_row.html#a65dafb81295c1453460ee1090876e287">m_StartMoment</a>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="class_c_table_row.html#a24b8a2c2debc3b6b68b29652e92a804e">   56</a></span>&#160;    std::string <a class="code" href="class_c_table_row.html#a24b8a2c2debc3b6b68b29652e92a804e">m_TotalMotionTime</a>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="class_c_table_row.html#af0352051ea8ba51cd117f3dff11442be">   61</a></span>&#160;    std::string <a class="code" href="class_c_table_row.html#af0352051ea8ba51cd117f3dff11442be">ms_ProcessingTime</a>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="class_c_table_row.html#a47732fd56a22348ea9f6b1242691d025">   66</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_c_table_row.html#a47732fd56a22348ea9f6b1242691d025">m_NeedProcessing</a>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="class_c_table_row.html#a98c3240ae520cad48c4d5cc67e272124">   71</a></span>&#160;    std::string <a class="code" href="class_c_table_row.html#a98c3240ae520cad48c4d5cc67e272124">m_AircraftPriority</a>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="class_c_table_row.html#a97eb0784d5c4cf8064f795b2bb54211a">   76</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_c_table_row.html#a97eb0784d5c4cf8064f795b2bb54211a">m_IsReserved</a>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="class_c_table_row.html#a3f3ff23e2b85533bc834091029d58d7a">   81</a></span>&#160;    std::string <a class="code" href="class_c_table_row.html#a3f3ff23e2b85533bc834091029d58d7a">m_PSWaitingTime</a>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="class_c_table_row.html#a22993be5443a336b10308ea0a5f0bba5">   86</a></span>&#160;    std::string <a class="code" href="class_c_table_row.html#a22993be5443a336b10308ea0a5f0bba5">m_RunwayId</a>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    </div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="class_c_table_row.html#acdd362866b74915a5da3956267017b0d">   91</a></span>&#160;    std::string <a class="code" href="class_c_table_row.html#acdd362866b74915a5da3956267017b0d">m_SpecialPlaceId</a>;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="class_c_table_row.html#a597c0e96c02f7f4bca344f4750249339">   95</a></span>&#160;    <a class="code" href="class_c_table_row.html#a597c0e96c02f7f4bca344f4750249339">CTableRow</a>(std::string aircraftId, std::string plannedTakingOffMoment, std::string possibleTakingOffMoment,</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        std::string permittedTakingOffMoment, std::string startMoment, std::string totalMotionTime, std::string processingTime, <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        needProcessing, std::string prioriry, <span class="keywordtype">bool</span> isReserved, std::string PSWaitingTime, std::string runwayId, std::string specialPlaceId);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="class_c_table_row.html#ab13c78ab76f3695aec45648e809ff663">  101</a></span>&#160;    std::string <a class="code" href="class_c_table_row.html#ab13c78ab76f3695aec45648e809ff663">GetAircraftId</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_c_table_row.html#a4ed66580de5bf868e8c0d973150608fb">m_AircraftId</a>; }</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="class_c_table_row.html#a109a833d2115201d2e8e53e064e88f1d">  103</a></span>&#160;    std::string <a class="code" href="class_c_table_row.html#a109a833d2115201d2e8e53e064e88f1d">GetPlannedTakingOffMoment</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_c_table_row.html#a3dbc0f91af88daaecb5a37f9a3c0fbff">m_PlannedTakingOffMoment</a>; }</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="class_c_table_row.html#aa06a93a5409b1b6318166d0457d9cfba">  105</a></span>&#160;    std::string <a class="code" href="class_c_table_row.html#aa06a93a5409b1b6318166d0457d9cfba">GetPossibleTakingOffMoment</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_c_table_row.html#a8ba8ee8ef74896219018005a6784baf1">m_PossibleTakingOffMoment</a>; }</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="class_c_table_row.html#a8dd7b86f1bd66fcdd4edc2bc44ebe1cf">  107</a></span>&#160;    std::string <a class="code" href="class_c_table_row.html#a8dd7b86f1bd66fcdd4edc2bc44ebe1cf">GetPermittedTakingOffMoment</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_c_table_row.html#af1a23096470fc16ef2c61c9df6dd123c">m_PermittedTakingOffMoment</a>; }</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="class_c_table_row.html#af833b9fbf1b19e18c298cf7805966ed2">  109</a></span>&#160;    std::string <a class="code" href="class_c_table_row.html#af833b9fbf1b19e18c298cf7805966ed2">GetStartMoment</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_c_table_row.html#a65dafb81295c1453460ee1090876e287">m_StartMoment</a>; }</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="class_c_table_row.html#ac4418b70d43a9d1d0d44c57d8c7447e9">  111</a></span>&#160;    std::string <a class="code" href="class_c_table_row.html#ac4418b70d43a9d1d0d44c57d8c7447e9">GetTotalMotionTime</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_c_table_row.html#a24b8a2c2debc3b6b68b29652e92a804e">m_TotalMotionTime</a>; }</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
+<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="class_c_table_row.html#ada80afa3e235a2e0210ba000f6325794">  113</a></span>&#160;    std::string <a class="code" href="class_c_table_row.html#ada80afa3e235a2e0210ba000f6325794">GetProcessingTime</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_c_table_row.html#af0352051ea8ba51cd117f3dff11442be">ms_ProcessingTime</a>; }</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
+<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="class_c_table_row.html#ac4a1a0a7b677b47b33549bf7a26cac0c">  115</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_c_table_row.html#ac4a1a0a7b677b47b33549bf7a26cac0c">GetProcessingNecessity</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_c_table_row.html#a47732fd56a22348ea9f6b1242691d025">m_NeedProcessing</a>; }</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
+<div class="line"><a name="l00117"></a><span class="lineno"><a class="line" href="class_c_table_row.html#ad51c950a899a9344ffa0e03df032f85d">  117</a></span>&#160;    std::string <a class="code" href="class_c_table_row.html#ad51c950a899a9344ffa0e03df032f85d">GetAircraftPriority</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_c_table_row.html#a98c3240ae520cad48c4d5cc67e272124">m_AircraftPriority</a>; }</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
+<div class="line"><a name="l00119"></a><span class="lineno"><a class="line" href="class_c_table_row.html#af0dffb971ed15d0c4f017b825f2950db">  119</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_c_table_row.html#af0dffb971ed15d0c4f017b825f2950db">GetIsReserved</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_c_table_row.html#a97eb0784d5c4cf8064f795b2bb54211a">m_IsReserved</a>; }</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="class_c_table_row.html#a70524ec250221431897ce398e090ba90">  121</a></span>&#160;    std::string <a class="code" href="class_c_table_row.html#a70524ec250221431897ce398e090ba90">GetPSWaitingTime</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_c_table_row.html#a3f3ff23e2b85533bc834091029d58d7a">m_PSWaitingTime</a>; }</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
+<div class="line"><a name="l00123"></a><span class="lineno"><a class="line" href="class_c_table_row.html#aa8233785805c7ec9ba5a8bb5b41cfc66">  123</a></span>&#160;    std::string <a class="code" href="class_c_table_row.html#aa8233785805c7ec9ba5a8bb5b41cfc66">GetRunwayId</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_c_table_row.html#a22993be5443a336b10308ea0a5f0bba5">m_RunwayId</a>; }</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
+<div class="line"><a name="l00125"></a><span class="lineno"><a class="line" href="class_c_table_row.html#aca2ce5f9aa0dddaf4445ac585d46174f">  125</a></span>&#160;    std::string <a class="code" href="class_c_table_row.html#aca2ce5f9aa0dddaf4445ac585d46174f">GetSpecialPlaceId</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_c_table_row.html#acdd362866b74915a5da3956267017b0d">m_SpecialPlaceId</a>; }</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;};</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
+<div class="ttc" id="aclass_c_table_row_html"><div class="ttname"><a href="class_c_table_row.html">CTableRow</a></div><div class="ttdef"><b>Definition:</b> CTableRow.h:26</div></div>
+<div class="ttc" id="aclass_c_table_row_html_a109a833d2115201d2e8e53e064e88f1d"><div class="ttname"><a href="class_c_table_row.html#a109a833d2115201d2e8e53e064e88f1d">CTableRow::GetPlannedTakingOffMoment</a></div><div class="ttdeci">std::string GetPlannedTakingOffMoment() const</div><div class="ttdef"><b>Definition:</b> CTableRow.h:103</div></div>
+<div class="ttc" id="aclass_c_table_row_html_a22993be5443a336b10308ea0a5f0bba5"><div class="ttname"><a href="class_c_table_row.html#a22993be5443a336b10308ea0a5f0bba5">CTableRow::m_RunwayId</a></div><div class="ttdeci">std::string m_RunwayId</div><div class="ttdef"><b>Definition:</b> CTableRow.h:86</div></div>
+<div class="ttc" id="aclass_c_table_row_html_a24b8a2c2debc3b6b68b29652e92a804e"><div class="ttname"><a href="class_c_table_row.html#a24b8a2c2debc3b6b68b29652e92a804e">CTableRow::m_TotalMotionTime</a></div><div class="ttdeci">std::string m_TotalMotionTime</div><div class="ttdef"><b>Definition:</b> CTableRow.h:56</div></div>
+<div class="ttc" id="aclass_c_table_row_html_a3dbc0f91af88daaecb5a37f9a3c0fbff"><div class="ttname"><a href="class_c_table_row.html#a3dbc0f91af88daaecb5a37f9a3c0fbff">CTableRow::m_PlannedTakingOffMoment</a></div><div class="ttdeci">std::string m_PlannedTakingOffMoment</div><div class="ttdef"><b>Definition:</b> CTableRow.h:36</div></div>
+<div class="ttc" id="aclass_c_table_row_html_a3f3ff23e2b85533bc834091029d58d7a"><div class="ttname"><a href="class_c_table_row.html#a3f3ff23e2b85533bc834091029d58d7a">CTableRow::m_PSWaitingTime</a></div><div class="ttdeci">std::string m_PSWaitingTime</div><div class="ttdef"><b>Definition:</b> CTableRow.h:81</div></div>
+<div class="ttc" id="aclass_c_table_row_html_a47732fd56a22348ea9f6b1242691d025"><div class="ttname"><a href="class_c_table_row.html#a47732fd56a22348ea9f6b1242691d025">CTableRow::m_NeedProcessing</a></div><div class="ttdeci">bool m_NeedProcessing</div><div class="ttdef"><b>Definition:</b> CTableRow.h:66</div></div>
+<div class="ttc" id="aclass_c_table_row_html_a4ed66580de5bf868e8c0d973150608fb"><div class="ttname"><a href="class_c_table_row.html#a4ed66580de5bf868e8c0d973150608fb">CTableRow::m_AircraftId</a></div><div class="ttdeci">std::string m_AircraftId</div><div class="ttdef"><b>Definition:</b> CTableRow.h:31</div></div>
+<div class="ttc" id="aclass_c_table_row_html_a597c0e96c02f7f4bca344f4750249339"><div class="ttname"><a href="class_c_table_row.html#a597c0e96c02f7f4bca344f4750249339">CTableRow::CTableRow</a></div><div class="ttdeci">CTableRow(std::string aircraftId, std::string plannedTakingOffMoment, std::string possibleTakingOffMoment, std::string permittedTakingOffMoment, std::string startMoment, std::string totalMotionTime, std::string processingTime, bool needProcessing, std::string prioriry, bool isReserved, std::string PSWaitingTime, std::string runwayId, std::string specialPlaceId)</div></div>
+<div class="ttc" id="aclass_c_table_row_html_a65dafb81295c1453460ee1090876e287"><div class="ttname"><a href="class_c_table_row.html#a65dafb81295c1453460ee1090876e287">CTableRow::m_StartMoment</a></div><div class="ttdeci">std::string m_StartMoment</div><div class="ttdef"><b>Definition:</b> CTableRow.h:51</div></div>
+<div class="ttc" id="aclass_c_table_row_html_a70524ec250221431897ce398e090ba90"><div class="ttname"><a href="class_c_table_row.html#a70524ec250221431897ce398e090ba90">CTableRow::GetPSWaitingTime</a></div><div class="ttdeci">std::string GetPSWaitingTime() const</div><div class="ttdef"><b>Definition:</b> CTableRow.h:121</div></div>
+<div class="ttc" id="aclass_c_table_row_html_a8ba8ee8ef74896219018005a6784baf1"><div class="ttname"><a href="class_c_table_row.html#a8ba8ee8ef74896219018005a6784baf1">CTableRow::m_PossibleTakingOffMoment</a></div><div class="ttdeci">std::string m_PossibleTakingOffMoment</div><div class="ttdef"><b>Definition:</b> CTableRow.h:41</div></div>
+<div class="ttc" id="aclass_c_table_row_html_a8dd7b86f1bd66fcdd4edc2bc44ebe1cf"><div class="ttname"><a href="class_c_table_row.html#a8dd7b86f1bd66fcdd4edc2bc44ebe1cf">CTableRow::GetPermittedTakingOffMoment</a></div><div class="ttdeci">std::string GetPermittedTakingOffMoment() const</div><div class="ttdef"><b>Definition:</b> CTableRow.h:107</div></div>
+<div class="ttc" id="aclass_c_table_row_html_a97eb0784d5c4cf8064f795b2bb54211a"><div class="ttname"><a href="class_c_table_row.html#a97eb0784d5c4cf8064f795b2bb54211a">CTableRow::m_IsReserved</a></div><div class="ttdeci">bool m_IsReserved</div><div class="ttdef"><b>Definition:</b> CTableRow.h:76</div></div>
+<div class="ttc" id="aclass_c_table_row_html_a98c3240ae520cad48c4d5cc67e272124"><div class="ttname"><a href="class_c_table_row.html#a98c3240ae520cad48c4d5cc67e272124">CTableRow::m_AircraftPriority</a></div><div class="ttdeci">std::string m_AircraftPriority</div><div class="ttdef"><b>Definition:</b> CTableRow.h:71</div></div>
+<div class="ttc" id="aclass_c_table_row_html_aa06a93a5409b1b6318166d0457d9cfba"><div class="ttname"><a href="class_c_table_row.html#aa06a93a5409b1b6318166d0457d9cfba">CTableRow::GetPossibleTakingOffMoment</a></div><div class="ttdeci">std::string GetPossibleTakingOffMoment() const</div><div class="ttdef"><b>Definition:</b> CTableRow.h:105</div></div>
+<div class="ttc" id="aclass_c_table_row_html_aa8233785805c7ec9ba5a8bb5b41cfc66"><div class="ttname"><a href="class_c_table_row.html#aa8233785805c7ec9ba5a8bb5b41cfc66">CTableRow::GetRunwayId</a></div><div class="ttdeci">std::string GetRunwayId() const</div><div class="ttdef"><b>Definition:</b> CTableRow.h:123</div></div>
+<div class="ttc" id="aclass_c_table_row_html_ab13c78ab76f3695aec45648e809ff663"><div class="ttname"><a href="class_c_table_row.html#ab13c78ab76f3695aec45648e809ff663">CTableRow::GetAircraftId</a></div><div class="ttdeci">std::string GetAircraftId() const</div><div class="ttdef"><b>Definition:</b> CTableRow.h:101</div></div>
+<div class="ttc" id="aclass_c_table_row_html_ac4418b70d43a9d1d0d44c57d8c7447e9"><div class="ttname"><a href="class_c_table_row.html#ac4418b70d43a9d1d0d44c57d8c7447e9">CTableRow::GetTotalMotionTime</a></div><div class="ttdeci">std::string GetTotalMotionTime() const</div><div class="ttdef"><b>Definition:</b> CTableRow.h:111</div></div>
+<div class="ttc" id="aclass_c_table_row_html_ac4a1a0a7b677b47b33549bf7a26cac0c"><div class="ttname"><a href="class_c_table_row.html#ac4a1a0a7b677b47b33549bf7a26cac0c">CTableRow::GetProcessingNecessity</a></div><div class="ttdeci">bool GetProcessingNecessity() const</div><div class="ttdef"><b>Definition:</b> CTableRow.h:115</div></div>
+<div class="ttc" id="aclass_c_table_row_html_aca2ce5f9aa0dddaf4445ac585d46174f"><div class="ttname"><a href="class_c_table_row.html#aca2ce5f9aa0dddaf4445ac585d46174f">CTableRow::GetSpecialPlaceId</a></div><div class="ttdeci">std::string GetSpecialPlaceId() const</div><div class="ttdef"><b>Definition:</b> CTableRow.h:125</div></div>
+<div class="ttc" id="aclass_c_table_row_html_acdd362866b74915a5da3956267017b0d"><div class="ttname"><a href="class_c_table_row.html#acdd362866b74915a5da3956267017b0d">CTableRow::m_SpecialPlaceId</a></div><div class="ttdeci">std::string m_SpecialPlaceId</div><div class="ttdef"><b>Definition:</b> CTableRow.h:91</div></div>
+<div class="ttc" id="aclass_c_table_row_html_ad51c950a899a9344ffa0e03df032f85d"><div class="ttname"><a href="class_c_table_row.html#ad51c950a899a9344ffa0e03df032f85d">CTableRow::GetAircraftPriority</a></div><div class="ttdeci">std::string GetAircraftPriority() const</div><div class="ttdef"><b>Definition:</b> CTableRow.h:117</div></div>
+<div class="ttc" id="aclass_c_table_row_html_ada80afa3e235a2e0210ba000f6325794"><div class="ttname"><a href="class_c_table_row.html#ada80afa3e235a2e0210ba000f6325794">CTableRow::GetProcessingTime</a></div><div class="ttdeci">std::string GetProcessingTime() const</div><div class="ttdef"><b>Definition:</b> CTableRow.h:113</div></div>
+<div class="ttc" id="aclass_c_table_row_html_af0352051ea8ba51cd117f3dff11442be"><div class="ttname"><a href="class_c_table_row.html#af0352051ea8ba51cd117f3dff11442be">CTableRow::ms_ProcessingTime</a></div><div class="ttdeci">std::string ms_ProcessingTime</div><div class="ttdef"><b>Definition:</b> CTableRow.h:61</div></div>
+<div class="ttc" id="aclass_c_table_row_html_af0dffb971ed15d0c4f017b825f2950db"><div class="ttname"><a href="class_c_table_row.html#af0dffb971ed15d0c4f017b825f2950db">CTableRow::GetIsReserved</a></div><div class="ttdeci">bool GetIsReserved() const</div><div class="ttdef"><b>Definition:</b> CTableRow.h:119</div></div>
+<div class="ttc" id="aclass_c_table_row_html_af1a23096470fc16ef2c61c9df6dd123c"><div class="ttname"><a href="class_c_table_row.html#af1a23096470fc16ef2c61c9df6dd123c">CTableRow::m_PermittedTakingOffMoment</a></div><div class="ttdeci">std::string m_PermittedTakingOffMoment</div><div class="ttdef"><b>Definition:</b> CTableRow.h:46</div></div>
+<div class="ttc" id="aclass_c_table_row_html_af833b9fbf1b19e18c298cf7805966ed2"><div class="ttname"><a href="class_c_table_row.html#af833b9fbf1b19e18c298cf7805966ed2">CTableRow::GetStartMoment</a></div><div class="ttdeci">std::string GetStartMoment() const</div><div class="ttdef"><b>Definition:</b> CTableRow.h:109</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">&#x202A;include</a></li><li class="navelem"><a class="el" href="_c_table_row_8h.html">&#x202A;CTableRow.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

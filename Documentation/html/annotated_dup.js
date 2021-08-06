@@ -12,12 +12,12 @@ var annotated_dup =
     [ "\u202ACProgramConstants", "class_c_program_constants.html", "class_c_program_constants" ],
     [ "\u202ACRunway", "class_c_runway.html", "class_c_runway" ],
     [ "\u202ACSpecialPlace", "class_c_special_place.html", "class_c_special_place" ],
+    [ "\u202ACTableRow", "class_c_table_row.html", "class_c_table_row" ],
     [ "\u202ACTakingOffAircraft", "class_c_taking_off_aircraft.html", "class_c_taking_off_aircraft" ],
     [ "\u202ACTakingOffAircraftCalculatingIntervals", "class_c_taking_off_aircraft_calculating_intervals.html", "class_c_taking_off_aircraft_calculating_intervals" ],
     [ "\u202ACTakingOffAircraftCalculatingMoments", "class_c_taking_off_aircraft_calculating_moments.html", "class_c_taking_off_aircraft_calculating_moments" ],
     [ "\u202ACTakingOffAircraftCreationIntervals", "class_c_taking_off_aircraft_creation_intervals.html", "class_c_taking_off_aircraft_creation_intervals" ],
     [ "\u202ACTakingOffAircraftCreationMoments", "class_c_taking_off_aircraft_creation_moments.html", "class_c_taking_off_aircraft_creation_moments" ],
     [ "\u202ACVectorHelper", "class_c_vector_helper.html", "class_c_vector_helper" ],
-    [ "\u202AIMassServiceZone", "class_i_mass_service_zone.html", "class_i_mass_service_zone" ],
-    [ "\u202AСTableRow", "class_xD0_xA1_table_row.html", "class_xD0_xA1_table_row" ]
+    [ "\u202AIMassServiceZone", "class_i_mass_service_zone.html", "class_i_mass_service_zone" ]
 ];

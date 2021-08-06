@@ -10,6 +10,5 @@ var functions_dup =
     [ "\u202Ap", "functions_p.html", null ],
     [ "\u202Ar", "functions_r.html", null ],
     [ "\u202As", "functions_s.html", null ],
-    [ "~", "functions_~.html", null ],
-    [ "\u202AС", "functions_0xd0a1.html", null ]
+    [ "~", "functions_~.html", null ]
 ];
