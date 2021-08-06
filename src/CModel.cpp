@@ -52,7 +52,7 @@ std::shared_ptr<std::vector<std::shared_ptr<СTableRow>>> CModel::GetOutputData(s
 	// Задаем разрешенные моменты и резервные ВС в полученном списке ВС
 	ReconfigureAircraftsWithReserve(*orderedConfiguredTakingOffAircrafts);
 
-	// Для всех ВС задаем время простоя на ПРДВ
+	// Для всех ВС задаем время ожидания на ПРДВ
 	SetPSWaitingTime(*orderedConfiguredTakingOffAircrafts);
 
 	// Создаем список ВС, упорядоченных по разрешенным моментам
@@ -76,7 +76,7 @@ std::shared_ptr<std::vector<std::shared_ptr<CTakingOffAircraft>>> CModel::GetOrd
 	// Создаем список ВС
 	auto takingOffAircrafts = std::vector<std::shared_ptr<CTakingOffAircraft>>();
 	// Создаем упорядоченный список плановых моментов на основе переданного списка
-	auto orderedPlannedTakingOffMoments = CVectorHelper::Sort(plannedTakingOffMoments, CVectorHelper::AscendingComparer);
+	auto orderedPlannedTakingOffMoments = CVectorHelper::Sort(plannedTakingOffMoments);
 
 	int startDelay = 0;
 
